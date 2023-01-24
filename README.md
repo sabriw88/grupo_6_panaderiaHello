@@ -6,7 +6,9 @@ breve descripción de los integrantes del equipo
 Juan Pablo Garcia Giraldo
 Nelson Bruni
 Dante Costamagna
-Jose Medina
+
+Jose Medina: Tengo 23 años, trabajo desde hace 4 años en el departamento de alumnos en una universidad, tengo unos breves conocimientos en programacion, actualmente estudio Ingles simultaneamente a este curso.
+
 Romina Salminci
 Sabrina Juliana Wolf
 
