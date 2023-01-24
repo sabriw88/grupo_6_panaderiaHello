@@ -9,3 +9,9 @@ Dante Costamagna
 Jose Medina
 Romina Salminci
 Sabrina Juliana Wolf
+
+Links a sitios de interés:
+https://www.leble.com.ar/
+https://hausbrot.com.ar/
+https://www.pani.com.ar/
+https://www.lepainquotidien.com/ar/es/
