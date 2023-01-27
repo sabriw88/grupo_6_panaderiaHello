@@ -5,7 +5,8 @@ breve descripción del público al que apunta el sitio
 breve descripción de los integrantes del equipo
 Juan Pablo Garcia Giraldo
 Nelson Bruni
-Dante Costamagna
+
+Dante Costamagna: Tengo 26 años, fui gastronómico hasta hace poquito y siempre estuve interiorizado en la informática aunque mi acercamiento máximo a la programación fue un curso bastante básico de C hace ya casi 10 años. Me costó dar el paso de volver a estudiar, aunque sea un curso relativamente corto, pero una amiga que trabaja de esto hace unos años me dió el empujón que precisaba. Hoy estoy mirando para adelante buscando dar un salto grande en mi nivel de ingresos y, en consecuencia, mi calidad de vida.
 
 Jose Medina: Tengo 23 años, trabajo desde hace 4 años en el departamento de alumnos en una universidad, tengo unos breves conocimientos en programacion, actualmente estudio Ingles simultaneamente a este curso.
 
