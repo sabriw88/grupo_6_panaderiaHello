@@ -15,16 +15,16 @@
 
 - Sabrina Juliana Wolf: Igual que Romina, tengo 34 años y dos hijos. Soy lic. en RRHH con una maestría en Negocios y Consultoría de la Berlin School of Economics and Law. Trabajo en una multinacional desde hace varios años pero tras tener a mi segundo hijo, decidí explorar otras alternativas que me permitan trabajar más desde mi casa y de manera más flexible. Nunca había programado pero siempre me interesó asique, aprovechando la licencia por maternidad, me inscribí en el curso.
 
-* Links a sitios de interés:
+* Links a sitios de interés y motivo de elección:
 
-https://www.leble.com.ar/
-https://hausbrot.com.ar/
-https://www.pani.com.ar/
-https://www.lepainquotidien.com/ar/es/
-https://elsoldemartinez.com.ar/
-http://www.panem.com.ar/index.html
-http://www.sueviaconfiteria.com.ar/nuestros_productos.php
-https://www.panaderiagamas.com/
-https://gallofa.com/
-https://preview.colorlib.com/#cakes
+https://preview.colorlib.com/#cakes: Es elegida por su home minimalista, con una presentación estética y simple, pero atractiva y llamativa con sus colores, por la gran historia que ofrecen a su público, y por la implementación de los videos en el home.
+https://hausbrot.com.ar/: Por el detalle en la clasificación de los productos ofrecidos, y el adicional que realizan a las opciones integrales de sus productos.
+https://www.pani.com.ar/: Por los servicios variados que se ofrecen para los eventos.
+https://www.lepainquotidien.com/ar/es/: Por la implementación del sector de “nuestra historia”, y por la estética del home con calidad y claridad.
+https://elsoldemartinez.com.ar/: Por la estética que presenta con gran calidad de las imágenes, y por el detalle en los productos ofrecidos y en el servicio de lunch.
+https://www.panaderiagamas.com/: Por la estética que se presenta en el home: simple, organizado, con la calidad y el atractivo de las imágenes, y la oferta de los diferentes productos. 
+https://gallofa.com/: Por la funcionalidad que posee en el home para seleccionar la opción de recogida en tienda o envío a domicilio.
+https://www.leble.com.ar/:
+
+
 
