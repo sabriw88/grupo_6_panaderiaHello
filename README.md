@@ -15,3 +15,5 @@ https://www.leble.com.ar/
 https://hausbrot.com.ar/
 https://www.pani.com.ar/
 https://www.lepainquotidien.com/ar/es/
+https://lepanem.com/
+https://lacentenariaalimentos.com.ar/
