@@ -3,7 +3,7 @@
 
 * Integrantes del equipo:
 
-- Juan Pablo Garcia Giraldo: 
+- Juan Pablo Garcia Giraldo: Tengo 40 años, padre de 3, Ingeniero Industrial sin haber nunca tocado el campo de la programacion, mi interes radica en reciclarme y dar el paso a las nuevas tecnologias y conseguir el valioso tiempo de estar y compartir con mi Familia, resido en España desde hace 6 años y ya me hace falta trabajar jornadas de menos de 12 horas, he llegado hasta aqui gracias a mi amigo Nelson, quien los conoce y me los ha recomendado.
 
 - Nelson Bruni: 
 
