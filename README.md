@@ -1,6 +1,46 @@
 * Oferta de productos y servicios ofrecidos / Público al que apunta el sitio
 (audiencia objetivo)/ Cómo ajustamos nuestra oferta a ese público
 
+¿Qué productos o servicios brindará nuestro sitio?  
+     
+NUESTROS PRODUCTOS
+
+PANADERIA:
+
+PANES DE MASA MADRE 
+PAN DE CAMPO 
+PAN DE MOLDE
+PAN DE PAPA
+BAGUETTE 
+PAN TIPO BRIOCHE
+SIN GLUTEN
+MULTICEREAL 
+INTEGRAL
+CENTENO 
+
+
+PASTELERIA:
+
+Tartas (HAVANET, FRUTILLA, BROWNIE, LEMON PIE, TARTA DE MANZANA, PASTA FROLA, TARTA DE RICOTA), 
+Tortas (SELVA NEGRA, BALCARCE, ROGEL).
+
+
+DELICIAS: 
+
+Alfajorcitos de maicena – macarrones – muffins – scones.
+
+
+PEDIDOS ESPECIALES/CATERING: 
+
+pedidos especialidazos por mail.
+
+
+Al ser una panaderia apuntamos a cada persona. para que pueda comprar desde su hogar utilizando la pagina, como tambien desde alguna de nuestros puntos de ventas (locales con los cuales trabajamos).
+
+
+
+
+
 * Integrantes del equipo:
 
 - Juan Pablo Garcia Giraldo: Tengo 40 años, padre de 3, Ingeniero Industrial sin haber nunca tocado el campo de la programacion, mi interes radica en reciclarme y dar el paso a las nuevas tecnologias y conseguir el valioso tiempo de estar y compartir con mi Familia, resido en España desde hace 6 años y ya me hace falta trabajar jornadas de menos de 12 horas, he llegado hasta aqui gracias a mi amigo Nelson, quien los conoce y me los ha recomendado.
@@ -9,7 +49,7 @@
 
 - Dante Costamagna: Tengo 26 años, fui gastronómico hasta hace poquito y siempre estuve interiorizado en la informática aunque mi acercamiento máximo a la programación fue un curso bastante básico de C hace ya casi 10 años. Me costó dar el paso de volver a estudiar, aunque sea un curso relativamente corto, pero una amiga que trabaja de esto hace unos años me dió el empujón que precisaba. Hoy estoy mirando para adelante buscando dar un salto grande en mi nivel de ingresos y, en consecuencia, mi calidad de vida.
 
-- Jose Medina: Tengo 23 años, trabajo desde hace 4 años en el departamento de alumnos en una universidad, tengo unos breves conocimientos en programacion, actualmente estudio Ingles simultaneamente a este curso.
+- Jose Medina: Tengo 23 años, trabajo desde hace 4 años en el departamento de alumnos en una universidad, tengo unos breves conocimientos en programacion, actualmente estudio Ingles simultaneamente a este curso y estoy entusiasmado por lo que vendra en el curso. 
 
 - Romina Salminci: Tengo 34 años, dos hijos y soy Licenciada en Administración de la Univesidad de Buenos Aires. Trabajé mas de diez años en un banco y hace unos meses me mudé al interior de la provincia de Buenos Aires, en post de una mejor calidad de vida. Este cambio trajo consigo las ganas de volver a estudiar, y si bien no tengo conocimientos previos en programación, Digital House me convenció por sus buenas críticas en los diferentes medios, destacando su enseñanza y la posibilidad existente de una futura búsqueda laboral. 
 
