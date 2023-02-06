@@ -76,4 +76,8 @@ Jose Medina
 Romina Salminci
 Sabrina Juliana Wolf
 
+Tablero en Trello:
+https://trello.com/b/kiZVLzkL
+
+
 
