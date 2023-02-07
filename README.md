@@ -1,43 +1,32 @@
-* Oferta de productos y servicios ofrecidos / Público al que apunta el sitio
-(audiencia objetivo)/ Cómo ajustamos nuestra oferta a ese público
+* Oferta de productos/servicios ofrecidos y audiencia objetivo:
 
-¿Qué productos o servicios brindará nuestro sitio?  
-     
-NUESTROS PRODUCTOS
+Somos una panadería que tiene como público objetivo a todas las personas en general, tanto aquellos consumidores que deseen visitar nuestra tienda, así como tambien los que prefieran la comodidad de su hogar utilizando nuestra página. Así mismo, nos encargamos de distribuir nuestros productos a locales minoristas, por lo que pueden disponer de los mismos en diferentes puntos de venta. Y por último, contamos con un sector especial dedicado al servicio de catering, donde ajustamos nuestros productos a la demanda del cliente.
 
-PANADERIA:
+A continuación detallamos nuestra oferta de productos y servicios:
+       
+- PANADERIA:
+Panes de masa madre * 
+Pan de campo * 
+Pan de molde *
+Pan de papa*
+Baguette * 
+Pan tipo brioche *
+Sin gluten *
+Multicereal * 
+Integral *
+Centeno * 
 
-PANES DE MASA MADRE * 
-PAN DE CAMPO * 
-PAN DE MOLDE *
-PAN DE PAPA *
-BAGUETTE * 
-PAN TIPO BRIOCHE *
-SIN GLUTEN *
-MULTICEREAL * 
-INTEGRAL *
-CENTENO * 
-
-
-PASTELERIA:
-
-Tartas (HAVANET, FRUTILLA, BROWNIE, LEMON PIE, TARTA DE MANZANA, PASTA FROLA, TARTA DE RICOTA), 
-Tortas (SELVA NEGRA, BALCARCE, ROGEL).
+- PASTELERIA:
+Tartas (Havanet, Frutilla, Brownie, Lemon pie, Tarta de manzana, Pasta frola, Tarta de ricota), 
+Tortas (Selva negra, Balcarce, Rogel).
 
 
-DELICIAS: 
-
-Alfajorcitos de maicena – macarrones – muffins – scones.
-
-
-PEDIDOS ESPECIALES/CATERING: 
-
-pedidos especialidazos por mail.
+- DELICIAS: 
+Alfajorcitos de maicena – Macarrones – Muffins – Scones.
 
 
-Al ser una panaderia apuntamos a cada persona. para que pueda comprar desde su hogar utilizando la pagina, como tambien desde alguna de nuestros puntos de ventas (locales con los cuales trabajamos).
-
-
+- PEDIDOS ESPECIALES/CATERING: 
+Aquellos pedidos especiales detallados a traves del contacto por mail.
 
 
 
@@ -55,6 +44,7 @@ Al ser una panaderia apuntamos a cada persona. para que pueda comprar desde su h
 
 - Sabrina Juliana Wolf: Igual que Romina, tengo 34 años y dos hijos. Soy lic. en RRHH con una maestría en Negocios y Consultoría de la Berlin School of Economics and Law. Trabajo en una multinacional desde hace varios años pero tras tener a mi segundo hijo, decidí explorar otras alternativas que me permitan trabajar más desde mi casa y de manera más flexible. Nunca había programado pero siempre me interesó asique, aprovechando la licencia por maternidad, me inscribí en el curso.
 
+
 * Links a sitios de interés y motivo de elección:
 
 https://preview.colorlib.com/#cakes: Es elegida por su home minimalista, con una presentación estética y simple, pero atractiva y llamativa con sus colores, por la gran historia que ofrecen a su público, y por la implementación de los videos en el home.
@@ -64,19 +54,12 @@ https://www.lepainquotidien.com/ar/es/: Por la implementación del sector de “
 https://elsoldemartinez.com.ar/: Por la estética que presenta con gran calidad de las imágenes, y por el detalle en los productos ofrecidos y en el servicio de lunch.
 https://www.panaderiagamas.com/: Por la estética que se presenta en el home: simple, organizado, con la calidad y el atractivo de las imágenes, y la oferta de los diferentes productos. 
 https://gallofa.com/: Por la funcionalidad que posee en el home para seleccionar la opción de recogida en tienda o envío a domicilio.
-https://www.leble.com.ar/:
+https://www.leble.com.ar/
 
-breve descripción del público al que apunta el sitio
 
-breve descripción de los integrantes del equipo
-Juan Pablo Garcia Giraldo
-Nelson Bruni
-Dante Costamagna
-Jose Medina
-Romina Salminci
-Sabrina Juliana Wolf
 
-Tablero en Trello:
+* Tablero en Trello:
+
 https://trello.com/b/kiZVLzkL
 
 
