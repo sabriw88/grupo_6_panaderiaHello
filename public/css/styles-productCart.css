@@ -196,29 +196,7 @@ footer li i{
         color: #010101;
     }
     /* MAIN */
-    .login-img {
-        display: block;
-        width: 100%;
-        margin: 0;
-        background-color: #010101;
-    }
-    .login-img img {
-        width: 100%;
-        opacity: 0.5;
-        margin: 0;
-    }
-    .main-login {
-        position: relative;
-        background-color: rgb(186, 160, 111);
-    }
-    .form-login {
-        position: absolute;
-        top: 5%;
-        right: 7%;
-    }
-    .formLoginButton:hover {
-        box-shadow: 0 0 5px #010101;
-    }
+    
     /* FOOTER */
     section.footer-logo {
         display: inline;
