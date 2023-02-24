@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello! Cakes & Bakery</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/styles-register.css">
-    <title>Hello! Cakes & Bakery</title>
 </head>
-<body class="body-register">
+<body class="body-login">
     <header>
         <div class="logo">
             <img src="/img/Logo.png" alt="logo">
@@ -34,13 +34,89 @@
             </nav>
         </div>
     </header>
-
-
     <main class="main-register">
-        
-    </main>
+        <div class="login-img">
+            <img src="https://cdn.pixabay.com/photo/2016/11/29/10/09/bakery-1868925_1280.jpg" alt="">
+        </div>
 
-    
+        <div class="container-formulario">
+
+            <form action="/" method="POST" class="register-input">
+                
+                    <div class="register-input">
+                        <input type="text" placeholder="Nombre" required minlength="3">
+                    </div>
+
+                    <br>
+
+                    <div class="register-input">
+                        <input type="text" placeholder="Apellido" required minlength="3">
+                    </div>
+
+                    <br>
+                    
+                    <div class="register-input">
+                        <input type="text" placeholder="Nombre de usuario" required>
+                    </div>
+
+                    <br>
+
+                    <div class="nacimiento">
+                        <label for="fecha-nacimiento"><h2>Fecha de nacimiento</h2></label>
+                        <input type="date" id="fecha-nacimiento" required>
+                    </div>
+
+                    <br>
+                    
+                    <div class="register-input">
+                        <input type="text" placeholder="Domicilio" required>
+                    </div>
+                        
+                    <br>
+
+                    <div class="foto-usuario">
+                        <label for="foto-usuario"><h2>Foto de perfil</h2></label>
+                        <input type="file" name="foto-usuario" id="foto-usuario" required accept=".jpg, .png">
+                    </div>
+   
+                    <br>
+
+                    <div class="register-input">
+                        <input type="password" placeholder="Contraseña" required>
+                    </div>
+
+                    <br>
+
+                    <div class="register-input">
+                        <input type="password" placeholder="Confirmar contraseña" required>
+                    </div>
+
+                    <br>
+
+                    <div class="register-checkbox">
+                        <label for="acepto-tyc"></label>
+                        <input type="checkbox"><p>Acepto Términos y Condiciones</p>
+                    
+                        
+
+                    <div class="botones">
+                        <div class="register-input, register-button">
+                            <button type="submit" id="botones">Registrarse</button>
+                        </div>
+        
+                        <div class="register-input, register-button">
+                            <button type="reset" id="botones"> Borrar todo</button>
+                        </div>
+                    </div>
+
+                    <div class="login-logo">
+                        <img src="/img/Logo-recortado.png" alt="">
+                    </div>
+
+            </form>
+        </div>
+
+    </main>
     <footer>
         <section class="footer-logo">
             <img src="/img/Logo.png" alt="HELLO!">

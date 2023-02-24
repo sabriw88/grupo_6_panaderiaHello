@@ -69,6 +69,72 @@ a {
     text-decoration: none;
 }
 
+/* MAIN */
+
+body {
+    background-color: wheat;
+}
+.login-img {
+    display: none;
+}
+.container-formulario {
+    background-color: white;
+    margin: 15px auto;
+    padding: 30px;
+    border: 3px solid #68ABB4;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    height: 780px;    
+    
+}
+.register-input label,
+.register-input input {
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+.register-input input {
+    width: 100%;
+    border: 3px solid #68ABB4;
+    border-radius: 5px;
+    background-color: #68abb418;
+    padding: 2px;
+}
+.register-input, .register-checkbox {
+    margin-bottom: 2px;
+}
+.register-checkbox {
+    margin: 0 auto;
+    justify-content: left;
+}
+.register-checkbox input,
+.register-checkbox p {
+    display: inline;
+    margin: 0 2px;
+    font-size: 14px;
+    height: 1em;
+    width: 1em;
+}
+
+.login-logo img{
+    width: 50%;
+    margin: 0% 25%;
+    cursor: pointer;
+}
+#botones {
+    background-color: #F1C732;
+    margin: 20px auto;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 15px;
+    border: 3px solid #68ABB4;
+}
+
+
+
 
 
 /* FOOTER */
@@ -196,7 +262,33 @@ footer li i{
         color: #010101;
     }
     /* MAIN */
+
+
+    .login-img {
+        display: block;
+        width: 100%;
+        margin: 0;
+        background-color: #010101;
+    }
+    .login-img img {
+        opacity: 0.5;
+        margin: 0;
+        min-width: 100%
+    }
+    .main-login {
+        position: relative;
+        background-color: rgb(186, 160, 111);
+    }
+    .container-formulario {
+        position: absolute;
+        top: 30%;
+        right: 7%;
+    }
+    .formLoginButton:hover {
+        box-shadow: 0 0 5px #010101;
+    }
     /* FOOTER */
+
     section.footer-logo {
         display: inline;
     }
