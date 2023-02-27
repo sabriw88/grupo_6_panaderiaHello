@@ -9,6 +9,9 @@ Tipografías:
 Meatloaf
 AngryBirds
 Raleway */
+
+* {box-sizing: border-box;}
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 * {
     color: inherit;
@@ -121,6 +124,94 @@ footer li i{
     text-indent: 5px;
 }
 
+.main-productCart{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+}
+
+.precio{
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-weight: bold;
+}
+
+
+.fa-trash-can {
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.title-cart{
+    display:flex;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    font-family: 'Mynerve';
+    color: black;
+    font-size: 32px;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.contenedor-product{
+    display: flex;
+    margin-top: 30px;
+    margin-left:30px;
+    width: 40vw;
+    height: auto;
+    align-items: flex-center;
+    
+}
+
+.hola{
+    width: 100vw;
+}
+
+.sub-main-productCart{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+}
+.img-selvanegra{
+    width: 12vw;
+    height: auto;
+    display: flex;
+}
+
+.prod-selvanegra{
+    font-family: 'Mynerve';
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.descr-selvanegra{
+    font-family: 'Mynerve';
+    display: flex;
+    font-size: 15px;
+    flex-direction: column;
+    
+}
+
+.contenedor-carrito{
+    display: flex;
+    margin-top: 30px;
+    margin-left:30px;
+    width: 40vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
 @media (min-width: 899px) {
     /* HEADER */
     .logo {
