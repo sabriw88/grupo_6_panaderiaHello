@@ -36,7 +36,7 @@
         </div>
     </header>
 
-
+    <main class="main">
         <h2 class="title-cart">Carrito de compras</h2>
     <div class="hola">
     <main class="main-productCart">
@@ -48,6 +48,11 @@
         </div>
         </div>
         <div class="contenedor-carrito">
+            <form id='myform' method='POST' class='quantity' action='#'>
+                <input type='button' value='-' class='qtyminus minus' field='quantity' />
+                <input type='text' name='quantity' value='0' class='qty' />
+                <input type='button' value='+' class='qtyplus plus' field='quantity' />
+              </form>
 
             <i class="fa-solid fa-trash-can"></i>
             <p class="precio">$3000</p>
@@ -65,19 +70,19 @@
         </div>
         </div>
         <div class="contenedor-carrito">
-
+            <form id='myform' method='POST' class='quantity' action='#'>
+                <input type='button' value='-' class='qtyminus minus' field='quantity' />
+                <input type='text' name='quantity' value='0' class='qty' />
+                <input type='button' value='+' class='qtyplus plus' field='quantity' />
+            </form>
             <i class="fa-solid fa-trash-can"></i>
             <p class="precio">$700</p>
         </div>
     </div>
 </div>
-
-        
-
         
     </main>
 
-    
     <footer>
         <section class="footer-logo">
             <img src="/img/Logo.png" alt="HELLO!">
