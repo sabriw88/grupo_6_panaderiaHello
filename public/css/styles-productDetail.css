@@ -10,6 +10,7 @@ Meatloaf
 AngryBirds
 Raleway */
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 * {
     color: inherit;
     font-family: 'Raleway', sans-serif;
@@ -69,23 +70,59 @@ a {
 
 /*MAIN*/
 
-.main-productDetail  .cajaexterior{
-    background-image: url(/img/iStock-995038782-small.jpg);
-    display: grid;
-    place-items: center;
-    width: 100vw;
-    height: 90vh;
+.mainProduct{
+    background-color: white;
+}
+.card{
+    border: 1px solid black;
+    width: 344px;
+    height: 612px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 69px auto;
+    background-color: white;
 }
 
-/* .main-productDetail .cajaexterior .cajainterior{
-    width: 80%;
-    height: 80%;
-    border-radius: 5rem;
-    background-color: whitesmoke;
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-} */
+.card .card_first-section img{
+width: 100%;
+}
+
+.card .card_second-section .productType{
+    margin: 18px 24px 8px 20px;
+    color: grey;
+}
+.card .card_second-section .titulo{
+    margin: 0px 24px 16px 24px;
+    font-size: 2.2em;
+}
+.card .card_second-section .description{
+    margin: 0px 24px 44px 24px;
+    color: grey;
+    font-size: 0.95em;
+    line-height: 22px;
+}
+.card .card_second-section .precio p{
+    font-size: 2.3em;
+    color: green;
+    margin: 0 24px 16px 24px;
+    
+}
+.card .card_second-section .card_button{
+ width: 296px;
+ height: 50px;
+ background-color: green;
+ color: white;
+ border: none;
+ border-radius: 8px;
+ font-size: 1.1em;
+ font-weight: 700;
+ display: block;
+ margin: auto;
+}
+.card .card_second-section .card_button:hover{
+cursor: pointer;
+background-color: blue;
+}
 
 
 /* FOOTER */
