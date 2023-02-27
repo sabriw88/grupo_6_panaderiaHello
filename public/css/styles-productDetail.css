@@ -45,9 +45,7 @@ div.bottom-header-bar {
     align-items: center;
     margin: 5px;
 }
-.main-bar {
-    display: none;
-}
+
 h1 {
     font-size: 30px;
     color: white;
@@ -69,6 +67,25 @@ a {
     text-decoration: none;
 }
 
+/*MAIN*/
+
+.main-productDetail  .cajaexterior{
+    background-image: url(/img/iStock-995038782-small.jpg);
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 90vh;
+}
+
+/* .main-productDetail .cajaexterior .cajainterior{
+    width: 80%;
+    height: 80%;
+    border-radius: 5rem;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+} */
 
 
 /* FOOTER */
@@ -121,7 +138,18 @@ footer li i{
     text-indent: 5px;
 }
 
+@media (min-width: 300px) {
+
+    .main-bar{
+        display: none;
+    }
+    
+
+}
+
 @media (min-width: 899px) {
+
+  
     /* HEADER */
     .logo {
         display: block;
