@@ -21,6 +21,7 @@ Raleway */
 }
 body {
     width: 100vw;
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/29/10/09/bakery-1868925_1280.jpg);
 }
 /* HEADER */
 .logo {
@@ -70,9 +71,9 @@ a {
 
 /*MAIN*/
 
-.mainProduct{
+/* .mainProduct{
     background-color: white;
-}
+} */
 .card{
     border: 1px solid black;
     width: 344px;
@@ -261,6 +262,38 @@ footer li i{
         color: #010101;
     }
     /* MAIN */
+
+    .card{
+        width: 600px;
+        height: 450px;
+        display: flex;
+        margin: 100px auto;
+    }
+
+    .card .card_first-section img{
+
+        content: url(/img/baguette-1.jpg);
+
+    }
+
+
+    .card_first-section{
+        width: 300px;
+    }
+
+    .card_second-section{
+        width: 300px;
+    }
+
+
+
+
+
+
+
+
+
+
     
     /* FOOTER */
     section.footer-logo {
