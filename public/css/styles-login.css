@@ -89,9 +89,6 @@ a {
     font-size: 14px;
     line-height: 1.5em;
 }
-/* .login-input label, .login-checkbox p {
-    font-weight: 600;
-} */
 .login-input input {
     width: 100%;
     border: 3px solid #68ABB4;
@@ -185,7 +182,9 @@ footer li i{
 .footer-contacto li {
     text-indent: 5px;
 }
-
+.phrase {
+    display: none;
+}
 @media (min-width: 899px) {
     /* HEADER */
     .logo {
@@ -261,6 +260,37 @@ footer li i{
         color: #010101;
     }
     /* MAIN */
+    .phrase-form {
+        width: 100%;
+        position: absolute;
+        top: 0%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .phrase {
+        display: inline;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 15px auto;
+        padding: 30px;
+    }
+    .phrase img {
+        width: 30%;
+        max-width: 120px;
+        margin: 0 auto -30px;
+        display: block;
+    }
+    .line1 {
+        font-family: Meatloaf;
+        font-size: 40px;
+        color: white;
+        text-align: center;
+        margin: 30px auto;
+        width: 90%;
+        max-width: 395px;
+    }
     .login-img {
         display: block;
         width: 100%;
@@ -275,11 +305,6 @@ footer li i{
     .main-login {
         position: relative;
         background-color: rgb(186, 160, 111);
-    }
-    .form-login {
-        position: absolute;
-        top: 5%;
-        right: 7%;
     }
     .formLoginButton:hover {
         box-shadow: 0 0 5px #010101;
