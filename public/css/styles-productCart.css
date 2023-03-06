@@ -8,6 +8,10 @@ Tipografías:
 Meatloaf
 AngryBirds
 Raleway */
+
+
+*{box-sizing: border-box}
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 * {
     color: inherit;
@@ -70,55 +74,61 @@ nav.login-bar ul{
 /*INICIO MAIN*/
 
 .img-fondo{
-    width: 100vw;
-    padding: 0px;
-    position: relative;
-    opacity: 0.7;
+    display: none;
 }
 .title-cart{
     text-align: center; 
     font-family: 'Mynerve';
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     color: black;
-    background-color: wheat;   
+    background-color: wheat; 
+    padding: 5vw;  
 }
-.main-product1 {
-    width: 70vw;
-    height: auto;
-    position: absolute;
-    top: 10vw;
-    left:15vw;
+.cuadro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin: 20px auto;
+    padding: 30px;
+    border: 3px solid #68ABB4;
+    border-radius: 10px;
+    width: 90%;
+}
+.main-cart{
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 15px auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.main-product1 {  
     background-color: whitesmoke;
     color: black;
     display: flex;   
 }
 .main-product2 {
-    width: 70vw;
-    height: auto;
-    position: absolute;
-    top: 24vw;
-    left:15vw;
     background-color: whitesmoke;
     color: black;
     display: flex;
 }
 .main-product3 {
-    width: 70vw;
-    height: 12vw;
-    position: absolute;
-    top:39vw;
-    left: 15vw;
     background-color: whitesmoke;
     color: black;
     display: flex;
+    height: 15vw;
+    flex-direction: column;
+    align-items: center;
 }
 .contenedor-product{   
-    width: 40vw;
+    width: 35vw;
     height: 15vw;
     display: flex;
-    justify-content: center;
-    text-align: left;
     align-items: center;
 }
 .img-product{
@@ -146,7 +156,7 @@ nav.login-bar ul{
     padding-top: 1vw;  
 }
 .contenedor-carrito{
-    width: 40vw;
+    width: 35vw;
     height: auto;
     display: flex;
     align-items: center;
@@ -154,13 +164,13 @@ nav.login-bar ul{
     padding-right: 5vw;
 }
 .fa-trash-can {
-    font-size: 20px;
+    font-size: 10px;
     justify-content: center;
     align-items: center;
     margin: auto;
 }
 .precio{
-    font-size: 18px;
+    font-size: 14px;
     justify-content: center;
     align-items: center;
 }
@@ -170,90 +180,86 @@ nav.login-bar ul{
     border: 1px dotted #ccc;
 }
 .qty {
-    width: 40px;
-    height: 25px;
+    width: 15px;
+    height: 20px;
     text-align: center;
 }
-input.qtyplus { width:25px; height:25px;}
-input.qtyminus { width:25px; height:25px;}
+input.qtyplus { width:15px; height:20px;}
+input.qtyminus { width:15px; height:20px;}
 
 .img-logo2{
-    margin-left: 10vw;  
+    width: 18vw;
+    height: auto;
     transition: all 1000ms;
+    display: flex;
+    position: absolute;
+    margin-right: 40vw;
 }
 .img-logo2:hover{
-    transform: rotate(360deg);
+    transform: rotate(90deg);
 }
 .main-botones{
-    width: 40vw;
-    margin-top: -3vw;
     display: flex;
-    align-items: flex-end;
     justify-content: space-around;
-    padding-top: 10vw;
-    position: absolute;
-    margin-left: 32vw;
-
+    margin-left: 36vw;
+    width: 30vw;
+    margin-top: 5vw;
 }
 .main-precio{
-    width: 30vw;
     display: flex;
-    align-items: flex-end;
     justify-content: space-around;
-    position: absolute;
-    margin-left: 41vw;
- 
+    margin-left: 40vw;
+    width: 30vw;
 }
 .button{
     background-color: #F1C732;
     border: none;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 10px;
     font-family: 'Mynerve';
 }
 
 .button-cart1{
     background-color: #F1C732;
     color: black;
-    font-size: 18px;
+    font-family: 'Mynerve';
+    font-size: 14px;
     font-weight: bold;
-    padding: 10px;
-    border-radius: 20px;
-    border: 3px solid #68ABB4;
-    margin-left: 3vw;
+    padding: 2px;
+    border-radius: 10px;
+    border: 2px solid #68ABB4;
+  
 }
 .button-cart2{
     background-color: #F1C732;
     color: black;
-    font-size: 18px;
+    font-family: 'Mynerve';
+    font-size: 14px;
     font-weight: bold;
-    padding: 10px;
-    border-radius: 20px;
-    border: 3px solid #68ABB4;
-    margin-right: 1vw;
-    
+    padding: 2px;
+    border-radius: 10px;
+    border: 2px solid #68ABB4;
 }
 
 .total{
     background-color:wheat;
     color: black;
     font-family: 'Mynerve';
-    font-size: 20px;
+    font-size: 12px;
     font-weight: bold;
-    padding: 10px;
+    padding: 2px;
     border-radius: 10px;
-    border: 3px solid #68ABB4;
-    display: flex;
+    border: 2px solid #68ABB4;
 }
 .precio-total{
     background-color: wheat;
     color: black;
-    font-size: 20px;
+    font-family: 'Mynerve';
+    font-size: 12px;
     font-weight: bold;
-    padding: 10px;
+    padding: 2px;
     border-radius: 10px;
-    border: 3px solid #68ABB4;
-    display: flex;
+    border: 2px solid #68ABB4;
 }
 /*FIN MAIN*/
 
@@ -381,96 +387,87 @@ footer li i{
         background-color: white;
         color: #010101;
     }
+
     /* MAIN */
-    div a.link-shop {
-        width: 16%;
-        left: 42%;
-        bottom: 30%;
-        padding: 5px;
-        border-radius: 5px;
-        border: 3px solid #F1C732;
-        font-size: 18px;
-        transition: all 0.2s;
+    
+    .img-fondo{
+        display: block;
+        width: 100%;
+        padding: 0px; 
+        opacity: 0.7;
+        margin: 0;
     }
-    div a.link-shop:hover {
-        box-shadow: 0 0 20px #010101;
+    .cuadro{
+    position: absolute;
+    margin-top: 13vw;
+    margin-left: 3vw;
     }
-    .star-products h2{
+    .title-cart{
+        padding: 2vw;
         font-size: 24px;
-        margin-top: 30px;
     }
-    .star-products p {
-        font-size: 18px;
+    .main-cart{
+        margin: 0;
+        padding: 0;
     }
-    .all-star-products {
-        margin: 20px auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-        padding: 15px;
-    }
-    .product-main {
-        width: 28%;
-        padding: 15px;
-        background-color: #010101;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .product-main img {
-        width: 95%;
-        padding-top: 5px;
-    }
-    .product-name {
-        font-size: 16px;
-    }
-    .go-to-buy {
-        font-size: 14px;
-        border-radius: 14px;
-        padding: 5px;
-        font-weight: 300;
+    #myform {
         text-align: center;
-        width: 80px;
-        margin: 10px;
-        transition: all 0.3s;
+        padding: 5px;
+        border: 1px dotted #ccc;
+        margin: 2%;
     }
-    .go-to-buy:hover {
-        box-shadow: 0 0 10px white;
+    .qty {
+        width: 40px;
+        height: 25px;
+        text-align: center;
     }
-    .main-video {
-        padding-top: 30px;
-        padding-bottom: 20px;
+    input.qtyplus { width:25px; height:25px;}
+    input.qtyminus { width:25px; height:25px;}
+
+    .fa-trash-can {
+        font-size: 20px;
+    
+    }
+    .precio {
+        font-size: 18px;
+    }
+    .total{
         display: flex;
+        background-color: wheat;
+        color: black;
+        font-family: 'Mynerve';
+        font-size: 2vw;
+        font-weight: bold;
+        padding: 2px;
+        border-radius: 10px;
+        border: 2px solid #68ABB4;
         align-items: center;
     }
-    .video {
-        width: 70%;
+    .precio-total{
+        display: flex;
+        background-color: wheat;
+        color: black;
+        font-family: 'Mynerve';
+        font-size: 2vw;
+        font-weight: bold;
+        padding: 2px;
+        border-radius: 10px;
+        border: 2px solid #68ABB4;
+        align-items: center;
     }
-    .video-side-text {
-        width: 30%;
-        padding: 5px 20px 5px;
+    .button{
+    
+        background-color:#F1C732;
+        color: black;
+        font-family: 'Mynerve';
+        font-size: 2vw;
+        font-weight: bold;
+        padding: 2px;
+        border-radius: 10px;
+        border: 2px solid #68ABB4;
+        align-items: center;
     }
-    .video-side-text h2 {
-        font-size: 18px;
-        margin-bottom: 15px;
-    }
-    .video-side-text p {
-        font-size: 14px;
-    }
-    .main-img-bar {
-        padding: 60px 0px;
-    }
-    .main-img-bar i {
-        font-size: 40px;
-        padding-top: 40px;
-        transition: all 0.3s;
-    }
-    .main-img-bar i:hover {
-        background-color: #01010100;
-        color: #010101;
-        text-shadow: 1px 1px #F1C732;
-    }
+
     /* FOOTER */
     section.footer-logo {
         display: inline;
