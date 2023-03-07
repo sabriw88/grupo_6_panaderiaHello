@@ -82,6 +82,7 @@ a {
     overflow: hidden;
     margin: 69px auto;
     background-color: white;
+    border: 3px solid #68ABB4;
 }
 
 .card .card_first-section img{
@@ -111,10 +112,10 @@ width: 100%;
 .card .card_second-section .card_button{
  width: 296px;
  height: 50px;
- background-color: green;
+ background-color: #F1C732;
  color: white;
- border: none;
- border-radius: 8px;
+ border-radius: 15px;
+    border: 3px solid #68ABB4;
  font-size: 1.1em;
  font-weight: 700;
  display: block;
