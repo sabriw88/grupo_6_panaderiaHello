@@ -8,7 +8,7 @@ Tipografías:
 Meatloaf
 AngryBirds
 Raleway */
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&family=Rampart+One&display=swap');
 * {
     color: inherit;
     font-family: 'Raleway', sans-serif;
@@ -51,7 +51,7 @@ h1 {
     font-size: 30px;
     color: white;
     text-align: center;
-    font-family: Meatloaf;
+    font-family: Meatloaf, 'Rampart One';
     display: inline;
 }
 nav.login-bar ul{
