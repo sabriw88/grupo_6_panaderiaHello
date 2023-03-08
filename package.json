@@ -6,12 +6,12 @@
   "scripts": {
     "test": "nodemon src/app.js",
     "start": "node src/app.js"
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.21"
   }
 }
