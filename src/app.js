@@ -2,15 +2,17 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-app.listen(3000, () => {console.log("Server running in port 3000")});
+const mainRouter = require("./routes/mainRouter.js");
+const usersRouter = require('./routes/usersRouter.js');
+const productsRouter = require('./routes/productsRouter.js');
 
 app.use(express.static(path.join(__dirname,'../public')));
-console.log(path.join(__dirname,'../public'));
 
-app.get('/', (req, res) => {res.sendFile(path.join(__dirname, './views/home.html'))});
-app.get('/login', (req, res) => {res.sendFile(path.join(__dirname, '/views/login.html'))});
-app.get('/register', (req, res) => {res.sendFile(path.join(__dirname, '/views/register.html'))})
-app.get('/productCart', (req, res) => {res.sendFile(path.join(__dirname, '/views/productCart.html'))})
-app.get('/productDetail', (req, res) => {res.sendFile(path.join(__dirname, '/views/productDetail.html'))})
-app.get('/contact', (req, res) => {res.sendFile(path.join(__dirname, '/views/contact.html'))})
+app.set('views', path.resolve(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
+app.use('/products', productsRouter);
+app.use('/users', usersRouter);
+app.use('/', mainRouter);
+
+app.listen(3000, () => {console.log("Server running in http://localhost:3000")});
