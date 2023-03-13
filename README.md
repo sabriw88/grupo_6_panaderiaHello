@@ -44,6 +44,8 @@ Aquellos pedidos especiales detallados a traves del contacto por mail.
 
 - Sabrina Juliana Wolf: Igual que Romina, tengo 34 años y dos hijos. Soy lic. en RRHH con una maestría en Negocios y Consultoría de la Berlin School of Economics and Law. Trabajo en una multinacional desde hace varios años pero tras tener a mi segundo hijo, decidí explorar otras alternativas que me permitan trabajar más desde mi casa y de manera más flexible. Nunca había programado pero siempre me interesó asique, aprovechando la licencia por maternidad, me inscribí en el curso.
 
+- Juan Navaridas: tengo 28 años. Vivo en Bolívar, pcia. de Buenos Aires, junto a mi familia. Actualmente trabajo para la Policia de la Provincia de Buenos Aires, desde hace 10 años. Busco ampliar mis horizontes y un cambio laboral por lo que elegí Digital House para formarme en el mundo de la programación.  
+
 
 * Links a sitios de interés y motivo de elección:
 
