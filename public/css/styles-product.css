@@ -100,11 +100,24 @@ a {
 .estanteDeProductos{
     background-color: white;
     border: 1px solid brown;
+    border-radius: 2rem;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
 }
 
 .cajaDeProducto{
     border: 1px solid skyblue;
     margin: 1rem;
+    text-align: center;
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.img-cajaDeProducto .imagen{
+    width: 100%;
 }
 
 
@@ -296,6 +309,10 @@ footer li i{
 
     .card_second-section{
         width: 300px;
+    }
+
+    .cajaDeProducto{
+        width: 25vw;
     }
 
 }
