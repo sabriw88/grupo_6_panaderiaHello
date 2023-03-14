@@ -57,9 +57,27 @@
             <p class="father-buscador"><input type="text" class="bottom-header-main buscador" placeholder="Buscar"></p>
             <h4 class="top-header-main">Lista de productos</h4>
             <p class="top-header-main filtro">Filtros</p>
-           
+     
         </div>
+
+       <section class="estanteDeProductos">
+        <% products.forEach(product => { %>
+         
        
+        <section class="cajaDeProducto">
+            <a href="#"></a>
+            <figure class="img-cajaDeProducto">
+                <img src="/public/img/<%= product.image %>" alt="imagen del producto">
+            </figure>
+            <article>
+                <h2><%= product.name%></h2>
+                <p><%= product.price%></p>
+            </article>
+        </section>
+
+
+        <% }) %>
+    </section>
     </main>
 
 

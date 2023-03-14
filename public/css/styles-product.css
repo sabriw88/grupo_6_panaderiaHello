@@ -93,7 +93,19 @@ a {
     width: 95vw;
 }
 
+.main-product{
+    background-color: #fffdf8;
+}
 
+.estanteDeProductos{
+    background-color: white;
+    border: 1px solid brown;
+}
+
+.cajaDeProducto{
+    border: 1px solid skyblue;
+    margin: 1rem;
+}
 
 
 /* FOOTER */
