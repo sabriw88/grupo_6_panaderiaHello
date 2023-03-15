@@ -61,22 +61,26 @@
         </div>
 
        <section class="estanteDeProductos">
+      
         <% products.forEach(product => { %>
          
-       
-        <section class="cajaDeProducto">
-            <a href="#"></a>
-            <figure class="img-cajaDeProducto">
-                <img  class= 'imagen' src="/img/<%= product.image %>" alt="imagen del producto">
-            </figure>
-            <article>
-                <h2><%= product.name%></h2>
-                <p><%= product.price%></p>
-            </article>
-        </section>
-
+            <div class="cajaDeProducto">
+                <section class="cajaDeProductoSuperior">
+                    <img src="/img/<%= product.image %>" alt="foto">
+                </section>
+                <section class="cajaDeProductoInferior">
+                    <p class="tipo">Pan</p>
+                    <h2 class="titulo"><%= product.name%></h2>
+                    <div class="precio">
+                        <p>$<%= product.price%></p>
+                    </div>
+                    <button class="boton">Add to card</button>
+                </section>
+            </div>
 
         <% }) %>
+
+       
     </section>
     </main>
 

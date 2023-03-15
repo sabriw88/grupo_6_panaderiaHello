@@ -83,6 +83,8 @@ a {
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin: auto;
+    color: white;
+    font-size: 1.5em;
 }
 
 .filtro{
@@ -94,7 +96,8 @@ a {
 }
 
 .main-product{
-    background-color: #fffdf8;
+   /*  background-color: #fffdf8; */
+    background-image: url(/img/fotoCarrito1.jpg);
 }
 
 .estanteDeProductos{
@@ -109,11 +112,45 @@ a {
 }
 
 .cajaDeProducto{
-    border: 1px solid skyblue;
+    border: 3px solid #68ABB4;
     margin: 1rem;
-    text-align: center;
-    padding: 1rem;
-    margin: 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.cajaDeProductoInferior{
+    padding-left: 1rem;
+}
+
+.cajaDeProductoInferior .tipo{
+    margin: 8px 0px 8px 0px;
+    color: grey;
+}
+
+
+.cajaDeProductoInferior .titulo{
+    margin: 0px 0px 8px 0px;
+    font-size: 1.5em;
+}
+
+.cajaDeProductoInferior .precio p{
+    font-size: 2em;
+    color: green;
+    margin: 0 0px 8px 0px;
+}
+
+.cajaDeProductoInferior .boton {
+    width: 20rem;
+    height: 2.5rem;
+    background-color: #F1C732;
+    color: white;
+    border-radius: 15px;
+       border: 3px solid #68ABB4;
+    font-size: 1.1em;
+    font-weight: 700;
+    display: block;
+    margin: auto;
+    margin-bottom: 13px;
 }
 
 .img-cajaDeProducto .imagen{
@@ -281,7 +318,10 @@ footer li i{
         width: 28vw;
     }
 
-    
+    .cajaDeProductoSuperior{
+        text-align: center;
+        padding-top: 8px;
+    }
     
 
     .card{
@@ -291,11 +331,6 @@ footer li i{
         margin: 100px auto;
     }
 
-    .card .card_first-section img{
-
-        content: url(/img/baguette-1.jpg);
-
-    }
 
     .father-buscador{
         margin: auto;
