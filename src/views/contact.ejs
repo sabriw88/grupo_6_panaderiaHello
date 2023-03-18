@@ -1,50 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello! Cakes & Bakery</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/styles-contact.css">
-</head>
+<%- include('partials/head.ejs') %>
+
 <body class="body-contact">
-    <header>
-        <div class="bottom-header-bar">
-            <div class="icon-bars">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <nav class="main-bar">
-                <ul type="none">
-                    <li><a href="/"><i class="fa-solid fa-house-chimney"></i>
-                            <p>HOME</p>
-                        </a></li>
-                    <li><a href="/productDetail">
-                            <p>PRODUCTOS</p>
-                        </a></li>
-                    <li><a href="#">
-                            <p>ABOUT-US</p>
-                        </a></li>
-                    <li><a href="/contact">
-                            <p>CONTACTO</p>
-                        </a></li>
-                </ul>
-            </nav>
-            <h1>HELLO!</h1>
-            <nav class="login-bar">
-                <ul type="none">
-                    <li><a href="/login">
-                            <div class="icon"><i class="fa-solid fa-right-to-bracket"></i></div>
-                            <p>Login</p>
-                        </a></li>
-                    <li><a href="/productCart">
-                            <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
-                            <p>Carrito</p>
-                        </a></li>
-                </ul>
-            </nav>
-        </div>
-    </header> 
+
+<%- include('partials/header.ejs') %>
+
     <form action="mailto:tucorreo@ejemplo.com" method="post" enctype="text/plain">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre"><br>
@@ -58,40 +17,8 @@
         <input type="submit" value="Enviar">
         <input type="reset" value="Borrar">
       </form>
-      <footer>
-        <section class="footer-logo">
-            <img src="/img/Logo.png" alt="HELLO!">
-            <h1>HELLO!</h1>
-        </section>
-        <section class="footer-navbar">
-            <div class="footer-secciones">
-                <ul type="none">
-                    <h2>SECCIONES</h2>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">PRODUCTOS</a></li>
-                    <li><a href="#">ABOUT-US</a></li>
-                    <li><a href="#">CONTACTO</a></li>
-                </ul>
-            </div>
-            <div class="footer-socialmedia">
-                <h2>SEGUINOS EN</h2>
-                <ul type="none">
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i><p>Usuario IG</p></a></li>
-                    <li><a href="#"><i class="fa-brands fa-facebook"></i><p>Usuario fb</p></a></li>
-                    <li><a href="#"><i class="fa-brands fa-tiktok"></i><p>Usuario tiktok</p></a></li>
-                </ul>
-            </div>
-            <div class="footer-contacto">
-                <h2>CONTACTO</h2>
-                <ul type="none">
-                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i><p>+54 11 5555 4444</p></a></li>
-                    <li><a href="#"><i class="fa-regular fa-envelope"></i><p>contacto_hello@gmail.com</p></a></li>
-                    <li><a href="#"><i class="fa-solid fa-location-dot"></i><p>Calle False 123</p><br><p>1400 CABA</p></a></li></ul>
-            </div>
-        </section>
-        <section class="copyright">
-            <p>Todos los derechos reservados</p>
-        </section>
-    </footer>
+
+<%- include('partials/footer.ejs') %>
+
 </body>
 </html>
