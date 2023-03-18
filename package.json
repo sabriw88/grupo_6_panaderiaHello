@@ -1,7 +1,7 @@
 {
   "name": "proyectointegrador-mycode",
   "version": "1.0.0",
-  "description": "",
+  "description": "* Oferta de productos/servicios ofrecidos y audiencia objetivo:",
   "main": "./src/app.js",
   "scripts": {
     "test": "nodemon src/app.js",
@@ -14,5 +14,13 @@
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "nodemon": "^2.0.21"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabriw88/grupo_6_panaderiaHello.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sabriw88/grupo_6_panaderiaHello/issues"
+  },
+  "homepage": "https://github.com/sabriw88/grupo_6_panaderiaHello#readme"
 }
