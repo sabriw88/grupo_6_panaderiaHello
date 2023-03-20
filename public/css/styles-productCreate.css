@@ -10,12 +10,52 @@
 body {
     width: 100vw;
 }
-
-.footer-create {
-    border: 5px solid red;
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
+/* HEADER */
+.logo {
+    display: none;
+}
+div.bottom-header-bar {
+    background-color: #010101;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.bottom-header-bar i {
+    color: white;
+    font-size: 14px;
+    display: inline;
+}
+.icon,
+.icon-bars {
+    padding: 3px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 5px;
+}
+.main-bar {
+    display: none;
+}
+h1 {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-family: Meatloaf, 'Rampart One';
+    display: inline;
+}
+nav.login-bar ul{
+    display: flex;
+    direction: row;
+    flex-wrap: nowrap;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+.login-bar ul li p {
+    display: none;
+}
+a {
+    text-decoration: none;
 }
 /* MAIN */
 .main-create {
@@ -31,9 +71,9 @@ body {
     text-align: center;
 }
 .body-create {
-    background-color: wheat;
+    background-color: rgb(237, 238, 242);
 }
-.login-img {
+.create-img {
     display: none;
 }
 .form-create {
@@ -162,7 +202,7 @@ select {
     .CreateButton:hover {
         box-shadow: 0 0 5px #010101;
     }
-    /* FOOTER */
+
     section.footer-logo {
         display: inline;
     }
