@@ -1,70 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&family=Rampart+One&display=swap');
-* {
-    color: inherit;
-    font-family: 'Raleway', sans-serif;
-    font-size: 12px;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-body {
-    width: 100vw;
-}
-/* HEADER */
-.logo {
-    display: none;
-}
-div.bottom-header-bar {
-    background-color: #010101;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.bottom-header-bar i {
-    color: white;
-    font-size: 14px;
-    display: inline;
-}
-.icon,
-.icon-bars {
-    padding: 3px;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    margin: 5px;
-}
-.main-bar {
-    display: none;
-}
-h1 {
-    font-size: 30px;
-    color: white;
-    text-align: center;
-    font-family: Meatloaf, 'Rampart One';
-    display: inline;
-}
-nav.login-bar ul{
-    display: flex;
-    direction: row;
-    flex-wrap: nowrap;
-    margin-top: 3px;
-    margin-right: 5px;
-}
-.login-bar ul li p {
-    display: none;
-}
-a {
-    text-decoration: none;
-}
 /* MAIN */
 .main-create {
     position: relative;
     min-width: 100vw;
     margin-top: 5vw;
 }
-
-
 .create-title{
     font-size: 18px;
     margin-bottom: 16px;
@@ -97,7 +36,6 @@ a {
     background-color: #68abb418;
     padding: 2px;
 }
-
 select {
     width: 100%;
     border: 3px solid #68ABB4;
@@ -107,11 +45,9 @@ select {
     font-size: 16px;
     height: 38px;
 }
-
 .create-input, .login-checkbox {
     margin-bottom: 2px;
 }
-
 .CreateButton {
     background-color: #F1C732;
     margin: 20px auto;
@@ -123,87 +59,12 @@ select {
     border: 3px solid #68ABB4;
 }
 
-
 @media (min-width: 899px) {
-    /* HEADER */
-    .logo {
-        display: block;
-        background-color: #010101;
-        margin-top: -20px;
-        margin-bottom: -30px;
-    }
-    .logo img {
-        width: 100px;
-        padding-left: 5px;
-    }
-    .bottom-header-bar div.icon-bars,
-    .fa-bars {
-        display: none;
-    }
-    .main-bar {
-        color: white;
-        display: inline;
-    }
-    .main-bar ul {
-        display: flex;
-        margin: 0px 10px;
-    }
-    .main-bar ul li,
-    .login-bar ul li {
-        padding: 5px 10px;
-    }
-    .main-bar ul li p,
-    .main-bar ul li i {
-        font-size: 16px;
-        display: inline;
-    }
-    .main-bar ul li i {
-        padding: 0px 3px;
-    }
-    header h1 {
-        display: none;
-    }
-    .login-bar {
-        padding-right: 10px;
-    }
-    .login-bar ul li p {
-        display: inline;
-    }
-    .login-bar ul li a div {
-        display: inline;
-    }
-    .login-bar p {
-        font-size: 16px;
-        padding-right: 5px;
-    }
-    .login-bar i {
-        font-size: 16px
-    }
-    .bottom-header-bar {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 0 5px;
-    }
-    .main-bar {
-        text-align: left;
-    }
-    .main-bar li:hover,
-    .login-bar li:hover {
-        background-color: white;
-        color: #010101;
-        border-radius: 2px;
-    }
-    .main-bar li:hover i,
-    .login-bar li:hover i{
-        background-color: white;
-        color: #010101;
-    }
     /* MAIN */
     .CreateButton:hover {
         box-shadow: 0 0 5px #010101;
     }
-
-    section.footer-logo {
+/*     section.footer-logo {
         display: inline;
     }
     .footer-logo img{
@@ -243,5 +104,5 @@ select {
     .footer-socialmedia li,
     .footer-contacto li {
         text-indent: 10px;
-    }
+    } */
 }
