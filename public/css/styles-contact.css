@@ -1,260 +1,55 @@
 /* MAIN */
-.img-logo-shop{
-    position: relative;
-}
-.main-img {
-    width: 100%;
-}
-.main-logo {
-    width: 30%;
-    position: absolute;
-    top: 5%;
-    left: 35%;
-}
-.main-logo:hover {
-    animation: greeting 0.5s 1;
-}
-@keyframes greeting {
-    25% {
-        transform: rotate(20deg);
-    }
-    50% {
-        transform: rotate(-20deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
-div a.link-shop {
-    width: 20%;
-    position: absolute;
-    left: 40%;
-    bottom: 30%;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    background-color: #68ABB4;
-    color: white;
-    padding: 3px;
-    border-radius: 2px;
-    border: 3px solid #F1C732;
-}
-a {
-    text-decoration: none;
-}
-.star-products {
-    width: 95%;
-    margin: auto;
-    padding: 5px;
-}
-.star-products h2 {
-    font-size: 16px;
-    margin-top: 5px;
-    text-align: center;
-    color: #d27518;
-    font-weight: 500;
-}
-.star-products p {
-    text-align: center;
-    font-style: italic;
-    font-size: 10px;
-}
-.all-star-products {
-    width: 100%;
-    margin: 5px auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    padding: 5px;
-}
-.product-main {
-    width: 30%;
-    padding: 5px;
-    background-color: #010101;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.product-main img {
-    width: 95%;
-}
-.product-name {
-    font-size: 10px;
-    font-weight: 500;
-    color: #d27518;
-}
-.go-to-buy {
-    bottom: 0px;
-    background-color: #F1C732;
-    border: 3px solid #68ABB4;
-    color: #010101;
-    border-radius: 12px;
-    padding: 3px;
-    font-weight: 300;
-    text-align: center;
-    width: 65px;
-    margin: auto;
-}
-.product-bottom-box {
-    position: relative;
-    margin-top: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    margin-bottom: 10px;
-}
-.product-bottom-box p {
-    text-align: right;
-    margin-bottom: 10px;
-    color: white;
-    font-style: normal;
-}
-.main-video {
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    display: flex;
-    background-color: white;
-}
-.video {
-    width: 60%;
-    display: inline;
-    margin-left: 5%;
-}
-.video img {
-    width: 100%;
-    padding: 5px;
-}
-.video-side-text {
-    width: 40%;
-    display: inline;
-    padding: 5px;
-    margin-right: 5%;
-}
-.main-img-bar {
-    padding: 30px 0px;
-    display: flex;
-    overflow: hidden;
-    flex-wrap: nowrap;
-}
-.img-ig-container {
-    position: relative;
-}
-.main-img-bar img {
-    width: 100%;
-    height: 100%;
-    display: inline;
-}
-.main-img-bar i {
-    font-size: 25px;
-    position: absolute;
-    right: 0px;
-    color: rgba(255, 255, 255, 0.3);
-    background-color: #01010183;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    padding-top: 15px;
-    transition: all 0.3s;
-}
-.main-img-bar i:hover {
-    background-color: #01010100;
-    color: #010101;
-    text-shadow: 1px 1px #F1C732;
-}
-/* FIN MAIN */
 
-@media (min-width: 899px) {
-    /* MAIN */
-    div a.link-shop {
-        width: 16%;
-        left: 42%;
-        bottom: 30%;
-        padding: 5px;
-        border-radius: 5px;
-        border: 3px solid #F1C732;
-        font-size: 18px;
-        transition: all 0.2s;
-    }
-    div a.link-shop:hover {
-        box-shadow: 0 0 20px #010101;
-    }
-    .star-products h2{
-        font-size: 24px;
-        margin-top: 30px;
-    }
-    .star-products p {
-        font-size: 18px;
-    }
-    .all-star-products {
-        margin: 20px auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-        padding: 15px;
-    }
-    .product-main {
-        width: 28%;
-        padding: 15px;
-        background-color: #010101;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .product-main img {
-        width: 95%;
-        padding-top: 5px;
-    }
-    .product-name {
-        font-size: 16px;
-    }
-    .go-to-buy {
-        font-size: 14px;
-        border-radius: 14px;
-        padding: 5px;
-        font-weight: 300;
-        text-align: center;
-        width: 80px;
-        margin: 10px;
-        transition: all 0.3s;
-    }
-    .go-to-buy:hover {
-        box-shadow: 0 0 10px white;
-    }
-    .main-video {
-        padding-top: 30px;
-        padding-bottom: 20px;
-        display: flex;
-        align-items: center;
-    }
-    .video {
-        width: 70%;
-    }
-    .video-side-text {
-        width: 30%;
-        padding: 5px 20px 5px;
-    }
-    .video-side-text h2 {
-        font-size: 18px;
-        margin-bottom: 15px;
-    }
-    .video-side-text p {
-        font-size: 14px;
-    }
-    .main-img-bar {
-        padding: 60px 0px;
-    }
-    .main-img-bar i {
-        font-size: 40px;
-        padding-top: 40px;
-        transition: all 0.3s;
-    }
-    .main-img-bar i:hover {
-        background-color: #01010100;
-        color: #010101;
-        text-shadow: 1px 1px #F1C732;
-    }
+.formulario{
+    text-align: center;
+    background-color: white;
+    margin: 15px auto;
+    padding: 30px;
+    border: 3px solid #68ABB4;
+    border-radius: 10px;
+    max-width: 400px;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+}
+.body-contact {
+    background-color: rgb(237, 238, 242);
+}
+.login-input label{
+    font-size: 16px;
+    display: flex;
+    line-height: 1vw;
+}
+.login-logo img{
+    width: 100%;
+    margin: -10px 0;
+    cursor: pointer;
+}
+.login-input input {
+    width: 100%;
+    border: 3px solid #68ABB4;
+    border-radius: 5px;
+    background-color: #68abb418;
+    padding: 2px;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+.login-input textarea {
+    width: 100%;
+    border: 3px solid #68ABB4;
+    border-radius: 5px;
+    background-color: #68abb418;
+    padding: 2px;
+    line-height: 40px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.formLoginButton {
+    background-color: #F1C732;
+    margin: 20px auto;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 15px;
+    border: 3px solid #68ABB4;
 }

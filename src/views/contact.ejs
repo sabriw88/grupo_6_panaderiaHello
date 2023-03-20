@@ -4,19 +4,30 @@
 
 <%- include('partials/header.ejs') %>
 
-    <form action="mailto:tucorreo@ejemplo.com" method="post" enctype="text/plain">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre"><br>
-      
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email"><br>
-      
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje"></textarea><br>
-      
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Borrar">
+    <div class="formulario">
+      <form class="login" action="">
+          <div class="login-input">
+              <label for="user">Nombre:</label><br>
+              <input type="text">
+              <span class="feedback"></span>
+          </div>
+          <div class="login-input">
+              <label for="email">Correo electrónico:</label><br>
+              <input type="email">
+              <span class="feedback"></span>
+          </div>
+          <div class="login-input">
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje"></textarea>
+            <span class="feedback"></span>
+        </div>
+          <a href="/"><button type="button" class="formLoginButton">Ingresar</button></a>
+          <div class="login-logo">
+              <img src="../img/Logo-recortado.png" alt="">
+          </div>
       </form>
+  </div>
+
 
 <%- include('partials/footer.ejs') %>
 
