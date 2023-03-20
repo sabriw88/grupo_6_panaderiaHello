@@ -42,7 +42,7 @@ A continuacion exponemos el resultado de la daily de nuestro equipo:
         Si encontró algún impedimento: Forma de aplicar la hoja de estilo individual a cada vista.
         Qué va a hacer: Completar los partials, la retrospectiva y el daily.
     - Semana 2:
-        Qué hizo: Agregar información del sprint 2 a la retrospectiva ; completar la areas de partials y actualizar las vistas para que sean dinámicas ; agregar contenido al archivo daily.
+        Qué hizo: Agregar información del sprint 2 a la retrospectiva ; completar la areas de partials y actualizar las vistas para que sean dinámicas ; agregar contenido al archivo daily ; corregir codigo en contact.ejs y agregarle estilo css.
         Si encontró algún impedimento: -
         Qué va a hacer: Ultimar detalles del proyecto en general.
 ● Sabrina Juliana Wolf: 
