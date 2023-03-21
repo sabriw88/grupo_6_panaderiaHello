@@ -18,15 +18,15 @@ A continuacion exponemos el resultado de la daily de nuestro equipo:
 
      - Semana 1: 
      
-        Qué hizo:
-        Si encontró algún impedimento:
-        Qué va a hacer:
+        Qué hizo: Ponerse al dia con contenido y revisar trabajo realizado por compañeros. 
+        Si encontró algún impedimento: -
+        Qué va a hacer: Agregar contenido a la retro, poner a punto Tablero de trello.
         
     - Semana 2:
     
-        Qué hizo:
-        Si encontró algún impedimento:
-        Qué va a hacer:
+        Qué hizo: Actualizar Tablero, revisar pendientes de sprint anterior.
+        Si encontró algún impedimento: -
+        Qué va a hacer: Implementar cambios en aspectos de diseño en general, paleta, fonts, transiciones. 
         
         
 ● Dante Costamagna:
@@ -63,7 +63,7 @@ A continuacion exponemos el resultado de la daily de nuestro equipo:
 
     - Semana 1: 
     
-        Qué hizo: Creación de archivo daily.md ; creación de la carpeta partials dentro de la carpeta de views, separando las áreas ccomunes head, header y footer.
+        Qué hizo: Creación de archivo daily.md ; creación de la carpeta partials dentro de la carpeta de views, separando las áreas comunes head, header y footer.
         Si encontró algún impedimento: Forma de aplicar la hoja de estilo individual a cada vista.
         Qué va a hacer: Completar los partials, la retrospectiva y el daily.
         
@@ -102,4 +102,4 @@ A continuacion exponemos el resultado de la daily de nuestro equipo:
     
         Qué hizo: Creación del estilo del formulario para crear y editar productos.
         Si encontró algún impedimento: -
-        Qué va a hacer: Ultimar detaalles de diseño.
+        Qué va a hacer: Ultimar detalles de diseño.
