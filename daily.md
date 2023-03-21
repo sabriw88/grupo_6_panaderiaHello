@@ -78,15 +78,15 @@ A continuacion exponemos el resultado de la daily de nuestro equipo:
 
     - Semana 1: 
     
-        Qué hizo: Implementar el módulo EJS y renombrar todas las vistas actuales para que utilicen la
-        extensión .ejs ; modificar los métodos de los controladores para que utilicen el método render(); separar las vistas en la carpeta products y users.
-        Si encontró algún impedimento:
-        Qué va a hacer:
+        Qué hizo: Crear las carpetas según modelo MVC e implementar el módulo EJS, renombrar todas las vistas actuales para que utilicen la
+        extensión .ejs y agruparlos en las carpetas correspondientes; codear los métodos de los controladores y los enrutadores.
+        Si encontró algún impedimento: -
+        Qué va a hacer: Revisar que las rutas estén funcionando correctamente
         
     - Semana 2:
     
-        Qué hizo: Corrección de las rutas para el correcto funcionamiento de la página; creación de la hoja de estilo css para el header y footer, evitando que se pisen los estilos. 
-        Si encontró algún impedimento:
+        Qué hizo: Corrección de rutas para el correcto funcionamiento de la página; creación de la hoja de estilo css para el header y footer, agregar código para que cada vista tenga asociada únicamente su propia hoja de estilo y así evitar que se pisen los estilos entre vistas. 
+        Si encontró algún impedimento: 
         Qué va a hacer: Ultimar detalles del proyecto en general.
         
         
