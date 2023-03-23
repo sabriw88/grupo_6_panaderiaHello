@@ -11,7 +11,9 @@ const productsController = {
       },
 
     detalleProducto: (req,res)=>{
-      res.render('products/productDetail')
+      const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
+      let producto = products.find(producto => producto.id == req.params.id)
+      res.render('products/productDetail', {producto: producto});
     },
 
     create: (req, res) => {

@@ -14,10 +14,11 @@
         </div>
 
        <section class="estanteDeProductos">
+
       
         <% products.forEach(product => { %>
          
-            <div class="cajaDeProducto">
+            <a href="/products/productDetail/<%= product.id %>"> <div class="cajaDeProducto">
                 <section class="cajaDeProductoSuperior">
                     <img src="/img/<%= product.image %>" alt="foto">
                 </section>
@@ -26,7 +27,7 @@
                     <h2 class="titulo"><%= product.name%></h2>
                     <div class="precio">
                         <p>$<%= product.price%></p>
-                    </div>
+                    </div></a>
                     <button class="boton">Add to card</button>
                 </section>
             </div>
@@ -36,6 +37,9 @@
        
     </section>
     </main>
+    
+    <br>
+    <br>
 
     <%- include('../partials/footer.ejs') %>
 

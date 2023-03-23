@@ -2,20 +2,18 @@
 
 <body class="body-productDetail">
     <%- include('../partials/header.ejs') %>
-    <main class="mainProduct">  
+    <main class="mainProduct"> 
+        
         <div class="card">
             <section class="card_first-section">
                 <img src="/img/panBaguete.jfif" alt="foto">
             </section>
             <section class="card_second-section">
                 <p class="productType">Pan</p>
-                <h2 class="titulo">BAGUETTE</h2>
-                <P class="description">se afirma que la baguette o el pan francés fue elaborado por primera vez en Viena, Austria, a
-                    mediados del siglo XIX. Y se realizaban en los primeros hornos a vapor. Los mismos posibilitaron
-                    entonces esa corteza crujiente y la miga blanca aireada y esponjosa con la que la conocemos
-                    actualmente.</P>
+                <h2 class="titulo"><%= producto.name %></h2>
+                <P class="description"><%= producto.description %></P>
                 <div class="precio">
-                    <p>150.00$</p>
+                    <p><%= producto.price %>$</p>
                 </div>
                 <button class="card_button">Add to card</button>
             </section>
