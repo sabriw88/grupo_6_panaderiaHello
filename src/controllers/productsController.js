@@ -19,6 +19,47 @@ const productsController = {
     create: (req, res) => {
       res.render('products/productCreate')
     },
+
+
+  //Edición
+    edit: (req, res) => {
+      const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
+      let id = req.params.id;
+      let productToEdit = products.find(product => product.id == id);
+
+      res.render('products/productEdit', {productToEdit})
+    },
+
+    update: (req, res) => {
+
+      const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+      let id = req.params.id;
+
+      let productWithoutEdit = products.find(product => product.id == id);
+      
+      let productoEditado = {
+        id: id,
+        name: req.body.name,
+        price: req.body.price,
+        category: req.body.category,
+        description: req.body.description,
+        image: productWithoutEdit.image
+      };
+
+      let indice = products.findIndex(product => {
+        return product.id == id
+      })
+      products[indice] = productoEditado;
+
+      let productsJSON = JSON.stringify(products, null, " ");
+
+      fs.writeFileSync(productsFilePath, productsJSON);
+
+      res.redirect('/products/productDetail/' +id);
+      
+      }
+      
 }
 
 module.exports = productsController;

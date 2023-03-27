@@ -13,9 +13,11 @@
                 <h2 class="titulo"><%= producto.name %></h2>
                 <P class="description"><%= producto.description %></P>
                 <div class="precio">
-                    <p><%= producto.price %>$</p>
+                    <p>$<%= producto.price %></p>
                 </div>
-                <button class="card_button">Add to card</button>
+                <button class="card_button">Add to cart</button>
+                <br>
+                <a href="/products/productEdit/<%= producto.id %>" class="card_button">Editar producto</a>
             </section>
         </div>
 

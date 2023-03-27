@@ -1,4 +1,4 @@
-<%- include('../partials/head.ejs', {cssSheet: "styles-productCreate"}) %>
+<%- include('../partials/head.ejs', {cssSheet: "styles-productEdit"}) %>
 
 <body class="body-create">
 
@@ -9,17 +9,17 @@
         <img src="https://cdn.pixabay.com/photo/2016/11/29/10/09/bakery-1868925_1280.jpg"valt="">
     </div>
     <div class="form-create">
-        <form action="/products" method="POST">           
+        <form action="/products/productEdit/<%= productToEdit.id %>?_method=PATCH" method="POST">           
             <div class="row product-detail">
-                <h2 class="create-title">Formulario de creación de productos</h2>
+                <h2 class="create-title">Editá el producto "<%= productToEdit.name %>"</h2>
                 <div class="create-input">
                     <label for="name" class="form-label">Nombre del producto:</label>
-                    <input type="text" id="name" name="name" class="form-input"></input>
+                    <input type="text" id="name" name="name" value="<%= productToEdit.name %>" class="form-input"></input>
                 </div>
 
                 <div class="create-input">
-                    <label for="description" class="form-label">Descipción:</label>
-                    <input name="description" id="description" class="form-input"></input>
+                    <label for="description" class="form-label">Descripción:</label>
+                    <input name="description" id="description" value="<%= productToEdit.description %>" class="form-input"></input>
                 </div>
 
                 <div class="create-input">
@@ -31,17 +31,17 @@
                     <select name="category" id="category" class="form-input">
                         <option value="">Elegí</option>
                         <option value="panes">Panes</option>
-                        <option value="pasteleria">Pasteleria</option>
+                        <option value="pasteleria">Pastelería</option>
                         <option value="delicias">Delicias</option>
                     </select>
                 </div>
                 
                 <div class="create-input">
                     <label for="price" class="form-label">Precio del producto:</label>
-                    <input type="number" id="price" name="price" class="form-input">
+                    <input type="number" id="price" name="price" value= <%= productToEdit.price %> class="form-input">
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="CreateButton">Guardar producto</button>
+                    <button type="submit" class="CreateButton">Guardar edición</button>
                 </div>
             </div>
         </form>

@@ -1,6 +1,13 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+const methodOverride = require("method-override");
+app.use(methodOverride("_method"));
 
 const mainRouter = require("./routes/mainRouter.js");
 const usersRouter = require('./routes/usersRouter.js');
