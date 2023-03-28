@@ -90,7 +90,26 @@ a {
     margin: 69px auto;
     background-color: white;
     border: 3px solid #68ABB4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
+
+a.card_button {
+    display: block;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    line-height: 50px;
+  }
 
 .card .card_first-section img {
     width: 100%;
