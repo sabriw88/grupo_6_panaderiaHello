@@ -15,13 +15,34 @@ const productsController = {
       let producto = products.find(producto => producto.id == req.params.id)
       res.render('products/productDetail', {producto: producto});
     },
-
+//crear
     create: (req, res) => {
-      res.render('products/productCreate')
+      res.render('products/productCreate');
     },
 
+    store: (req, res) => {
+      const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
+      
+    console.log (req.body)
 
-  //Edición
+      let productoNuevo = { 
+      id: products [products.length -1].id + 1,
+      name: req.body.name,
+      price: req.body.price ,
+      category: req.body.category,
+      description: req.body.description,
+      image: "panBaguete.jfif"
+    }
+      products.push(productoNuevo);
+
+      let productsJSON = JSON.stringify (products, null, " ");
+    
+      fs.writeFileSync(productsFilePath,productsJSON);
+
+      res.redirect ("/products")
+    },
+
+  //Edición 
     edit: (req, res) => {
       const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
       let id = req.params.id;
