@@ -15,12 +15,14 @@
                 <div class="precio">
                     <p>$<%= producto.price %></p>
                 </div>
-                <button class="card_button">Add to cart</button>
+                    <button class="card_button">Add to cart</button>
                 <br>
                 <a href="/products/productEdit/<%= producto.id %>" class="card_button">Editar producto</a>
+                <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST" >
+                    <button type="submit" class="card_button" onclick="return confirm('Estas seguro que quieres borrar este producto?')">Borrar producto</button>
+                </form>
             </section>
         </div>
-
     </main>
 
     <%- include('../partials/footer') %>
