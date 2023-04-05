@@ -28,7 +28,7 @@ const productsController = {
       let productoNuevo = { 
       id: products [products.length -1].id + 1,
       name: req.body.name,
-      price: req.body.price ,
+      price: parseInt (req.body.price) ,
       category: req.body.category,
       description: req.body.description,
       image: "panBaguete.jfif"
