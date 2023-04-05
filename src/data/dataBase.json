@@ -1,6 +1,6 @@
 [
  {
-  "id": "1",
+  "id": 1,
   "name": "Baguette",
   "price": "80",
   "category": "",
@@ -10,8 +10,8 @@
  {
   "id": 2,
   "name": "Pan de Molde",
-  "price": 58,
-  "category": "Panes",
+  "price": "79",
+  "category": "",
   "description": "El pan de molde (o pan sandwich) es aquel pan cuya masa se enriquece con mantequilla o leche y se hornea dentro de un molde o lata. Gracias a esto, el pan resultante tiene una corteza blanda y dorada, y una miga suave y esponjosa. Se suele vender rebanado, y se utiliza para elaborar sándwiches principalmente.",
   "image": "panBaguete.jfif"
  },
