@@ -68,14 +68,14 @@ A continuación exponemos el resultado de la daily del cuarto sprint de nuestro 
      - Semana 1: 
      
         Qué hizo: Ponerse al dia con contenido y revisar trabajo realizado por compañeros. 
-        Si encontró algún impedimento: -
-        Qué va a hacer: Agregar contenido a la retro, poner a punto Tablero de trello.
+        Si encontró algún impedimento: - Recorrer el camino de desarrollo del proyecto.
+        Qué va a hacer: Poner a punto Tablero de trello.
         
     - Semana 2:
     
-        Qué hizo: Actualizar Tablero, revisar pendientes de sprint anterior.
-        Si encontró algún impedimento: -
-        Qué va a hacer: Implementar cambios en aspectos de diseño en general, paleta, fonts, transiciones. 
+        Qué hizo: Actualizar Tablero, realización de funcion DELETE como parte de tarea asignada del CRUD. 
+        Si encontró algún impedimento: - problemas al pushear para resolver conflictos.
+        Qué va a hacer: Tratar de implementar el trabajo con branches, para mayor seguridad.
         
         
 ● Romina Salminci:
