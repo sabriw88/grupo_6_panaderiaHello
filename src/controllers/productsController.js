@@ -21,17 +21,16 @@ const productsController = {
     },
 
     store: (req, res) => {
+      console.log(req.file);
       const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
       
-    console.log (req.body)
-
       let productoNuevo = { 
       id: products [products.length -1].id + 1,
       name: req.body.name,
       price: parseInt (req.body.price) ,
       category: req.body.category,
       description: req.body.description,
-      image: "panBaguete.jfif"
+      image: req.file ? req.file.filename : "default-image.png",
     }
       products.push(productoNuevo);
 
@@ -62,7 +61,7 @@ const productsController = {
       let productoEditado = {
         id: id,
         name: req.body.name,
-        price: req.body.price,
+        price: parseInt (req.body.price),
         category: req.body.category,
         description: req.body.description,
         image: productWithoutEdit.image
@@ -77,10 +76,29 @@ const productsController = {
 
       fs.writeFileSync(productsFilePath, productsJSON);
 
-      res.redirect('/products/productDetail/' +id);
+      res.redirect('/products/detail/' +id);
       
       }
       
-}
+,
 
+  //Delete
+
+      destroy : (req, res) => {
+      let id = req.params.id;
+
+      const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+      let finalProducts = products.filter(product => {
+      return product.id != id
+      })
+
+      let productsJSON = JSON.stringify(finalProducts, null," ")
+
+      fs.writeFileSync(productsFilePath, productsJSON);
+
+       res.redirect("/products");
+
+      }
+    };
 module.exports = productsController;

@@ -1,0 +1,62 @@
+[
+ {
+  "id": 1,
+  "name": "John",
+  "surname": "Snow",
+  "email": "jsnow@gmail.com",
+  "bday": "1985-05-06",
+  "address": "cualquiera",
+  "password": "$2a$10$Rne.1OOJ8IOwYkrTJSHtIuMyF3OhmT2p1wOH4VspdYja4C6prxwo2",
+  "avatar": "1680480988558.jpg"
+ },
+ {
+  "id": 2,
+  "name": "Brandon",
+  "surname": "Stark",
+  "email": "bstark@gmail.com",
+  "bday": "1999-06-04",
+  "address": "cualquiera",
+  "password": "$2a$10$Rne.1OOJ8IOwYkrTJSHtIuMyF3OhmT2p1wOH4VspdYja4C6prxwo2",
+  "avatar": "1680480988558.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Cersei",
+  "surname": "Lannister",
+  "email": "clannister@gmail.com",
+  "bday": "1978-05-05",
+  "address": "cualquiera",
+  "password": "$2a$10$Rne.1OOJ8IOwYkrTJSHtIuMyF3OhmT2p1wOH4VspdYja4C6prxwo2",
+  "avatar": "1680480988558.jpg"
+ },
+ {
+  "id": 4,
+  "name": "Rob",
+  "surname": "Stark",
+  "email": "rstark@gmail.com",
+  "bday": "1988-02-02",
+  "address": "cualquiera",
+  "password": "$2a$10$Rne.1OOJ8IOwYkrTJSHtIuMyF3OhmT2p1wOH4VspdYja4C6prxwo2",
+  "avatar": "1680480988558.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Jamie",
+  "surname": "Lannister",
+  "email": "jlannister@gmail.com",
+  "bday": "1978-05-05",
+  "address": "cualquiera",
+  "password": "$2a$10$Rne.1OOJ8IOwYkrTJSHtIuMyF3OhmT2p1wOH4VspdYja4C6prxwo2",
+  "avatar": "1680480988558.jpg"
+ },
+ {
+  "id": 6,
+  "name": "Arya",
+  "surname": "Stark",
+  "email": "astark@gmail.com",
+  "bday": "1996-06-06",
+  "address": "cualquiera",
+  "password": "$2a$10$DJKDwTsT7D2IjhORHMJcuepZkPUEFyCJ8lrToQGE6R7G59y.or1.e",
+  "avatar": "1680566202374.jpg"
+ }
+]

@@ -90,7 +90,6 @@ a {
     margin: 69px auto;
     background-color: white;
     border: 3px solid #68ABB4;
-    display: flex;
     align-items: center;
     justify-content: center;
     
@@ -155,6 +154,19 @@ a.card_button {
 .card .card_second-section .card_button:hover {
     cursor: pointer;
     background-color: blue;
+}
+
+.botonesModificar{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card_button2{
+    color: black;
+    border-radius: 15px;
+    border: 3px solid #68ABB4;
+    font-size: 1.1em;
+    width: 10rem;
 }
 
 /* FOOTER */
@@ -222,6 +234,8 @@ footer li i {
     .main-bar {
         display: none;
     }
+    
+    
 
 
 }

@@ -68,3 +68,33 @@ A continuación detallamos las principales conclusiones de nuestro segundo sprin
 -	Intentar que todos participen en todo el procedimiento.
 -	Postergar reuniones acordadas, para evitar que se dilaten temas a definir.
 
+Retrospectiva Sprint 3
+
+A continuación detallamos las principales conclusiones de nuestro tercer sprint:
+
+1.	Start Doing (Comenzar a hacer):
+
+-   Reunión inicial del sprint con todos los integrantes.
+-   Conocer, interactuar y hacer partícipe al nuevo integrante del equipo.
+
+2.	More Of (Hacer más):
+
+-	Dividir tareas y responsabilidades al comienzo del sprint.
+-	Comprometerse con los días y horarios de reuniones.
+-	Informar al equipo cuando no sea viable finalizar la tarea asignada.
+
+3.	Keep Doing (Continuar haciendo):
+
+-	Comunicar avances e ideas.
+-	Dedicar tiempo a reuniones y trabajo de proyecto.
+-	Reuniones semanales para seguimiento de avances.
+-	Dedicación del tiempo posible de cada integrante para las actividades a resolver.
+-	Avisar al grupo de forma anticipada si no es viable realizar las tareas del sprint.
+
+4.	Less Off (Hacer menos):
+
+-	Comprometerse a una tarea cuando no es factible terminarla en el tiempo planificado del sprint en curso.
+
+5.	Stop Doing (Dejar de hacer):
+
+-	Postergar reuniones acordadas, para evitar que se dilaten temas a definir.
