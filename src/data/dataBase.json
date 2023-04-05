@@ -46,5 +46,13 @@
   "category": "Panes",
   "description": "La baguette o baguete​ es una variedad de pan originaria de Francia que se caracteriza por una forma alargada. Es uno de los formatos de pan más conocidos, producidos y consumidos a nivel internacional.",
   "image": "panBaguete.jfif"
+ },
+ {
+  "id": 7,
+  "name": "ggg",
+  "price": "433",
+  "category": "panes",
+  "description": "f",
+  "image": "default-image.png"
  }
 ]

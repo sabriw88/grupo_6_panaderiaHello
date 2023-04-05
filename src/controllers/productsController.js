@@ -21,17 +21,16 @@ const productsController = {
     },
 
     store: (req, res) => {
+      console.log(req.file);
       const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
       
-    console.log (req.body)
-
       let productoNuevo = { 
       id: products [products.length -1].id + 1,
       name: req.body.name,
       price: req.body.price ,
       category: req.body.category,
       description: req.body.description,
-      image: "panBaguete.jfif"
+      image: req.file ? req.file.filename : "default-image.png",
     }
       products.push(productoNuevo);
 
@@ -62,7 +61,7 @@ const productsController = {
       let productoEditado = {
         id: id,
         name: req.body.name,
-        price: req.body.price,
+        price: parseInt (req.body.price),
         category: req.body.category,
         description: req.body.description,
         image: productWithoutEdit.image
