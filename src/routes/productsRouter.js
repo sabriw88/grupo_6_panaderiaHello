@@ -26,6 +26,8 @@ router.patch('/edit/:id', productsController.update);
 //crear
     router.get("/productCreate",productsController.create);
     router.post("/", upload.single("image") ,productsController.store);
+    router.post("/", productsController.store);
+    
     
 //Borrar
 
