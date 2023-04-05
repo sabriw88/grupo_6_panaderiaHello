@@ -76,12 +76,13 @@ A continuación detallamos las principales conclusiones de nuestro tercer sprint
 
 -   Reunión inicial del sprint con todos los integrantes.
 -   Conocer, interactuar y hacer partícipe al nuevo integrante del equipo.
+-   Testeo grupal del sitio y funcionamiento general.
 
 2.	More Of (Hacer más):
 
 -	Dividir tareas y responsabilidades al comienzo del sprint.
 -	Comprometerse con los días y horarios de reuniones.
--	Informar al equipo cuando no sea viable finalizar la tarea asignada.
+-	Informar al equipo cuando no sea viable finalizar la tarea asignada.\
 
 3.	Keep Doing (Continuar haciendo):
 
@@ -90,6 +91,7 @@ A continuación detallamos las principales conclusiones de nuestro tercer sprint
 -	Reuniones semanales para seguimiento de avances.
 -	Dedicación del tiempo posible de cada integrante para las actividades a resolver.
 -	Avisar al grupo de forma anticipada si no es viable realizar las tareas del sprint.
+-	Implementar la división de tareas.
 
 4.	Less Off (Hacer menos):
 
