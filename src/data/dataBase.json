@@ -54,5 +54,13 @@
   "category": "panes",
   "description": "f",
   "image": "default-image.png"
+ },
+ {
+  "id": 8,
+  "name": "hhhh",
+  "price": "66",
+  "category": "pasteleria",
+  "description": "hhh",
+  "image": "image-1680726023512.jpg"
  }
 ]
