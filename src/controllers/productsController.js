@@ -77,7 +77,7 @@ const productsController = {
 
       fs.writeFileSync(productsFilePath, productsJSON);
 
-      res.redirect('/products/productDetail/' +id);
+      res.redirect('/products/detail/' +id);
       
       }
       
