@@ -17,16 +17,19 @@ const upload = multer({storage: storage});
 const productsController = require("../controllers/productsController.js");
 
 router.get('/', productsController.listaDeProductos);
-router.get('/productDetail/:id/', productsController.detalleProducto);
-router.get('/productCreate', productsController.create);
+router.get('/detail/:id/', productsController.detalleProducto);
 
 //Editar
-router.get('/productEdit/:id', productsController.edit);
-router.patch('/productEdit/:id', productsController.update);
+router.get('/edit/:id', productsController.edit);
+router.patch('/edit/:id', productsController.update);
 
 //crear
     router.get("/productCreate",productsController.create);
     router.post("/", upload.single("image") ,productsController.store);
+    
+//Borrar
+
+router.delete('/delete/:id', productsController.destroy);
 
 
 module.exports = router;

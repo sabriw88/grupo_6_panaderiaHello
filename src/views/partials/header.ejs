@@ -18,7 +18,7 @@
                         <p>CONTACTO</p>
                     </a></li>
 
-                 <li><a href="/products/productCreate">
+                 <li><a href="/products/create">
                         <p>VENDER</p>
                     </a></li>
             </ul>
@@ -26,14 +26,36 @@
         <h1>HELLO!</h1>
         <nav class="login-bar">
             <ul type="none">
-                <li><a href="/users/login">
-                        <div class="icon"><i class="fa-solid fa-right-to-bracket"></i></div>
-                        <p>Login</p>
-                    </a></li>
-                <li><a href="/users/productCart">
-                        <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
-                        <p>Carrito</p>
-                    </a></li>
+                <% if (locals.isLogged) { %>
+                    <li>
+                        <a href="/users/productCart">
+                            <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                            <p>Carrito</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/users/profile">
+                            <p>Mi perfil</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/users/logout">
+                            <p>Logout</p>
+                        </a>
+                    </li>
+                <% } else { %>
+                    <li>
+                        <a href="/users/login">
+                            <div class="icon"><i class="fa-solid fa-right-to-bracket"></i></div>
+                            <p>Login</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/users/register">
+                        <p>Registrarse</p>
+                        </a>
+                    </li>
+                <% } %>
             </ul>
         </nav>
     </div>

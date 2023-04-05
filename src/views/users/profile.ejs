@@ -1,0 +1,17 @@
+<%- include('../partials/head.ejs', {cssSheet: "styles-login"}) %>
+
+<body class="body-profile">
+
+<%- include('../partials/header.ejs') %>
+
+    <main class="main-profile">
+        <h2>Página de perfil del usuario</h2>
+        <p>Hola <%= user.name %></p>
+        <img src="/img/avatars/<%= user.avatar %>" alt="">
+
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+
+</body>
+</html>

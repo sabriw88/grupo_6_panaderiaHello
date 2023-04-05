@@ -1,6 +1,6 @@
 [
  {
-  "id": "1",
+  "id": 1,
   "name": "Baguette",
   "price": "80",
   "category": "",
@@ -10,8 +10,8 @@
  {
   "id": 2,
   "name": "Pan de Molde",
-  "price": 58,
-  "category": "Panes",
+  "price": "79",
+  "category": "",
   "description": "El pan de molde (o pan sandwich) es aquel pan cuya masa se enriquece con mantequilla o leche y se hornea dentro de un molde o lata. Gracias a esto, el pan resultante tiene una corteza blanda y dorada, y una miga suave y esponjosa. Se suele vender rebanado, y se utiliza para elaborar sándwiches principalmente.",
   "image": "panBaguete.jfif"
  },
@@ -25,14 +25,6 @@
  },
  {
   "id": 4,
-  "name": "Baguette",
-  "price": 100,
-  "category": "Panes",
-  "description": "La baguette o baguete​ es una variedad de pan originaria de Francia que se caracteriza por una forma alargada. Es uno de los formatos de pan más conocidos, producidos y consumidos a nivel internacional.",
-  "image": "panBaguete.jfif"
- },
- {
-  "id": 5,
   "name": "Baguette",
   "price": 100,
   "category": "Panes",
@@ -55,12 +47,5 @@
   "description": "f",
   "image": "default-image.png"
  },
- {
-  "id": 8,
-  "name": "hhhh",
-  "price": "66",
-  "category": "pasteleria",
-  "description": "hhh",
-  "image": "image-1680726023512.jpg"
- }
+
 ]

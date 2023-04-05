@@ -1,8 +1,19 @@
 const express = require('express');
+const session = require('express-session');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
+const cookies = require('cookie-parser');
 
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
+app.use(session({
+    secret: 'Secret Hello!',
+    resave: false,
+    saveUninitialized: false
+}))
+app.use(cookies());
+app.use(userLoggedMiddleware);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
