@@ -78,31 +78,18 @@ A continuación exponemos el resultado de la daily del cuarto sprint de nuestro 
         Qué va a hacer: Tratar de implementar el trabajo con branches, para mayor seguridad.
         
         
-● Romina Salminci:
+● Romina Salminci y Juan Navaridas (trabajo en conjunto):
 
     - Semana 1: 
     
-        Qué hizo: 
-        Si encontró algún impedimento: 
+        Qué hizo: Revisar nuevamente el contenido de las clases en vivo para la correcta aplicación del trabajo asignado en el proyecto grupal.
+        Si encontró algún impedimento: -
         Qué va a hacer: Completar la retrospectiva y el daily.
         
     - Semana 2:
     
-        Qué hizo: Agregar información del sprint 3 a la retrospectiva ; completar el daily con las semanas del cuarto sprint.
-        Si encontró algún impedimento: 
-        Qué va a hacer: Ultimar detalles del proyecto en general.
+        Qué hizo: Aplicar funcionalidad al formulario de creación de productos, de forma tal que el usuario pueda agregar lo requerido, con su correspondiente imagen; y en caso que no se cargue alguna que aparezca la imagen default.
+        Si encontró algún impedimento: Conflictos merge al pushear.
+        Qué va a hacer: Finalizar el css de la imagen, y ultimar detalles.
         
         
-● Juan Navaridas: 
-
-    - Semana 1: 
-    
-        Qué hizo: Creación de la pagina ejs con el formulario para crear y editar productos, teniendo en cuenta los campos indicados en el sprint 3. 
-        Si encontró algún impedimento: hoja de estilos aplicados a las vistas.
-        Qué va a hacer: Crear los recursos necesarios y estilos de css.
-        
-    - Semana 2:
-    
-        Qué hizo: Creación del estilo del formulario para crear y editar productos.
-        Si encontró algún impedimento: -
-        Qué va a hacer: Ultimar detalles de diseño.
