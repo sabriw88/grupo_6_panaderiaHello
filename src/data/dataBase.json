@@ -24,19 +24,27 @@
   "image": "panBaguete.jfif"
  },
  {
-  "id": 4,
-  "name": "Baguette",
-  "price": 100,
-  "category": "Panes",
-  "description": "La baguette o baguete​ es una variedad de pan originaria de Francia que se caracteriza por una forma alargada. Es uno de los formatos de pan más conocidos, producidos y consumidos a nivel internacional.",
+  "id": "4",
+  "name": "PAN BLANCO",
+  "price": 50,
+  "category": "",
+  "description": "harina 0000 ",
   "image": "panBaguete.jfif"
  },
  {
-  "id": 6,
-  "name": "Baguette",
-  "price": 100,
-  "category": "Panes",
-  "description": "La baguette o baguete​ es una variedad de pan originaria de Francia que se caracteriza por una forma alargada. Es uno de los formatos de pan más conocidos, producidos y consumidos a nivel internacional.",
-  "image": "panBaguete.jfif"
+  "id": "41",
+  "name": "pan negro",
+  "price": 20,
+  "category": "panes",
+  "description": "pan centeno ",
+  "image": "image-1680739658902.jpg"
+ },
+ {
+  "id": "411",
+  "name": "pan molde",
+  "price": 40,
+  "category": "",
+  "description": "pan molde ",
+  "image": "image-1680740108722.jpg"
  }
 ]
