@@ -58,5 +58,15 @@
   "address": "cualquiera",
   "password": "$2a$10$DJKDwTsT7D2IjhORHMJcuepZkPUEFyCJ8lrToQGE6R7G59y.or1.e",
   "avatar": "1680566202374.jpg"
+ },
+ {
+  "id": 7,
+  "name": "martin",
+  "surname": "medina",
+  "email": "martinmedina1@gmail.com",
+  "bday": "1999-03-15",
+  "address": "paris 1243",
+  "password": "$2a$10$jmqWHVn.Sw0i4VeLSgzUOOlAXiFjW0mVzVD1BAAT2C6n5RkFn/atK",
+  "avatar": "1681163148378.jpg"
  }
 ]
