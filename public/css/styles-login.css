@@ -93,6 +93,7 @@ body {
 
 .main-profile{
     text-align: center;
+    margin-top: 4rem;
 }
 
 .first-section{
@@ -190,4 +191,24 @@ body {
     .formLoginButton:hover {
         box-shadow: 0 0 5px #010101;
     }
+
+    
+.main-profile{
+    text-align: center;
+    margin: 9rem;
+}
+
+.nav-perfil{
+
+    flex-direction: row;
+    justify-content: center;
+    margin: 4rem;
+
+}
+
+.nav-perfil button{
+
+    width: 18%;
+}
+
 }
