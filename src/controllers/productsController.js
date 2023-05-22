@@ -2,10 +2,10 @@ const db = require("../database/models");
 
 
 const productsController = {
-    "listaDeProductos": (req, res) => { 
+    listaDeProductos: (req, res) => { 
         db.Products.findAll()
-        .then(products=> {
-          res.send(products)
+        .then(Products=> {
+          res.send(Products)
         })
       },
 

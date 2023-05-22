@@ -1,23 +1,23 @@
-module.exports = (sequelize, Datatype) => {
+module.exports = (sequelize, dataTypes) => {
     let alias = "Bags";
 
     let cols = {
         id:{
-            type: Datatype.INTEGER,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
         userId:{
-            type: Datatype.INTEGER,
+            type: dataTypes.INTEGER,
         },
         date:{
-            type: Datatype.DATE,
+            type: dataTypes.DATE,
         },
         status:{
-            type: Datatype.STRING,
+            type: dataTypes.STRING,
         },
         total:{
-            type: Datatype.INTEGER,
+            type: dataTypes.INTEGER,
         }
         
     }

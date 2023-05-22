@@ -1,3 +1,4 @@
+const db = require("../database/models");
 const bcrypt = require('bcryptjs');
 const { validationResult } = require("express-validator");
 
@@ -5,9 +6,13 @@ const User = require('../models/User');
 
 const usersController = {
     // Ir al registro de usuario
-    register: (req, res) => {
-        res.render("users/register");
-    },
+    register: (req, res) => { 
+        db.Products.findAll()
+        .then(Products=> {
+          res.send(Products)
+        })
+      },
+
     // Guardar a un nuevo usuario
     processRegister: (req, res) => {
         const resultvalidation = validationResult(req); 
