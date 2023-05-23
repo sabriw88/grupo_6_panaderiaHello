@@ -3,9 +3,14 @@ const db = require("../database/models");
 
 const productsController = {
     listaDeProductos: (req, res) => { 
-        db.Products.findAll()
+        db.Products.findAll({
+          include: [{
+            association: "category",
+          }]
+        })
         .then(Products=> {
-          res.send(Products)
+     
+         res.render("products/product", {products: Products}) 
         })
       },
 

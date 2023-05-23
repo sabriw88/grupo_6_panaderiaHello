@@ -23,7 +23,8 @@
                     <img src="/img/<%= product.image %>" alt="foto">
                 </section>
                 <section class="cajaDeProductoInferior">
-                    <p class="tipo">Pan</p>
+                    
+                    <p class="tipo"><%= product.category.name%></p>
                     <h2 class="titulo"><%= product.name%></h2>
                     <div class="precio">
                         <p>$<%= product.price%></p>
