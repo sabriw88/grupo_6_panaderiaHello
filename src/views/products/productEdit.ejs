@@ -9,37 +9,51 @@
         <img src="https://cdn.pixabay.com/photo/2016/11/29/10/09/bakery-1868925_1280.jpg"valt="">
     </div>
     <div class="form-create">
-        <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST">           
+        <form action="/products/edit/<%= producto.id %>?_method=PATCH" method="POST">           
             <div class="row product-detail">
-                <h2 class="create-title">Editá el producto "<%= productToEdit.name %>"</h2>
+                <h2 class="create-title">Editá el producto "<%= producto.name %>"</h2>
                 <div class="create-input">
                     <label for="name" class="form-label">Nombre del producto:</label>
-                    <input type="text" id="name" name="name" value="<%= productToEdit.name %>" class="form-input"></input>
+                    <input type="text" id="name" name="name" value="<%= producto.name %>" class="form-input"></input>
+                </div>
+
+                <div class="create-input">
+                    <label for="price" class="form-label">Precio del producto:</label>
+                    <input type="number" id="price" name="price" value="<%= producto.price %>" class="form-input">
+                </div>
+
+                <div class="create-input">
+                    <label for="category" class="form-label">Categoría:</label>
+                    <select name="category" id="category" class="form-input">
+                        <% for(let i=0; i < categorias.length; i++) { %>
+                            <% if(categorias[i].id == producto.categoryId) { %>
+                        <option value= "<%= categorias[i].id%>" selected >
+                            <%=categorias[i].name%>
+                        </option>
+                            <% } else { %>
+                                <option value="categorias[i].id">
+                                     <%=categorias[i].name%>
+                                 </option>
+                            <% } %>
+                        <% } %>
+                    </select>
+                </div>
+
+                <div class="create-input">
+                    <label for="stock" class="form-label">Stock:</label>
+                    <input type="number" id="stock" name="stock" value="<%= producto.stock %>" class="form-input">
                 </div>
 
                 <div class="create-input">
                     <label for="description" class="form-label">Descripción:</label>
-                    <input name="description" id="description" value="<%= productToEdit.description %>" class="form-input"></input>
+                    <input name="description" id="description" value="<%= producto.description %>" class="form-input"></input>
                 </div>
 
                 <div class="create-input">
-                    <label for="image" class="form-label">imagen</label>
+                    <label for="image" class="form-label">Imagen</label>
                     <input type= "file" name="image" id="image" accept=".jpg" class="form-input"></input>
                 </div>
-                <div class="create-input">
-                    <label for="category" class="form-label">Categoría:</label>
-                    <select name="category" id="category" class="form-input">
-                        <option value="">Elegí</option>
-                        <option value="panes">Panes</option>
-                        <option value="pasteleria">Pastelería</option>
-                        <option value="delicias">Delicias</option>
-                    </select>
-                </div>
                 
-                <div class="create-input">
-                    <label for="price" class="form-label">Precio del producto:</label>
-                    <input type="number" id="price" name="price" value= <%= productToEdit.price %> class="form-input">
-                </div>
                 <div class="col-12">
                     <button type="submit" class="CreateButton">Guardar edición</button>
                 </div>

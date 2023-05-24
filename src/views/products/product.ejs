@@ -16,24 +16,24 @@
        <section class="estanteDeProductos">
 
       
-        <% products.forEach(product => { %>
+        <% for (let i=0; i < products.length; i++) { %>
          
-            <a href="/products/detail/<%= product.id %>"> <div class="cajaDeProducto">
+            <a href="/products/detail/<%= products[i].id %>"> <div class="cajaDeProducto">
                 <section class="cajaDeProductoSuperior">
-                    <img src="/img/<%= product.image %>" alt="foto">
+                    <img src="/img/<%= products[i].image %>" alt="foto">
                 </section>
                 <section class="cajaDeProductoInferior">
                     
-                    <p class="tipo"><%= product.category.name%></p>
-                    <h2 class="titulo"><%= product.name%></h2>
+                    <p class="tipo"><%= products[i].category.name%></p>
+                    <h2 class="titulo"><%= products[i].name%></h2>
                     <div class="precio">
-                        <p>$<%= product.price%></p>
+                        <p>$<%= products[i].price%></p>
                     </div></a>
                     <button class="boton">Add to cart</button>
                 </section>
             </div>
 
-        <% }) %>
+        <% } %>
 
        
     </section>

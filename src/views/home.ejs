@@ -15,13 +15,33 @@
         <section class="star-products">
             <h2>NUESTROS PREFERIDOS</h2>
             <p>¿Todavía no los probaste?</p>
+
             <div class="all-star-products">
+
+                <% for (let i=0; i < 3; i++) { %>
+
+                <article class="product-main">
+                    <img src="/img/<%= products[i].image %>" alt="">
+                    <div class="product-bottom-box">
+                        <h3 class="product-name"><%= products[i].name%></h3>
+                        <p class="product-description"><% if (products[i].description.length > 100) { %>
+                            <%= products[i].description.slice(0, 65) + "..." %>
+                        <% } else { %>
+                            <%= products[i].description %>
+                        <% } %></p>
+                    </div> 
+                    <a class="go-to-buy" href="/products/detail/<%= products[i].id%>">Ver más</a>
+                </article>
+                
+                <% } %>
+            </div>
+            <!-- <div class="all-star-products">
                 <article class="product-main">
                     <img src="/img/Pan-de-molde-casero-cuadrado.jpg" alt="">
                     <div class="product-bottom-box">
                         <h3 class="product-name">PAN DE MOLDE</h3>
                         <p class="product-description">500g</p>
-                    </div>
+                    </div> 
                     <a class="go-to-buy" href="/products/detail">ver más</a>
                 </article>
                 <article class="product-main">
@@ -40,7 +60,7 @@
                     </div>
                     <a class="go-to-buy" href="/products/detail">ver más</a>
                 </article>
-            </div>
+            </div> -->
         </section>
         <section class="main-video">
             <div class="video">

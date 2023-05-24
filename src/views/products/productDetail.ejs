@@ -6,20 +6,20 @@
         
         <div class="card">
             <section class="card_first-section">
-                <img src="/img/<%= producto.image %>" alt="foto">
+                <img src="/img/<%= product.image %>" alt="foto">
             </section>
             <section class="card_second-section">
-                <p class="productType">Pan</p>
-                <h2 class="titulo"><%= producto.name %></h2>
-                <P class="description"><%= producto.description %></P>
+                <p class="productType"><%= product.category.name %></p>
+                <h2 class="titulo"><%= product.name %></h2>
+                <P class="description"><%= product.description %></P>
                 <div class="precio">
-                    <p>$<%= producto.price %></p>
+                    <p>$<%= product.price %></p>
                 </div>
                     <button class="card_button">Add to cart</button>
                 <br>
                 <div class="botonesModificar">
-                <a href="/products/edit/<%= producto.id %>" > <button class="card_button2" >  Editar producto </button></a>
-                <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST" >
+                <a href="/products/edit/<%= product.id %>" > <button class="card_button2" >  Editar producto </button></a>
+                <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" >
                     <button type="submit" class="card_button2" onclick="return confirm('Estas seguro que quieres borrar este producto?')">Borrar producto</button>
                 </form>
                 </div>

@@ -79,6 +79,10 @@ a {
     flex-direction: column;
     align-items: center;
 }
+.caja{
+    position: relative;
+    bottom: -2rem;
+}
 .product-main img {
     width: 95%;
 }
@@ -106,9 +110,10 @@ a {
     flex-direction: column;
     align-items: stretch;
     margin-bottom: 10px;
+    height: 7rem;
 }
 .product-bottom-box p {
-    text-align: right;
+    text-align: justify;
     margin-bottom: 10px;
     color: white;
     font-style: normal;
@@ -207,6 +212,7 @@ a {
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
     }
     .product-main img {
         width: 95%;
