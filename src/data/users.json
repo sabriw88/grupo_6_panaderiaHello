@@ -68,5 +68,15 @@
   "address": "paris 1243",
   "password": "$2a$10$jmqWHVn.Sw0i4VeLSgzUOOlAXiFjW0mVzVD1BAAT2C6n5RkFn/atK",
   "avatar": "1681163148378.jpg"
+ },
+ {
+  "id": 8,
+  "name": "Dante",
+  "surname": "Costamagna",
+  "email": "dantecostamagna@gmail.com",
+  "bday": "1997-01-04",
+  "address": "Cocabamba 49",
+  "password": "$2a$10$pi4VBSRg6c3/IMp6DtosVOEWy3ZdhpUUtHXBGVH3S0ErhY7r2J6G.",
+  "avatar": "1684949315738.jpg"
  }
 ]

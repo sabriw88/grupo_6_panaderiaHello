@@ -7,10 +7,11 @@ const User = require('../models/User');
 const usersController = {
     // Ir al registro de usuario
     register: (req, res) => { 
-        db.Products.findAll()
+        /* db.Products.findAll()
         .then(Products=> {
           res.send(Products)
-        })
+        }) */
+        res.render('users/register')
       },
 
     // Guardar a un nuevo usuario
@@ -41,6 +42,35 @@ const usersController = {
         let usercreated = User.create(userToCreate);
         return res.redirect('/users/login');
     },
+
+    // Editar usuario //
+
+    edit: (req, res) => {
+        let pedidoUser = db.Usuarios.findByPk(req.params.id);
+
+        Promise.all(pedidoUser)
+          .then(function(usuario){
+            res.render('users/userEdit', {usuario:usuario})
+          })
+    },
+
+    update: (req,res) => {
+        db.Users.update({
+            name: req.body.name,
+            surname: req.body.surname,
+            email: req.body.email,
+            bday:req.body.bday,
+            adress: req.body.address,
+            avatar: req.file ? req.file.filename : 'default-image.png',
+            password: req.body.password,
+          },{
+            where: {
+              id: req.params.id
+            }
+          },
+            res.redirect ("../views/userEdit" + req.params.id))
+    },
+
     // Ir a la página de login
     login: (req, res) => {
         res.render("users/login");
