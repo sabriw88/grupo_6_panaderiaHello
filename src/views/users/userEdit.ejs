@@ -11,7 +11,7 @@
 
         <div class="container-formulario">
 
-            <form action="/users/register" method="POST" class="register-input" enctype="multipart/form-data">
+            <form action="/users/profile" method="POST" class="register-input" enctype="multipart/form-data">
                 
                 <div class="register-input <%= locals.errors && errors.name ? 'is-invalid' : null %>">
                     <input type="text" name="name" placeholder="Nombre" value="<%= locals.oldData ? oldData.name : null %>">
@@ -29,9 +29,6 @@
                 <br>
                 <div class="register-input <%= locals.errors && errors.email ? 'is-invalid' : null %>">
                     <input type="text" name="email" placeholder="Correo electronico" value="<%= locals.oldData ? oldData.email : null %>">
-                    <% if (locals.errors && errors.email) { %>
-                        <div class="warning"><p><%= errors.email.msg %></p></div>
-                    <% } %>
                 </div>
                 <br>
                 <div class="nacimiento">
@@ -74,7 +71,7 @@
 
                 <div class="botones">
                     <div class="register-input, register-button">
-                        <button type="submit" id="botones">Registrarse</button>
+                        <button type="submit" id="botones">Actualizar</button>
                     </div>
     
                     <div class="register-input, register-button">

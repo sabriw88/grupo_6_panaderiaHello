@@ -46,12 +46,14 @@ const usersController = {
     // Editar usuario //
 
     edit: (req, res) => {
-        let pedidoUser = db.Usuarios.findByPk(req.params.id);
-
-        Promise.all(pedidoUser)
-          .then(function(usuario){
-            res.render('users/userEdit', {usuario:usuario})
+        db.Users.findByPk(req.params.id)
+          .then((usuario) => {
+            res.render('users/userEdit', { usuario: usuario });
           })
+          .catch((error) => {
+            console.log(error);
+            res.redirect('/');
+          });
     },
 
     update: (req,res) => {
