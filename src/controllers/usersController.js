@@ -2,20 +2,16 @@ const db = require("../database/models");
 const bcrypt = require('bcryptjs');
 const { validationResult } = require("express-validator");
 
-const User = require('../models/User');
+/* const User = require('../models/User'); */
 
 const usersController = {
     // Ir al registro de usuario
-    register: (req, res) => { 
-        /* db.Products.findAll()
-        .then(Products=> {
-          res.send(Products)
-        }) */
-        res.render('users/register')
-      },
+    register: (req, res) => {
+        res.render("users/register");
+    },
 
-    // Guardar a un nuevo usuario
-    processRegister: (req, res) => {
+    // Guardar a un nuevo usuario en JSON
+/*     processRegister: (req, res) => {
         const resultvalidation = validationResult(req); 
         if (resultvalidation.errors.length > 0) {
             return res.render ('users/register', {
@@ -41,8 +37,30 @@ const usersController = {
         }
         let usercreated = User.create(userToCreate);
         return res.redirect('/users/login');
-    },
+    }, */
 
+    // Guardar a un nuevo usuario en Base de datos
+    processRegister: (req, res) => {
+        const resultvalidation = validationResult(req); 
+        if (resultvalidation.errors.length > 0) {
+            return res.render ('users/register', {
+                errors: resultvalidation.mapped(),
+                oldData: req.body
+            });
+        }
+        db.Users.create({
+            name: req.body.name,
+            surname: req.body.surname,
+            email: req.body.email,
+            bday:req.body.bday,
+            adress: req.body.address,
+            password: bcrypt.hashSync(req.body.password, 10),
+            avatar: req.file ? req.file.filename : 'default-image.png',
+            admin: 0
+        })
+        return res.redirect('/users/login');
+    },
+    
     // Editar usuario //
 
     edit: (req, res) => {
