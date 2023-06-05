@@ -6,12 +6,18 @@
     position: relative;
 }
 .main-img {
-    width: 100%;
+    width: 100vw;
+    height: 75vh;
+
+}
+
+.link-shop{
+    display: none;
 }
 .main-logo {
     width: 30%;
     position: absolute;
-    top: 5%;
+    top: -9%;
     left: 35%;
 }
 .main-logo:hover {

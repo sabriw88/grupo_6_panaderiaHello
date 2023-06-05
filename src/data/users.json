@@ -88,5 +88,16 @@
   "address": "farrel 111",
   "password": "$2a$10$G3daDI5/GEDsMbdQy9EA2u8zW6ZKI8FzvWQUwLJCkh/wSWmfV8NTS",
   "avatar": "1684967505869.jpg"
+ },
+ {
+  "id": 10,
+  "name": "tokito ",
+  "surname": "mui",
+  "email": "tokito@gmail.com",
+  "bday": "1999-12-12",
+  "address": "italia 2021",
+  "password": "$2a$10$7XzJlPt8PASFwO.Fvg072uzDiFcxd8PET8iM9tMfatTiZgwPFp8.e",
+  "confirmPsw": "Digital2023",
+  "avatar": "1685987617175.jpg"
  }
 ]
