@@ -17,7 +17,7 @@ router.post('/userEdit', usersController.update);
 router.get('/login', guestMiddleware, usersController.login);
 router.post('/login', usersController.processLogin);// agregado
 
-router.get('/profile', authMiddleware, usersController.profile);// agregado
+router.get('/profile/:id', authMiddleware, usersController.profile);// agregado
 router.get('/logout', usersController.logout);// agregado
 
 router.get('/productCart', usersController.productCart);

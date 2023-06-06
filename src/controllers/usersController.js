@@ -95,8 +95,8 @@ const usersController = {
     login: (req, res) => {
         res.render("users/login");
       },
-    // Logearse
-    processLogin: (req, res) => {
+    // Logearse (JSON)
+    /* processLogin: (req, res) => {
         let userToLogin = User.findByField('email', req.body.email);
         if (userToLogin) {
             let passwordVerified = bcrypt.compareSync(req.body.password, userToLogin.password);
@@ -123,7 +123,46 @@ const usersController = {
                 }
             }
         })
+    }, */
+
+    // Logearse (DB)
+    processLogin: (req, res) => {
+        let userToLogin = db.Users.findOne({
+            where: {
+                email: req.body.email
+            }
+        }).then((usuario) => {
+            
+            if (usuario != null) {
+                let passwordVerified = bcrypt.compareSync(req.body.password, usuario.password)
+                if(passwordVerified) {
+                delete usuario.password
+                req.session.loggedUser = usuario
+                if (req.body.rememberMe) {
+                    res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 * 60 * 24})
+                }
+                res.redirect('profile/'+usuario.id)
+                } else {
+                res.render('users/login', {
+                    errors: {
+                        password: {
+                            msg: 'Las credenciales son inválidas, por favor revise el correo y contraseña ingresados'
+                        }
+                    }
+                })
+                }
+            } else {
+                res.render('users/login', {
+                    errors: {
+                        email: {
+                            msg: 'El correo ingresado no se encuentra en nuestra base de datos'
+                        }
+                    }
+                })
+            }
+        });
     },
+
     // Ir al perfil de usuario
     profile: (req, res) => {
         res.render('users/profile', {
