@@ -74,16 +74,20 @@ const usersController = {
             name: req.body.name,
             surname: req.body.surname,
             email: req.body.email,
-            bday:req.body.bday,
+            bday: req.body.bday,
             adress: req.body.address,
             avatar: req.file ? req.file.filename : 'default-image.png',
-            password: req.body.password,
+            password: bcrypt.hashSync(req.body.password, 10),
           },{
             where: {
               id: req.params.id
             }
-          },
-            res.redirect ("../views/userEdit" + req.params.id))
+          }).then(() => {
+            res.redirect('/products')
+          }).catch((error) => {
+            console.log(error);
+            res.redirect('/');
+          })
     },
 
     // Ir a la página de login

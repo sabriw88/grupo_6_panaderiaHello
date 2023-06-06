@@ -11,63 +11,42 @@
 
         <div class="container-formulario">
 
-            <form action="/users/profile" method="POST" class="register-input" enctype="multipart/form-data">
+            <form action="/users/edit/<%= user.id %>" method="POST" class="register-input" enctype="multipart/form-data">
                 
-                <div class="register-input <%= locals.errors && errors.name ? 'is-invalid' : null %>">
-                    <input type="text" name="name" placeholder="Nombre" value="<%= locals.oldData ? oldData.name : null %>">
-                    <% if (locals.errors && errors.name) { %>
-                        <div class="warning"><p><%= errors.name.msg %></p></div>
-                    <% } %>
+                <div class="register-input">
+                    <input type="text" name="name" placeholder="Nombre" value="<%= user.name %>">
                 </div>
                 <br>
-                <div class="register-input <%= locals.errors && errors.surname ? 'is-invalid' : null %>">
-                    <input type="text" name="surname" placeholder="Apellido" value="<%= locals.oldData ? oldData.surname : null %>">
-                    <% if (locals.errors && errors.surname) { %>
-                        <div class="warning"><p><%= errors.surname.msg %></p></div>
-                    <% } %>
+                <div class="register-input">
+                    <input type="text" name="surname" placeholder="Apellido" value="<%= user.surname %>">
                 </div>
                 <br>
-                <div class="register-input <%= locals.errors && errors.email ? 'is-invalid' : null %>">
-                    <input type="text" name="email" placeholder="Correo electronico" value="<%= locals.oldData ? oldData.email : null %>">
+                <div class="register-input">
+                    <input type="text" name="email" placeholder="Correo electronico" value="<%= user.email %>">
                 </div>
                 <br>
                 <div class="nacimiento">
                     <label for="fecha-nacimiento"><h2>Fecha de nacimiento</h2></label>
-                    <input type="date" name="bday" id="fecha-nacimiento" value="<%= locals.oldData ? oldData.bday : null %>">
-                    <% if (locals.errors && errors.bday) { %>
-                        <div class="warning"><p><%= errors.bday.msg %></p></div>
-                    <% } %>
+                    <input type="date" name="bday" id="fecha-nacimiento" value="<%= user.bday %>">
                 </div>
                 <br>                    
-                <div class="register-input <%= locals.errors && errors.address ? 'is-invalid' : null %>">
-                    <input type="text" name="address" placeholder="Domicilio" value="<%= locals.oldData ? oldData.address : null %>" class="form-control <%= locals.errors && errors.address ? 'is-invalid' : null %>">
-                    <% if (locals.errors && errors.address) { %>
-                        <div class="warning"><p><%= errors.address.msg %></p></div>
-                    <% } %>
+                <div class="register-input">
+                    <input type="text" name="address" placeholder="Domicilio" value="<%= user.adress %>" class="form-control">
                 </div>
                 <br>
                 <div class="foto-usuario">
                     <label for="avatar"><h2>Foto de perfil</h2></label>
                     <input type="file" name="avatar" id="foto-usuario" accept=".jpg, .png">
-                    <% if (locals.errors && errors.avatar) { %>
-                        <div class="warning"><p><%= errors.avatar.msg %></p></div>
-                    <% } %>
                 </div>
                 <br>
-                <div class="register-input <%= locals.errors && errors.password ? 'is-invalid' : null %>">
+                <div class="register-input">
                     <input type="password" name="password" placeholder="Contraseña">
-                    <% if (locals.errors && errors.password) { %>
-                        <div class="warning"><p><%= errors.password.msg %></p></div>
-                    <% } %>
                 </div>
                 <br>
                 <div class="register-input">
                     <input type="password" placeholder="Confirmar contraseña">
                 </div>
                 <br>
-                <div class="register-checkbox">
-                    <label for="acepto-tyc"></label>
-                    <input type="checkbox"><p>Acepto Términos y Condiciones</p>
 
                 <div class="botones">
                     <div class="register-input, register-button">
@@ -75,7 +54,7 @@
                     </div>
     
                     <div class="register-input, register-button">
-                        <button type="reset" id="botones"> Borrar todo</button>
+                        <a href="/users/profile/<%= user.id %>"><button type="button" id="botones">Cancelar</button></a>
                     </div>
                 </div>
 
