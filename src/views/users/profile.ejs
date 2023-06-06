@@ -14,7 +14,7 @@
         <h2><%= user.name + " " + user.surname%></h2>
         <p><%= user.email %></p>
 
-        <a href="userEdit">Editar usuario</a>
+        <a href="/users/edit/<%= user.id %>">Editar usuario</a>
 
         <div class="nav-perfil">
             <button> Productos </button>

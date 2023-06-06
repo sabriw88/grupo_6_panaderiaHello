@@ -12,8 +12,8 @@ const loginValidations = require('../middlewares/validateLoginMiddleware.js')
 router.get('/register', guestMiddleware, usersController.register);
 router.post('/register', uploadFile.single('avatar'), validations, usersController.processRegister) // agregado
 
-router.get('/userEdit', usersController.edit);
-router.post('/userEdit', usersController.update);
+router.get('/edit/:id', usersController.edit);
+router.post('/edit', usersController.update);
 
 router.get('/login', guestMiddleware, usersController.login);
 router.post('/login', loginValidations, usersController.processLogin);// agregado
