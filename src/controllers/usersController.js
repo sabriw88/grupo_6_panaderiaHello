@@ -127,6 +127,13 @@ const usersController = {
 
     // Logearse (DB)
     processLogin: (req, res) => {
+        const resultvalidation = validationResult(req); 
+        if (resultvalidation.errors.length > 0) {
+            return res.render ('users/login', {
+                errors: resultvalidation.mapped(),
+                oldData: req.body
+            });
+        }
         let userToLogin = db.Users.findOne({
             where: {
                 email: req.body.email
