@@ -11,17 +11,21 @@
 
         <div class="container-formulario">
 
+            <div class="errores">
+                <ul></ul>
+            </div>
+
             <form action="/users/register" method="POST" class="register-input" enctype="multipart/form-data">
                 
                 <div class="register-input <%= locals.errors && errors.name ? 'is-invalid' : null %>">
-                    <input type="text" name="name" placeholder="Nombre" value="<%= locals.oldData ? oldData.name : null %>">
+                    <input type="text" name="name" id="nombre" placeholder="Nombre" value="<%= locals.oldData ? oldData.name : null %>">
                     <% if (locals.errors && errors.name) { %>
                         <div class="warning"><p><%= errors.name.msg %></p></div>
                     <% } %>
                 </div>
                 <br>
                 <div class="register-input <%= locals.errors && errors.surname ? 'is-invalid' : null %>">
-                    <input type="text" name="surname" placeholder="Apellido" value="<%= locals.oldData ? oldData.surname : null %>">
+                    <input type="text" name="surname" id="apellido" placeholder="Apellido" value="<%= locals.oldData ? oldData.surname : null %>">
                     <% if (locals.errors && errors.surname) { %>
                         <div class="warning"><p><%= errors.surname.msg %></p></div>
                     <% } %>
@@ -92,6 +96,7 @@
 </main>
 
 <%- include('../partials/footer.ejs') %>
+<script src="/public/js/registerValidation.js"></script>
 
 </body>
 </html>
