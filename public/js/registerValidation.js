@@ -1,3 +1,5 @@
+console.log('Archivo registerValidation vinculado');
+
 window.addEventListener('load', function(){
     let formulario = document.querySelectorAll('.register-input');
 
