@@ -12,7 +12,7 @@ const validations = [
 
 //validacion de contraseña
   body('password')
-    .notEmpty().withMessage('Debe ingresar una contraseña').bail()
+    .notEmpty().withMessage('').bail()
     .isLength({min:8}).withMessage('Debera tener al menos 8 caracteres').bail()
     .matches("[A-Z]").withMessage('Debera tener al menos 1 letra mayuscula').bail()
     .matches("[0-9]").withMessage('Debera tener al menos 1 numero').bail()

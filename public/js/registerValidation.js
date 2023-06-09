@@ -8,7 +8,7 @@ window.addEventListener('load', function(){
         
         let errores = [];
 
-        //validacion del nombre
+    //validacion del nombre
 
             let campoNombre = document.querySelector('#nombre');
 
@@ -27,18 +27,18 @@ window.addEventListener('load', function(){
             }
 
 
-            //validacion contrasena
+    //validacion contrasena
 
         let campoContraseña = document.querySelector("input.contraseña")
 
         if (campoContraseña.value == "") {
             errores.push("el campo de contraseña no tiene que estar vacio")
         } else if (campoContraseña.value.length < 8) {
-            errores.push("la contraseña debe tener al menos 8 caracteres")
+            errores.push("la contraseña debe tener al menos 8 caracteres, una letra mayuscula y una minuscula")
         }
 
 
-        //imprimiendo errores en el div 
+    //imprimiendo errores en el div 
 
         if(errores.length > 0){
             event.preventDefault();
