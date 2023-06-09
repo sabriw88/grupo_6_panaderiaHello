@@ -4,145 +4,95 @@
 
         <%- include('../partials/header.ejs') %>
 
-            <main class="main-register">
-                <div class="login-img">
-                    <img src="https://cdn.pixabay.com/photo/2016/11/29/10/09/bakery-1868925_1280.jpg" alt="">
+    <main class="main-register">
+        <div class="login-img">
+            <img src="https://cdn.pixabay.com/photo/2016/11/29/10/09/bakery-1868925_1280.jpg" alt="">
+        </div>
+
+        <div class="container-formulario">
+
+            <div class="errores">
+                <ul></ul>
+            </div>
+
+            <form action="/users/register" method="POST" class="register-input" enctype="multipart/form-data">
+                
+                <div class="register-input <%= locals.errors && errors.name ? 'is-invalid' : null %>">
+                    <input type="text" name="name" id="nombre" placeholder="Nombre" value="<%= locals.oldData ? oldData.name : null %>">
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="warning"><p><%= errors.name.msg %></p></div>
+                    <% } %>
+                </div>
+                <br>
+                <div class="register-input <%= locals.errors && errors.surname ? 'is-invalid' : null %>">
+                    <input type="text" name="surname" id="apellido" placeholder="Apellido" value="<%= locals.oldData ? oldData.surname : null %>">
+                    <% if (locals.errors && errors.surname) { %>
+                        <div class="warning"><p><%= errors.surname.msg %></p></div>
+                    <% } %>
+                </div>
+                <br>
+                <div class="register-input <%= locals.errors && errors.email ? 'is-invalid' : null %>">
+                    <input type="text" name="email" placeholder="Correo electronico" value="<%= locals.oldData ? oldData.email : null %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="warning"><p><%= errors.email.msg %></p></div>
+                    <% } %>
+                </div>
+                <br>
+                <div class="nacimiento">
+                    <label for="fecha-nacimiento"><h2>Fecha de nacimiento</h2></label>
+                    <input type="date" name="bday" id="fecha-nacimiento" value="<%= locals.oldData ? oldData.bday : null %>">
+                    <% if (locals.errors && errors.bday) { %>
+                        <div class="warning"><p><%= errors.bday.msg %></p></div>
+                    <% } %>
+                </div>
+                <br>                    
+                <div class="register-input <%= locals.errors && errors.address ? 'is-invalid' : null %>">
+                    <input type="text" name="address" placeholder="Domicilio" value="<%= locals.oldData ? oldData.address : null %>" class="form-control <%= locals.errors && errors.address ? 'is-invalid' : null %>">
+                    <% if (locals.errors && errors.address) { %>
+                        <div class="warning"><p><%= errors.address.msg %></p></div>
+                    <% } %>
+                </div>
+                <br>
+                <div class="foto-usuario">
+                    <label for="avatar"><h2>Foto de perfil</h2></label>
+                    <input type="file" name="avatar" id="foto-usuario" accept=".jpg, .png">
+                    <% if (locals.errors && errors.avatar) { %>
+                        <div class="warning"><p><%= errors.avatar.msg %></p></div>
+                    <% } %>
+                </div>
+                <br>
+                <div class="register-input <%= locals.errors && errors.password ? 'is-invalid' : null %>">
+                    <input type="password" name="password" placeholder="Contraseña">
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="warning"><p><%= errors.password.msg %></p></div>
+                    <% } %>
+                </div>
+                <br>
+                <div class="register-input">
+                    <input type="password" name="confirmPsw" placeholder="Confirmar contraseña">
+                </div>
+                <br>
+                <div class="register-checkbox">
+                    <label for="acepto-tyc"></label>
+                    <input type="checkbox"><p>Acepto Términos y Condiciones</p>
+
+                <div class="botones">
+                    <div class="register-input, register-button">
+                        <button type="submit" id="botones">Registrarse</button>
+                    </div>
+    
+                    <div class="register-input, register-button">
+                        <button type="reset" id="botones"> Borrar todo</button>
+                    </div>
                 </div>
 
-                <div class="container-formulario">
-
-                    <form action="/users/register" method="POST" class="register-input" enctype="multipart/form-data">
-
-                        <div class="register-input <%= locals.errors && errors.name ? 'is-invalid' : null %>">
-                            <input type="text" name="name" placeholder="Nombre"
-                                value="<%= locals.oldData ? oldData.name : null %>">
-                            <% if (locals.errors && errors.name) { %>
-                                <div class="warning">
-                                    <p>
-                                        <%= errors.name.msg %>
-                                    </p>
-                                </div>
-                                <% } %>
-                        </div>
-                        <br>
-                        <div class="register-input <%= locals.errors && errors.surname ? 'is-invalid' : null %>">
-                            <input type="text" name="surname" placeholder="Apellido"
-                                value="<%= locals.oldData ? oldData.surname : null %>">
-                            <% if (locals.errors && errors.surname) { %>
-                                <div class="warning">
-                                    <p>
-                                        <%= errors.surname.msg %>
-                                    </p>
-                                </div>
-                                <% } %>
-                        </div>
-                        <br>
-                        <div class="register-input <%= locals.errors && errors.email ? 'is-invalid' : null %>">
-                            <input type="text" name="email" placeholder="Correo electronico"
-                                value="<%= locals.oldData ? oldData.email : null %>">
-                            <% if (locals.errors && errors.email) { %>
-                                <div class="warning">
-                                    <p>
-                                        <%= errors.email.msg %>
-                                    </p>
-                                </div>
-                                <% } %>
-                        </div>
-                        <br>
-                        <div class="nacimiento">
-                            <label for="fecha-nacimiento">
-                                <h2>Fecha de nacimiento</h2>
-                            </label>
-                            <input type="date" name="bday" id="fecha-nacimiento"
-                                value="<%= locals.oldData ? oldData.bday : null %>">
-                            <% if (locals.errors && errors.bday) { %>
-                                <div class="warning">
-                                    <p>
-                                        <%= errors.bday.msg %>
-                                    </p>
-                                </div>
-                                <% } %>
-                        </div>
-                        <br>
-                        <div class="register-input <%= locals.errors && errors.address ? 'is-invalid' : null %>">
-                            <input type="text" name="address" placeholder="Domicilio"
-                                value="<%= locals.oldData ? oldData.address : null %>"
-                                class="form-control <%= locals.errors && errors.address ? 'is-invalid' : null %>">
-                            <% if (locals.errors && errors.address) { %>
-                                <div class="warning">
-                                    <p>
-                                        <%= errors.address.msg %>
-                                    </p>
-                                </div>
-                                <% } %>
-                        </div>
-                        <br>
-                        <div class="foto-usuario">
-                            <label for="avatar">
-                                <h2>Foto de perfil</h2>
-                            </label>
-                            <input type="file" name="avatar" id="foto-usuario" accept=".jpg, .png">
-                            <% if (locals.errors && errors.avatar) { %>
-                                <div class="warning">
-                                    <p>
-                                        <%= errors.avatar.msg %>
-                                    </p>
-                                </div>
-                                <% } %>
-                        </div>
-                        <br>
-                        <div class="register-input <%= locals.errors && errors.password ? 'is-invalid' : null %>">
-                            <input type="password" name="password" placeholder="Contraseña" class="contraseña">
-                            <% if (locals.errors && errors.password) { %>
-                                <div class="warning">
-                                    <p>
-                                        <%= errors.password.msg %>
-                                    </p>
-                                </div>
-                                <% } %>
-
-                                <div class="errores">
-                                    <ul></ul>
-                                </div>
-
-                        </div>
-                        <br>
-                        <div class="register-input">
-                            <input type="password" name="confirmPsw" placeholder="Confirmar contraseña">
-                        </div>
-                        <br>
-                        <div class="register-checkbox">
-                            <label for="acepto-tyc"></label>
-                            <input type="checkbox">
-                            <p>Acepto Términos y Condiciones</p>
-
-                            <div class="botones">
-                                <div class="register-input, register-button">
-                                    <button type="submit" class="botones">Registrarse</button>
-                                </div>
-
-                                <div class="register-input, register-button">
-                                    <button type="reset" class="botones"> Borrar todo</button>
-                                </div>
-                            </div>
-
-                          
-
-                           
-
-                            <div class="login-logo">
-                                <img src="/img/Logo-recortado.png" alt="">
-                            </div>
-
-                    </form>
-                </div>
 
             </main>
 
             <%- include('../partials/footer.ejs') %>
 
+<script src="/js/registerValidation.js"></script>
 
-               <script src="/js/validator.js" type="text/javascript"></script> 
     </body>
 
     </html>

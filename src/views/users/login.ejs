@@ -15,6 +15,10 @@
             </div>
             <div class="form-login">
                 <form class="login" method="POST" action="/users/login">
+                    <div class="errores" style="display: none;">
+                        <div><i class="fa-solid fa-triangle-exclamation" style="color: darkred;display: inline; margin-right: 5px;"></i></div>
+                        <p style="display: inline;"></p>
+                    </div>
                     <% if (locals.errors && errors.email) { %>
                         <div class="feedback">
                             <div><i class="fa-solid fa-triangle-exclamation"></i></div>
@@ -34,7 +38,7 @@
                     <div class="login-comment">
                         <p>¿Aún no eres usuario? <a href="/users/register">Regístrate aquí.</a></p>
                     </div>
-                    <div class="login-input">
+                    <div class="login-input password">
                         <label for="password">Contraseña:</label><br>
                         <input type="password" name="password">
                     </div>
@@ -55,6 +59,8 @@
     </main>
 
     <%- include('../partials/footer.ejs') %>
+
+    <script src="/js/loginValidator.js"></script>
 
 </body>
 </html>
