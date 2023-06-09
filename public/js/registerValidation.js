@@ -1,11 +1,14 @@
 console.log('Archivo registerValidation vinculado');
 
 window.addEventListener('load', function(){
-    let formulario = document.querySelectorAll('.register-input');
 
-    formulario.addEventListener('submit', function(e){
+    let formulario = document.querySelector('form.register-input');
+
+    formulario.addEventListener('submit', function(event){
         
         let errores = [];
+
+        //validacion del nombre
 
             let campoNombre = document.querySelector('#nombre');
 
@@ -23,7 +26,10 @@ window.addEventListener('load', function(){
                 errores.push('El campo "Apellido" debe tener al menos 2 caracteres');
             }
 
-            let campoContraseña = document.querySelector("input.contraseña")
+
+            //validacion contrasena
+
+        let campoContraseña = document.querySelector("input.contraseña")
 
         if (campoContraseña.value == "") {
             errores.push("el campo de contraseña no tiene que estar vacio")
@@ -31,14 +37,17 @@ window.addEventListener('load', function(){
             errores.push("la contraseña debe tener al menos 8 caracteres")
         }
 
+
+        //imprimiendo errores en el div 
+
         if(errores.length > 0){
-            e.preventDefault();
+            event.preventDefault();
 
             let ulErrores = document.querySelector('div.errores ul');
             for (let i = 0; i < errores.length; i++) {
                 ulErrores.innerHTML += '<li>' + errores[i] + '</li>'
                 
             }
-        }
+        } 
     })
 })

@@ -11,10 +11,6 @@
 
         <div class="container-formulario">
 
-            <div class="errores">
-                <ul></ul>
-            </div>
-
             <form action="/users/register" method="POST" class="register-input" enctype="multipart/form-data">
                 
                 <div class="register-input <%= locals.errors && errors.name ? 'is-invalid' : null %>">
@@ -62,7 +58,7 @@
                 </div>
                 <br>
                 <div class="register-input <%= locals.errors && errors.password ? 'is-invalid' : null %>">
-                    <input type="password" name="password" placeholder="Contraseña">
+                    <input type="password" name="password" placeholder="Contraseña" class="contraseña">
                     <% if (locals.errors && errors.password) { %>
                         <div class="warning"><p><%= errors.password.msg %></p></div>
                     <% } %>
@@ -76,13 +72,17 @@
                     <label for="acepto-tyc"></label>
                     <input type="checkbox"><p>Acepto Términos y Condiciones</p>
 
+                    <div class="errores">
+                        <ul></ul>
+                    </div>
+
                 <div class="botones">
                     <div class="register-input, register-button">
-                        <button type="submit" id="botones">Registrarse</button>
+                        <button type="submit" class="botones">Registrarse</button>
                     </div>
     
                     <div class="register-input, register-button">
-                        <button type="reset" id="botones"> Borrar todo</button>
+                        <button type="reset" class="botones"> Borrar todo</button>
                     </div>
                 </div>
 
@@ -91,7 +91,9 @@
 
             <%- include('../partials/footer.ejs') %>
 
-<script src="/js/registerValidation.js"></script>
+<script src="/js/registerValidation.js">
+    
+</script>
 
     </body>
 
