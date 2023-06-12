@@ -1,8 +1,5 @@
 window.addEventListener('load', function () {
     let loginForm = document.querySelector('form');
-    /* loginForm.addEventListener('mouseenter', () => {
-        loginForm.style.backgroundColor = 'yellow'
-    }) */
     
     let errores = [];
     let loginPassword = document.querySelector('.password input');
@@ -15,6 +12,7 @@ window.addEventListener('load', function () {
             errores.push('Debe ingresar su contraseña');
             let ulErrores = document.querySelector('.errores p');
             errores.forEach(error => {
+                ulErrores.innerText = "";
                 ulErrores.innerHTML += error+'<br>'+'<br>';
                 ulErrores.style.color = 'darkred';
             })
@@ -22,23 +20,10 @@ window.addEventListener('load', function () {
         }
     })
 
-    /* if (loginPassword.value == "") {
-        errores.push('Debe ingresar su contraseña');
-    } */
-
     if (errores.length > 0) {
         loginForm.addEventListener('submit', function (e) {
-            e.preventDefault()
-/*             divErrores.style.display = 'block' */;
+            e.preventDefault();
         });
-        
-        /* divErrores.addEventListener('submit', () => {
-            let ulErrores = document.querySelector('.errores ul');
-            errores.forEach(error => {
-                ulErrores.innerHTML += '<li>{error}</li>';
-                ulErrores.style.color = 'darkred';
-            })
-        }) */
     }
 
     loginPassword.addEventListener('focus', function () {
