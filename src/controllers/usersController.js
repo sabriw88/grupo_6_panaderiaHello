@@ -48,17 +48,39 @@ const usersController = {
                 oldData: req.body
             });
         }
-        db.Users.create({
-            name: req.body.name,
-            surname: req.body.surname,
-            email: req.body.email,
-            bday:req.body.bday,
-            adress: req.body.address,
-            password: bcrypt.hashSync(req.body.password, 10),
-            avatar: req.file ? req.file.filename : 'default-image.png',
-            admin: 0
+        let userInDB = db.Users.findOne({
+            where: {
+                email: req.body.email
+            }
+        }).then((usuario)=>{
+            console.log(usuario);
+        }).catch((error)=>{
+            console.log(error);
         })
-        return res.redirect('/users/login');
+        if (userInDB) {
+            return (
+                res.render ('users/register', {
+                    errors: {
+                        email: {
+                            msg: 'Este correo electrónico ya está registrado'
+                        }
+                    },
+                oldData: req.body
+                })
+            );
+        } else {
+            db.Users.create({
+                name: req.body.name,
+                surname: req.body.surname,
+                email: req.body.email,
+                bday:req.body.bday,
+                adress: req.body.address,
+                password: bcrypt.hashSync(req.body.password, 10),
+                avatar: req.file ? req.file.filename : 'default-image.png',
+                admin: 0
+            })
+            return (res.redirect('/users/login'))
+        };
     },
     
     // Editar usuario //

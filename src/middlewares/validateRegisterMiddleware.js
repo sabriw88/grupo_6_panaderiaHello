@@ -11,7 +11,7 @@ const validations = [
     body('email')
         .notEmpty().withMessage('Debe ingresar su correo electrónico').bail()
         .isEmail().withMessage('Debe ingresar un correo electrónico válido')
-        /* validar q no se repita con un mail de la base */,
+        /* validar q no se repita con un mail de la base quedó en el controller */,
     body('bday').notEmpty().withMessage('Debe ingresar su fecha de nacimiento'),
     body('address').notEmpty().withMessage('Debe ingresar su dirección'),
 
