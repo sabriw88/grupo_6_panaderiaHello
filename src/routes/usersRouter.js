@@ -10,17 +10,19 @@ const authMiddleware = require('../middlewares/authMiddleware');
 const loginValidations = require('../middlewares/validateLoginMiddleware.js')
 
 router.get('/register', guestMiddleware, usersController.register);
-router.post('/register', uploadFile.single('avatar'), validations, usersController.processRegister) // agregado
+router.post('/register', uploadFile.single('avatar'), validations, usersController.processRegister) 
 
 router.get('/edit/:id', usersController.edit);
 router.post('/edit/:id', uploadFile.single('avatar'), usersController.update);
 
 router.get('/login', guestMiddleware, usersController.login);
-router.post('/login', loginValidations, usersController.processLogin);// agregado
+router.post('/login', loginValidations, usersController.processLogin);
 
-router.get('/profile/:id', authMiddleware, usersController.profile);// agregado
-router.get('/logout', usersController.logout);// agregado
+router.get('/profile/:id', authMiddleware, usersController.profile);
+router.get('/logout', usersController.logout);
 
 router.get('/productCart', usersController.productCart);
+
+router.delete('/delete/:id', usersController.delete);
 
 module.exports = router;

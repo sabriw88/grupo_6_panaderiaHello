@@ -48,39 +48,38 @@ const usersController = {
                 oldData: req.body
             });
         }
-        let userInDB = db.Users.findOne({
+        db.Users.findOne({
             where: {
                 email: req.body.email
             }
         }).then((usuario)=>{
-            console.log(usuario);
+            if (usuario) {
+                return (
+                    res.render ('users/register', {
+                        errors: {
+                            email: {
+                                msg: 'Este correo electrónico ya está registrado'
+                            }
+                        },
+                    oldData: req.body
+                    })
+                );    
+            } else {
+                db.Users.create({
+                    name: req.body.name,
+                    surname: req.body.surname,
+                    email: req.body.email,
+                    bday:req.body.bday,
+                    adress: req.body.address,
+                    password: bcrypt.hashSync(req.body.password, 10),
+                    avatar: req.file ? req.file.filename : 'default-image.png',
+                    admin: 0
+                })
+                return (res.redirect('/users/login'))
+            };
         }).catch((error)=>{
             console.log(error);
         })
-        if (userInDB) {
-            return (
-                res.render ('users/register', {
-                    errors: {
-                        email: {
-                            msg: 'Este correo electrónico ya está registrado'
-                        }
-                    },
-                oldData: req.body
-                })
-            );
-        } else {
-            db.Users.create({
-                name: req.body.name,
-                surname: req.body.surname,
-                email: req.body.email,
-                bday:req.body.bday,
-                adress: req.body.address,
-                password: bcrypt.hashSync(req.body.password, 10),
-                avatar: req.file ? req.file.filename : 'default-image.png',
-                admin: 0
-            })
-            return (res.redirect('/users/login'))
-        };
     },
     
     // Editar usuario //
@@ -206,6 +205,20 @@ const usersController = {
     // Ir al carrito de productos
     productCart: (req, res) => {
         res.render('users/productCart');
+    },
+
+    // Borrar usuario
+    delete: (req, res) => {
+        db.Users.destroy({
+            where: {
+              id: req.params.id
+            }
+          }).then(() => {
+            res.redirect('/')
+          }).catch((error) => {
+            console.log(error);
+            res.redirect('/');
+          })
     }
 }
 

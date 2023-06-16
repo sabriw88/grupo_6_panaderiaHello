@@ -16,6 +16,10 @@
 
         <a href="/users/edit/<%= user.id %>">Editar usuario</a>
 
+        <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST" >
+            <button type="submit" class="card_button2" onclick="return confirm('¿Estás seguro que quieres borrar tu usuario?')">Borrar usuario</button>
+        </form>
+
         <div class="nav-perfil">
             <button> Productos </button>
             <button> Últimas compras </button>
