@@ -214,6 +214,8 @@ const usersController = {
               id: req.params.id
             }
           }).then(() => {
+            res.clearCookie('userEmail');
+            req.session.destroy();
             res.redirect('/')
           }).catch((error) => {
             console.log(error);
