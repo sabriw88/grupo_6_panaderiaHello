@@ -163,7 +163,8 @@ const usersController = {
             if (usuario != null) {
                 let passwordVerified = bcrypt.compareSync(req.body.password, usuario.password)
                 if(passwordVerified) {
-                delete usuario.password
+                delete usuario.dataValues.password
+                console.log(usuario);
                 req.session.loggedUser = usuario
                 if (req.body.rememberMe) {
                     res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 * 60 * 24})
@@ -192,6 +193,7 @@ const usersController = {
 
     // Ir al perfil de usuario
     profile: (req, res) => {
+        console.log(req.session.loggedUser);
         res.render('users/profile', {
             user: req.session.loggedUser
         });
