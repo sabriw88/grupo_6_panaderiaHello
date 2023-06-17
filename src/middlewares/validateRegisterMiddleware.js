@@ -23,6 +23,9 @@ const validations = [
     .matches("[0-9]").withMessage('La contraseña debe tener al menos 1 número').bail()
     .matches("[a-z]").withMessage('La contraseña debe tener al menos 1 letra minúscula'),  
 
+
+
+//validacion de imagen
     body('avatar').custom((value, {req}) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];

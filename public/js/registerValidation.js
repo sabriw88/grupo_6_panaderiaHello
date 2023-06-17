@@ -38,6 +38,13 @@ window.addEventListener('load', function(){
         }
 
 
+    //validacion imagen front 
+
+
+    //validacion email front
+
+
+
     //imprimiendo errores en el div 
 
         if(errores.length > 0){

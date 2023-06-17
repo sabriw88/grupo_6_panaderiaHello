@@ -9,7 +9,7 @@
         <img src="https://cdn.pixabay.com/photo/2016/11/29/10/09/bakery-1868925_1280.jpg"valt="">
     </div>
     <div class="form-create">
-        <form action="/products" method="POST" enctype="multipart/form-data">           
+        <form action="/products" method="POST" enctype="multipart/form-data" class="createProduct">           
             <div class="row product-detail">
                 <h2 class="create-title">Formulario de creación de productos</h2>
 
@@ -49,11 +49,17 @@
                 <div class="col-12">
                     <button type="submit" class="CreateButton">Guardar producto</button>
                 </div>
+
+                <div class="errores">
+                    <ul></ul>
+                </div>
             </div>
         </form>
     </div>
 
 </div>
 <%- include('../partials/footer') %>
+
+<script src="/js/createProductValidator.js"></script>
 </body>
 </html>
