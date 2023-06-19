@@ -2,7 +2,7 @@
 
 window.addEventListener('load', function(){
 
-    let formulario = document.querySelector('form.createProduct');
+    let formulario = document.querySelector('form.form-edit');
   
 
     formulario.addEventListener('submit', function(event){
@@ -58,9 +58,6 @@ if(errores.length > 0){
 
     })
 })
-
-
-
 
 
 

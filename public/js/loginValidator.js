@@ -6,6 +6,7 @@ window.addEventListener('load', function () {
     let divErrores = document.querySelector('.errores');
 
     loginPassword.addEventListener('blur', () => {
+
         if (loginPassword.value == "") {
             loginPassword.style.backgroundColor = 'pink';
             loginPassword.style.borderColor = 'darkred';
@@ -23,6 +24,8 @@ window.addEventListener('load', function () {
     if (errores.length > 0) {
         loginForm.addEventListener('submit', function (e) {
             e.preventDefault();
+
+            
         });
     }
 

@@ -9,7 +9,7 @@
         <img src="https://cdn.pixabay.com/photo/2016/11/29/10/09/bakery-1868925_1280.jpg"valt="">
     </div>
     <div class="form-create">
-        <form action="/products/edit/<%= producto.id %>?_method=PATCH" method="POST">           
+        <form action="/products/edit/<%= producto.id %>?_method=PATCH" method="POST" class="form-edit">           
             <div class="row product-detail">
                 <h2 class="create-title">Editá el producto "<%= producto.name %>"</h2>
                 <div class="create-input">
@@ -55,9 +55,6 @@
                 </div>
                 <div class="errores">
                     <ul>
-                        <% errores.forEach(function(error) { %>
-                            <li><%= error %></li>
-                        <% }) %>
                     </ul>
                 <div class="col-12">
                     <button type="submit" class="CreateButton">Guardar edición</button>
@@ -68,5 +65,6 @@
 
 </div>
 <%- include('../partials/footer') %>
+<script src="/js/editProductValidator.js"></script>
 </body>
 </html>

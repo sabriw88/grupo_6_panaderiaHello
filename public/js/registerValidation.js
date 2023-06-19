@@ -39,7 +39,14 @@ window.addEventListener('load', function(){
 
 
     //validacion imagen front 
-
+    let imagenProducto = document.querySelector('#foto-usuario');
+    let allowedFormats = ['jpg', 'jpeg', 'png', 'gif'];
+    let fileExtension = imagenProducto.value.split('.').pop().toLowerCase();
+    
+    if (imagenProducto.value !== '' && !allowedFormats.includes(fileExtension)) {
+        errores.push('El campo "Imagen" debe ser en formato JPG, JPEG, PNG o GIF');
+    }   
+    
 
     //validacion email front
 
@@ -51,6 +58,7 @@ window.addEventListener('load', function(){
             event.preventDefault();
 
             let ulErrores = document.querySelector('div.errores ul');
+            ulErrores.innerHTML = ''; // Limpiar los errores anteriores
             for (let i = 0; i < errores.length; i++) {
                 ulErrores.innerHTML += '<li>' + errores[i] + '</li>'
                 
