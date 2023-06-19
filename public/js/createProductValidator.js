@@ -40,3 +40,11 @@ if(errores.length > 0){
 })
 
 
+// Validación del campo imagen
+let imagenProducto = document.querySelector('#image');
+let allowedFormats = ['jpg', 'jpeg', 'png', 'gif'];
+let fileExtension = imagenProducto.value.split('.').pop().toLowerCase();
+
+if (imagenProducto.value !== '' && !allowedFormats.includes(fileExtension)) {
+    errores.push('El campo "Imagen" debe ser en formato JPG, JPEG, PNG o GIF');
+}
