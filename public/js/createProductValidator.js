@@ -47,4 +47,5 @@ let fileExtension = imagenProducto.value.split('.').pop().toLowerCase();
 
 if (imagenProducto.value !== '' && !allowedFormats.includes(fileExtension)) {
     errores.push('El campo "Imagen" debe ser en formato JPG, JPEG, PNG o GIF');
-}
+}   
+
