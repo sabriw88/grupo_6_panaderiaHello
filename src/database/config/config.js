@@ -7,6 +7,7 @@ module.exports =
     "database": "bakerydb",
     "host": "127.0.0.1",
     "dialect": "mysql"
+    
   },
   "test": {
     "username": "root",
