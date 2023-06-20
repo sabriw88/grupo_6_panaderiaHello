@@ -74,8 +74,11 @@ body {
     border: 1px solid darkred;
     margin-bottom: 1.5em;
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: stretch;
+}
+.feedback hr {
+    margin: 0 5px;
 }
 .feedback div{
     margin: 0px 5px 0px 0px;
