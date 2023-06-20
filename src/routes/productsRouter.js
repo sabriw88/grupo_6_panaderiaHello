@@ -21,7 +21,7 @@ router.get('/detail/:id/', productsController.detalleProducto);
 
 //Editar
 router.get('/edit/:id', productsController.edit);
-router.patch('/edit/:id', productsController.update);
+router.patch('/edit/:id', upload.single("image") , productsController.update);
 
 //crear
     router.get("/productCreate",productsController.create);

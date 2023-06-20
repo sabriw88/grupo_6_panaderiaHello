@@ -1,0 +1,16 @@
+*{
+    background-color: whitesmoke;
+}
+
+
+.row{
+   
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+
+.caja{
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+    width: 20rem;
+}

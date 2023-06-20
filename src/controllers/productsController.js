@@ -104,7 +104,7 @@ const productsController = {
           id: req.params.id
         }
       },
-        res.redirect ("../detail/" + req.params.id))
+      res.redirect ("/products"))
 
       //Antiguo código con JSON
 
