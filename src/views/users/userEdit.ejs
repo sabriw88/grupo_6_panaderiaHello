@@ -11,7 +11,7 @@
 
         <div class="container-formulario">
 
-            <form action="/users/edit/<%= user.id %>" method="POST" class="register-input" enctype="multipart/form-data">
+            <form method="POST" action="/users/edit/<%= user.id %>?_method=PUT" class="register-input" enctype="multipart/form-data">
                 
                 <div class="register-input">
                     <input type="text" name="name" placeholder="Nombre" value="<%= user.name %>">

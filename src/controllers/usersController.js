@@ -193,11 +193,15 @@ const usersController = {
 
     // Ir al perfil de usuario
     profile: (req, res) => {
-        console.log(req.session.loggedUser);
-        res.render('users/profile', {
-            user: req.session.loggedUser
-        });
+        db.Users.findByPk(req.session.loggedUser.id).then(usuario => {
+            delete usuario.password;
+            req.session.loggedUser = usuario;
+            res.render('users/profile', {
+                user: req.session.loggedUser
+            })
+        })
     },
+    
     // Deslogearse
     logout: (req, res) => {
         res.clearCookie('userEmail');

@@ -21,13 +21,13 @@
                     </div>
                     <% if (locals.errors && errors.email) { %>
                         <div class="feedback">
-                            <div><i class="fa-solid fa-triangle-exclamation"></i></div>
+                            <i class="fa-solid fa-triangle-exclamation"></i><hr>
                             <%= errors.email.msg %>
                         </div>
                     <% } %>
                     <% if (locals.errors && errors.password) { %>
                         <div class="feedback">
-                            <div><i class="fa-solid fa-triangle-exclamation"></i></div>
+                            <i class="fa-solid fa-triangle-exclamation"></i><hr>
                             <%= errors.password.msg %>
                         </div>
                     <% } %>
