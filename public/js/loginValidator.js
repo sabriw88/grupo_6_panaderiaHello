@@ -4,12 +4,16 @@ window.addEventListener('load', function () {
     let loginPassword = document.querySelector('.password input');
     let divErrores = document.querySelector('.errores');
     let ulErrores = document.querySelector('.errores p');
+    let regEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
     loginEmail.addEventListener('blur', () => {
         if (loginEmail.value == "") {
             loginEmail.style.backgroundColor = 'pink';
             loginEmail.style.borderColor = 'darkred';
-        }
+        } else if (!regEmail.test(loginEmail.value)) {
+            loginEmail.style.backgroundColor = 'pink';
+            loginEmail.style.borderColor = 'darkred';
+        } 
     })
 
     loginPassword.addEventListener('blur', () => {
@@ -25,6 +29,8 @@ window.addEventListener('load', function () {
         ulErrores.innerHTML = "";
         if (loginEmail.value == "") {
             errores.push('Debe ingresar su email');
+        } else if (!regEmail.test(loginEmail.value)) {
+            errores.push('Debe ingresar un email válido')
         }
         if (loginPassword.value == "") {
             errores.push('Debe ingresar su contraseña');
