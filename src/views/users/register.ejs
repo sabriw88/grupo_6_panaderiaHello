@@ -28,7 +28,7 @@
                 </div>
                 <br>
                 <div class="register-input <%= locals.errors && errors.email ? 'is-invalid' : null %>">
-                    <input type="text" name="email" placeholder="Correo electronico" value="<%= locals.oldData ? oldData.email : null %>">
+                    <input type="text" name="email" class="email" placeholder="Correo electronico" value="<%= locals.oldData ? oldData.email : null %>">
                     <% if (locals.errors && errors.email) { %>
                         <div class="warning"><p><%= errors.email.msg %></p></div>
                     <% } %>
