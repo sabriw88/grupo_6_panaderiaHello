@@ -45,6 +45,35 @@ const apisController = {
         db.Users.findByPk(req.params.id).then(usuario => {
             let userPhoto = usuario.dataValues.avatar
             res.sendFile(path.join(__dirname,'../../public/img/avatars/'+userPhoto))}) 
+    },
+
+    // API para mostrar listado de productos
+    listProducts: (req, res) => {
+        db.Products
+            .findAll()
+            .then(productos => {
+                productos.forEach(productos => {
+                    productos = 'http://localhost:3000/api/products'
+                });
+                res.status(200).json({
+                    total: productos.length,
+                    data: productos,
+                    status: 200
+                })
+            }) 
+} ,
+    // API para mostrar 1 producto
+    showProduct: (req, res) => {
+        db.Products
+            .findByPk(req.params.id)
+            .then(producto => {
+                producto.image = 'http://localhost:3000/api/products/'+imagen.id+'/image'
+                res.send(producto)
+                /* res.status(200).json({
+                    data: usuario,
+                    status: 200
+                }) */
+            })
     }
 
 }
