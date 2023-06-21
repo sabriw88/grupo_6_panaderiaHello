@@ -7,7 +7,7 @@ router.get('/users', apisController.listUsers);
 router.get('/users/:id/avatar', apisController.showUserAvatar);
 router.get('/users/:id', apisController.showUser);
 router.get('/products', apisController.listProducts);
-
+router.get('/products/:id', apisController.showProduct);
 
 
 module.exports = router;

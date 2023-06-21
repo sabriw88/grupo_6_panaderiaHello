@@ -58,8 +58,21 @@ const apisController = {
                     status: 200
                 })
             }) 
+} ,
+    // API para mostrar 1 producto
+    showProduct: (req, res) => {
+        db.Products
+            .findByPk(req.params.id)
+            .then(producto => {
+                producto.image = 'http://localhost:3000/api/products/'+imagen.id+'/image'
+                res.send(producto)
+                /* res.status(200).json({
+                    data: usuario,
+                    status: 200
+                }) */
+            })
+    }
 
-} 
 }
 
 module.exports = apisController;
