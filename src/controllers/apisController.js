@@ -4,6 +4,8 @@ const path = require('path');
 const apisController = {
 
     // API para buscar todos los usuarios
+
+   
     listUsers: (req, res) => {
         db.Users
             .findAll()
@@ -16,6 +18,7 @@ const apisController = {
                 res.status(200).json({
                     total: usuarios.length,
                     data: usuarios,
+                    url : "api/users",
                     status: 200
                 })
             }) 

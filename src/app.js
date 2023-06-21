@@ -36,4 +36,4 @@ app.use('/users', usersRouter);
 app.use('/api', apisRouter)
 app.use('/', mainRouter);
 
-app.listen(3000, () => {console.log("Server running in http://localhost:3000")});
+app.listen(3031, () => {console.log("Server running in http://localhost:3031")});

@@ -1,11 +1,34 @@
-import logo from './logo.svg';
+/* import logo from './logo.svg'; */
 import './App.css';
+ import { useState } from "react"; 
+ import { useEffect } from "react"; 
 import ContentRow from './components/contentRow';
+import ContentWrapper from './components/contentWrapper';
+import ProductByCategory from './components/ProductByCategory';
+import TableProducts from './components/tableProducts';
 import React from 'react';
 import '../src/assets/css/app.css';
 
 
 function App() {
+
+ const [usuarios, setUsuarios] = useState([]);
+
+	useEffect(()=>{
+
+		fetch('api/users')
+		.then(respuesta=>{
+			return respuesta.json()
+		})
+		.then(usuarios=>{
+			setUsuarios({usuarios})
+      console.log(usuarios.total)
+		})
+		.catch(error => console.log(error))
+
+	},[])
+
+
   return (
     <React.Fragment >
       <div className='body'>
@@ -21,7 +44,7 @@ function App() {
         }, {
           titulo: "Total de usuarios",
           colorDeBorde: "card border-left-success shadow h-100 py-2",
-          cifra: 79,
+          cifra: usuarios.total,
           icono: "fas fa-award fa-2x text-gray-300"
 
         }, {
@@ -33,6 +56,10 @@ function App() {
 
 
       />
+      
+      <ContentWrapper />
+      <ProductByCategory />
+      <TableProducts />
 </div>
     </React.Fragment>
 
