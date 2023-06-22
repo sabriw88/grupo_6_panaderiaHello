@@ -75,7 +75,7 @@ INSERT INTO products (id , name, price, categoryId, stock, image, description)
 VALUES 
 (DEFAULT,"Baguette", 80, 1, 100,  "panBaguete.jfif", 'La baguette o baguete​ es una variedad de pan originaria de Francia que se caracteriza por una forma alargada. Es uno de los formatos de pan más conocidos, producidos y consumidos a nivel internacional.' ),
 (DEFAULT,"Pan de molde", 60, 1, 80,  "panBaguete.jfif", 'El pan de molde (o pan sandwich) es aquel pan cuya masa se enriquece con mantequilla o leche y se hornea dentro de un molde o lata. Gracias a esto, el pan resultante tiene una corteza blanda y dorada, y una miga suave y esponjosa. Se suele vender rebanado, y se utiliza para elaborar sándwiches principalmente.' ),
-(DEFAULT,"Pan negro", 100, 1, 150,  "image-1680739658902.jpg", 'Pan negro realizado con centeno' ),
+(DEFAULT,"Pan negro", 100, 1, 150,  "image-1680739658902.jpg", 'Pan de molde de centeno con una generosa capa de semillas' ),
 (DEFAULT,"Selva Negra", 2000, 2, 5,  "selva-negra.jpg", 'torta de chocolate.' );
 
 INSERT INTO users (id , name, surname, email, bday, adress, password, avatar, admin)
