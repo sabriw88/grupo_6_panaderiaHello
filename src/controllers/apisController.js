@@ -4,8 +4,6 @@ const path = require('path');
 const apisController = {
 
     // API para buscar todos los usuarios
-
-   
     listUsers: (req, res) => {
         db.Users
             .findAll()
@@ -13,12 +11,14 @@ const apisController = {
                 usuarios.forEach(usuario => {
                     delete usuario.dataValues.password;
                     delete usuario.dataValues.admin;
-                    usuario.avatar = 'http://localhost:3000/api/users/'+usuario.id+'/avatar'
+                    delete usuario.dataValues.bday;
+                    delete usuario.dataValues.adress;
+                    delete usuario.dataValues.avatar;
+                    usuario.dataValues.detail = 'http://localhost:3031/api/users/'+usuario.id;
                 });
                 res.status(200).json({
                     total: usuarios.length,
                     data: usuarios,
-                    url : "api/users",
                     status: 200
                 })
             }) 
@@ -31,12 +31,11 @@ const apisController = {
             .then(usuario => {
                 delete usuario.dataValues.password;
                 delete usuario.dataValues.admin;
-                usuario.avatar = 'http://localhost:3000/api/users/'+usuario.id+'/avatar'
-                res.send(usuario)
-                /* res.status(200).json({
+                usuario.avatar = 'http://localhost:3031/api/users/'+usuario.id+'/avatar'
+                res.status(200).json({
                     data: usuario,
                     status: 200
-                }) */
+                })
             })
     },
 
@@ -52,12 +51,16 @@ const apisController = {
         db.Products
             .findAll()
             .then(productos => {
-                productos.forEach(productos => {
-                    productos = 'http://localhost:3000/api/products'
+                productos.forEach(producto => {
+                    delete producto.dataValues.price;
+                    delete producto.dataValues.stock;
+                    delete producto.dataValues.image;
+                    producto.dataValues.detail = 'http://localhost:3031/api/products/'+producto.id
                 });
                 res.status(200).json({
-                    total: productos.length,
-                    data: productos,
+                    count: productos.length,
+                    countByCategory: "" /* agregar */,
+                    products: productos,
                     status: 200
                 })
             }) 
@@ -67,15 +70,20 @@ const apisController = {
         db.Products
             .findByPk(req.params.id)
             .then(producto => {
-                producto.image = 'http://localhost:3000/api/products/'+imagen.id+'/image'
-                res.send(producto)
-                /* res.status(200).json({
-                    data: usuario,
+                producto.image = 'http://localhost:3031/api/products/'+producto.id+'/image'
+                res.status(200).json({
+                    data: producto,
                     status: 200
-                }) */
+                })
             })
-    }
+    },
 
+    // API para mostrar la foto del producto
+    showProductPhoto: (req, res) => {
+        db.Products.findByPk(req.params.id).then(producto => {
+            let productPhoto = producto.dataValues.image
+            res.sendFile(path.join(__dirname,'../../public/img/'+productPhoto))}) 
+    },
 }
 
 module.exports = apisController;
