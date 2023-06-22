@@ -8,10 +8,11 @@ window.addEventListener('load', function(){
     let campoContraseña = document.querySelector("input.contraseña");
     let imagenProducto = document.querySelector('#foto-usuario');
     let allowedFormats = ['jpg', 'jpeg', 'png', 'gif'];
-    let fileExtension = imagenProducto.value.split('.').pop().toLowerCase();
+
 
     formulario.addEventListener('submit', function(event){
         let errores = [];
+        let fileExtension = imagenProducto.value.split('.').pop().toLowerCase();
 
     //validacion del nombre
             if(campoNombre.value == ''){
@@ -42,7 +43,7 @@ window.addEventListener('load', function(){
             }
 
     //validacion imagen front 
-            if (imagenProducto.value !== '' && !allowedFormats.includes(fileExtension)) {
+            if (imagenProducto.value !== '' && !allowedFormats.includes(fileExtension.toLowerCase())) {
                 errores.push('El campo "Imagen" debe ser en formato JPG, JPEG, PNG o GIF');
             }   
 
