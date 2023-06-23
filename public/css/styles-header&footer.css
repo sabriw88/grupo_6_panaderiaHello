@@ -67,6 +67,29 @@ nav.login-bar ul{
 a {
     text-decoration: none;
 }
+.burger-bar {
+    display: flex;
+    flex-direction: column;
+    background-color: #010101;
+    color: white;
+    text-align: center;
+    border-top: 1px solid white;
+    width: 100vw;
+    max-width: 120px;
+    position: fixed;
+    z-index: 1;
+    top: -135px;
+}
+.expanded {
+    top: auto;
+}
+.burger-bar hr {
+    max-width: 80px;
+    margin: 0px auto;
+}
+.burger-bar li {
+    padding: 5px;
+}
 /* FIN HEADER */
 
 /* FOOTER */
@@ -194,6 +217,9 @@ footer li i{
     .login-bar li:hover i{
         background-color: white;
         color: #010101;
+    }
+    .burger-bar {
+        display: hidden;
     }
     /* FOOTER */
     section.footer-logo {
