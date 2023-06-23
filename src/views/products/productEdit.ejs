@@ -9,7 +9,7 @@
         <img src="https://cdn.pixabay.com/photo/2016/11/29/10/09/bakery-1868925_1280.jpg"valt="">
     </div>
     <div class="form-create">
-        <form action="/products/edit/<%= producto.id %>?_method=PATCH" method="POST" class="form-edit" enctype="multipart/form-data"></form>          
+        <form action="/products/edit/<%= producto.id %>?_method=PATCH" method="POST" class="form-edit" enctype="multipart/form-data">        
             <div class="row product-detail">
                 <h2 class="create-title">Editá el producto "<%= producto.name %>"</h2>
                 <div class="create-input">
@@ -51,7 +51,7 @@
 
                 <div class="create-input">
                     <label for="image" class="form-label">Imagen</label>
-                    <input type= "file" name="image" id="image" accept=".jpg" class="form-input"></input>
+                    <input type= "file" name="image" id="image" accept="image/*" class="form-input"></input>
                 </div>
                 <div class="errores">
                     <ul>
