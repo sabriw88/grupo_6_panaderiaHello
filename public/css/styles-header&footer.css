@@ -30,6 +30,9 @@ div.bottom-header-bar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
 }
 .bottom-header-bar i {
     color: white;
@@ -81,7 +84,7 @@ a {
     top: -135px;
 }
 .expanded {
-    top: auto;
+    top: 33px;
 }
 .burger-bar hr {
     max-width: 80px;
