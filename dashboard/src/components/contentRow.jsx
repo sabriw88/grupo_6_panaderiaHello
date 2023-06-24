@@ -1,4 +1,5 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
+import Prueba from "./prueba";
 
 
 class User extends Component {
@@ -11,45 +12,72 @@ class User extends Component {
 	//Compomentes Ciclo de vida - Montar - Actualizar - Desmontar
 	//Montaje
 	componentDidMount() {
+
+		
+		fetch('/api/products')
+			.then(respuesta => {
+				return respuesta.json()
+			})
+			.then(products => {
+				//console.log(movies)
+				this.setState({ products: products.count,
+				                todo: products })
+			})
+			.catch(error => console.log(error))
+
 		fetch('/api/users')
 			.then(respuesta => {
 				return respuesta.json()
 			})
 			.then(users => {
 				//console.log(movies)
-				this.setState({ users: users})
+				this.setState({ users: users })
 			})
 			.catch(error => console.log(error))
 
+
+		fetch('/api/categoria')
+			.then(respuesta => {
+				return respuesta.json()
+			})
+			.then(categorias => {
+				//console.log(movies)
+				this.setState({ categorias: categorias.countByCategory })
+			})
+			.catch(error => console.log(error))
+
+
 	}
+
+
+
 
 	render() {
 
 		return (
 			<div className="row">
 
-				<h3>{this.state.users.total}</h3>
+				<Prueba
 
-				{/* {props.items.map((item, i) =>
+					name="Total de Productos"
+					totalUsers={this.state.products}
 
+				/>
+				<Prueba
 
-					<div key={i + item} className="caja">
-						<div className={item.colorDeBorde}>
-							<div className="card-body">
-								<div className="row no-gutters align-items-center">
-									<div className="col mr-2">
-										<div className="text-xs font-weight-bold text-primary text-uppercase mb-1">{item.titulo}</div>
-										<div className="text-xs font-weight-bold text-primary text-uppercase mb-1">{total}</div>
-										<div className="h5 mb-0 font-weight-bold text-gray-800">{item.cifra}</div>
-									</div>
-									<div className="col-auto">
-										<i className={item.icono}></i>
-									</div>
-								</div>
-							</div>
-						</div>
+					name="Total de Usuarios"
+					totalUsers={this.state.users.total}
 
-					</div>)} */}
+				/>
+				<Prueba
+
+					name="Total de Categorias"
+					totalUsers={this.state.categorias}
+
+				/>
+
+				<h2></h2>
+
 			</div>
 		)
 	}

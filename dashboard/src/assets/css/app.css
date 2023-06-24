@@ -2,7 +2,10 @@
     background-color: whitesmoke;
 }
 
-
+.body .titulo   {
+    text-align: center;
+    color: teal;
+}
 .row{
    
     display: flex;
@@ -11,6 +14,15 @@
 }
 
 .caja{
-    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
-    width: 20rem;
+    border: 1px solid teal;
+    display: flex;
+    width: 22rem;
+    justify-content: space-around;
+}
+
+.addProduct{
+    border: 1px solid teal;
+    width: 22rem;
+    box-sizing: border-box;
+   
 }

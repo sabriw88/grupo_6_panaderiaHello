@@ -54,17 +54,35 @@ const apisController = {
                 productos.forEach(producto => {
                     delete producto.dataValues.price;
                     delete producto.dataValues.stock;
-                    delete producto.dataValues.image;
-                    producto.dataValues.detail = 'http://localhost:3031/api/products/'+producto.id
+                    producto.dataValues.detail = 'http://localhost:3031/api/products/'+producto.id;
                 });
                 res.status(200).json({
                     count: productos.length,
-                    countByCategory: "" /* agregar */,
-                    products: productos,
-                    status: 200
+                    ultimo: productos[productos.length-1],
+                    foto: 'http://localhost:3031/api/products/11/image',
+                    data: productos,  
+                    status: 200 
                 })
             }) 
 } ,
+
+
+
+
+listCategories: (req, res) => {
+    db.Categories
+        .findAll()
+        .then(categorias => {
+            categorias.forEach(categoria => {
+                categoria.dataValues.detail = 'http://localhost:3031/api/categoria/'+categoria.id
+            });
+            res.status(200).json({
+                countByCategory: categorias.length,
+                status: 200
+            })
+        }) 
+} ,
+
     // API para mostrar 1 producto
     showProduct: (req, res) => {
         db.Products

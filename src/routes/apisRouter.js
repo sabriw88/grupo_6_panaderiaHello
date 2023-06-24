@@ -9,6 +9,6 @@ router.get('/users/:id', apisController.showUser);
 router.get('/products', apisController.listProducts);
 router.get('/products/:id', apisController.showProduct);
 router.get('/products/:id/image', apisController.showProductPhoto);
-
+router.get('/categoria', apisController.listCategories);
 
 module.exports = router;
