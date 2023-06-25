@@ -10,14 +10,13 @@
     max-height: 75vh;
     object-fit: cover;
 }
-
 .link-shop{
     display: none;
 }
 .main-logo {
     width: 30%;
     position: absolute;
-    top: -9%;
+    top: 40px;
     left: 35%;
 }
 .main-logo:hover {
@@ -73,12 +72,12 @@ a {
     margin: 5px auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     padding: 5px;
 }
 .product-main {
     width: 30%;
-    padding: 5px;
+    padding: 10px 5px;
     background-color: #010101;
     border-radius: 5px;
     display: flex;
@@ -91,6 +90,8 @@ a {
 }
 .product-main img {
     width: 95%;
+    height: 40%;
+    object-fit: cover;
 }
 .product-name {
     font-size: 10px;
@@ -108,15 +109,18 @@ a {
     text-align: center;
     width: 65px;
     margin: auto;
+    height: 25px;
 }
 .product-bottom-box {
     position: relative;
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    margin-bottom: 50px;
-    padding:10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    height: 50%;
+    width: 100%;
 }
 .product-bottom-box p {
     text-align: justify;
@@ -164,6 +168,7 @@ a {
     width: 100%;
     height: 100%;
     display: inline;
+    object-fit: cover;
 }
 .main-img-bar i {
     font-size: 25px;
@@ -188,6 +193,9 @@ a {
 
 @media (min-width: 899px) {
     /* MAIN */
+    .main-logo {
+        max-width: 300px;
+    }
     div a.link-shop {
         width: 16%;
         left: 42%;
@@ -206,7 +214,7 @@ a {
         margin-top: 30px;
     }
     .star-products p {
-        font-size: 18px;
+        font-size: 14px;
     }
     .all-star-products {
         margin: 20px auto;
@@ -227,10 +235,13 @@ a {
     }
     .product-main img {
         width: 95%;
+        height: 45%;
         padding-top: 5px;
+        object-fit: cover;
     }
     .product-name {
         font-size: 18px;
+        padding-bottom: 5px;
     }
     .go-to-buy {
         font-size: 14px;
@@ -241,6 +252,7 @@ a {
         width: 80px;
         margin: 10px;
         transition: all 0.3s;
+        height: 30px;
     }
     .go-to-buy:hover {
         box-shadow: 0 0 10px white;
@@ -263,7 +275,7 @@ a {
         margin-bottom: 15px;
     }
     .video-side-text p {
-        font-size: 18px;
+        font-size: 14px;
         text-align: justify;
     }
     .main-img-bar {

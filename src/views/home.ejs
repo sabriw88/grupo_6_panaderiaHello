@@ -9,7 +9,7 @@
             <div class="img-logo-shop">
                 <img class="main-img" src="/img/iStock-995038782-small.jpg" alt="">
                 <img class="main-logo" src="/img/Logo.png" alt="">
-                <div><a class="link-shop" href="#">SHOP</a></div>
+                <div><a class="link-shop" href="/products">SHOP</a></div>
             </div>
         </section>
         <section class="star-products">
@@ -21,7 +21,7 @@
                 <% for (let i=0; i < 3; i++) { %>
 
                 <article class="product-main">
-                    <img src="/img/<%= products[i].image %>" width="264.09" height="180.09" alt="">
+                    <img src="/img/<%= products[i].image %>" alt="">
                     <div class="product-bottom-box">
                         <h3 class="product-name"><%= products[i].name%></h3>
                         <p class="product-description"><% if (products[i].description.length > 100) { %>
