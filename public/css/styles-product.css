@@ -1,9 +1,16 @@
+.background-img {
+    position: fixed;
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
 .header-main .top-header-main{
     width: 45vw;
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin: auto;
-    color: white;
+    color: #010101;
     font-size: 1.5em;
 }
 .filtro{
@@ -14,11 +21,12 @@
 }
 .main-product{
    /*  background-color: #fffdf8; */
-    background-image: url(/img/fotoCarrito1.jpg);
+    /* background-image: url(/img/fotoCarrito1.jpg); */
+    background-color: rgba(255, 255, 255, 0.8);
 }
 .estanteDeProductos{
-    background-color: white;
-    border: 1px solid brown;
+    /* background-color: white; */
+    /* border: 1px solid brown; */
     border-radius: 2rem;
     width: 90%;
     display: flex;
@@ -27,6 +35,7 @@
     margin: auto;
 }
 .cajaDeProducto{
+    background-color: white;
     border: 3px solid #68ABB4;
     margin: 1rem;
     border-radius: 12px;
@@ -42,10 +51,11 @@
 .cajaDeProductoInferior .titulo{
     margin: 0px 0px 8px 0px;
     font-size: 1.5em;
+    color: #d27518
 }
 .cajaDeProductoInferior .precio p{
     font-size: 2em;
-    color: green;
+    color: #010101;
     margin: 0 0px 8px 0px;
 }
 .cajaDeProductoInferior .boton {
@@ -68,6 +78,7 @@
 .cajaDeProductoSuperior img{
     width: 276px;
     height: 183px;
+    object-fit: cover;
 }
 
 
@@ -100,7 +111,7 @@
     }
     .cajaDeProductoSuperior{
         text-align: center;
-        padding-top: 8px;
+        /* padding-top: 8px; */
     }
     .card{
         width: 600px;
@@ -119,6 +130,7 @@
         width: 300px;
     }
     .cajaDeProducto{
-        width: 25vw;
+        width: 20vw;
+        max-width: 275px;
     }
 }
