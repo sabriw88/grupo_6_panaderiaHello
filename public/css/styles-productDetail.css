@@ -154,7 +154,8 @@ a.card_button {
 
 .card .card_second-section .card_button:hover {
     cursor: pointer;
-    background-color: blue;
+    background-color: #68ABB4;
+    border: 3px solid #F1C732;
 }
 
 .botonesModificar{
