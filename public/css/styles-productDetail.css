@@ -25,7 +25,7 @@ body {
 }
 
 /* HEADER */
-.logo {
+/* .logo {
     display: none;
 }
 
@@ -74,40 +74,40 @@ nav.login-bar ul {
 
 a {
     text-decoration: none;
-}
+} */
 
 /*MAIN*/
 
-/* .mainProduct{
-    background-color: white;
-} */
+.mainProduct{
+    background-color: rgba(255, 255, 255, 0.75);
+    padding-top: 40px;
+    padding-bottom: 30px;
+/*     width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    z-index: -1; */
+}
 .card {
-    border: 1px solid black;
     width: 344px;
     height: 612px;
     border-radius: 12px;
     overflow: hidden;
-    margin: 69px auto;
+    margin: 33px auto 0;
     background-color: white;
     border: 3px solid #68ABB4;
     align-items: center;
     justify-content: center;
-    
 }
 
 a.card_button {
-    display: block;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: block;
+    /* display: block; */
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50px;
-    line-height: 50px;
+    /* line-height: 50px; */
   }
 
 .card .card_first-section img {
@@ -122,6 +122,7 @@ a.card_button {
 .card .card_second-section .titulo {
     margin: 0px 24px 16px 24px;
     font-size: 2.2em;
+    color: #d27518;
 }
 
 .card .card_second-section .description {
@@ -133,7 +134,7 @@ a.card_button {
 
 .card .card_second-section .precio p {
     font-size: 2.3em;
-    color: green;
+    color: #010101;
     margin: 0 24px 16px 24px;
 
 }
@@ -170,7 +171,7 @@ a.card_button {
 }
 
 /* FOOTER */
-footer {
+/* footer {
     background-color: #010101;
     color: white;
 }
@@ -227,24 +228,14 @@ footer li i {
 .footer-socialmedia li,
 .footer-contacto li {
     text-indent: 5px;
-}
+} */
 
-@media (min-width: 300px) {
-
-    .main-bar {
-        display: none;
-    }
-    
-    
-
-
-}
 
 @media (min-width: 899px) {
 
 
     /* HEADER */
-    .logo {
+    /* .logo {
         display: block;
         background-color: #010101;
         margin-top: -20px;
@@ -333,45 +324,42 @@ footer li i {
         background-color: white;
         color: #010101;
     }
-
+ */
     /* MAIN */
 
     .card {
-        width: 600px;
+        width: 800px;
         height: 450px;
         display: flex;
         margin: 100px auto;
     }
-
-    .card_first-section img {
-        position: relative;
-        top: 24%;
-        padding: 1rem;
-    }
-
-
-
-
     .card_first-section {
-        width: 300px;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
     }
-
+    .card_first-section img {
+        height: 450px;
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
     .card_second-section {
         width: 300px;
     }
-
-
-
-
-
-
-
-
-
-
-
+    button.card_button {
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .card .card_second-section .card_button {
+        width: 270px;
+    }
     /* FOOTER */
-    section.footer-logo {
+    /* section.footer-logo {
         display: inline;
     }
 
@@ -418,5 +406,5 @@ footer li i {
     .footer-socialmedia li,
     .footer-contacto li {
         text-indent: 10px;
-    }
+    } */
 }

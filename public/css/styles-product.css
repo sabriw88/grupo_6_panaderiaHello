@@ -92,7 +92,21 @@
     }
 }
 
-@media (min-width: 899px) {  
+@media (min-width: 899px) {
+    .background-img {
+        position: fixed;
+        z-index: -1;
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+    .estanteDeProductos {
+        margin-top: auto;
+        margin-bottom: auto;
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }  
+
     .header-main{
         display: flex;
         justify-content: space-between;
@@ -132,5 +146,18 @@
     .cajaDeProducto{
         width: 20vw;
         max-width: 275px;
+    }
+    .cajaDeProductoInferior .boton {
+        width: 15vw;
+        height: 2.5rem;
+        background-color: #F1C732;
+        color: white;
+        border-radius: 15px;
+           border: 3px solid #68ABB4;
+        font-size: 1.1em;
+        font-weight: 700;
+        display: block;
+        margin: auto;
+        margin-bottom: 13px;
     }
 }
