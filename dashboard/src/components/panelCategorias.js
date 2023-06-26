@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Product from "./contentWrapper";
+/* import Product from "./contentWrapper"; */
 import ProductList from "./productList";
 
 class Categorias extends Component {
@@ -35,8 +35,9 @@ class Categorias extends Component {
 
                 <table>
                     <thead>
-                        <tr>Id</tr>
                         <tr>Name</tr>
+                        <tr>Descripcion</tr>
+                        <tr>precio</tr>
                     </thead>
                 </table>
                 <tbody>

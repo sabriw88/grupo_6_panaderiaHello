@@ -17,7 +17,7 @@ class Product extends Component {
                 return respuesta.json()
             })
             .then(products => {
-                //console.log(movies)
+                console.log(products.ultimo)
                 this.setState({
                     id: products.ultimo.id,
                     name: products.ultimo.name,
@@ -36,7 +36,6 @@ class Product extends Component {
            <div className="addProduct">
             <h2>Ultimo Producto Agregado</h2>
             <img src={this.state.foto} alt="foto" />
-            <p> {this.state.img}</p>
             <h2>{this.state.name}</h2>
             <h2>{this.state.descripcion}</h2>
            </div>

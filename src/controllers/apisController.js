@@ -1,3 +1,4 @@
+const { raw } = require("mysql2");
 const db = require("../database/models");
 const path = require('path');
 
@@ -49,20 +50,27 @@ const apisController = {
     // API para mostrar listado de productos
     listProducts: (req, res) => {
         db.Products
-            .findAll()
+            .findAll({raw:true})
             .then(productos => {
+                console.log(productos)
                 productos.forEach(producto => {
-                    delete producto.dataValues.price;
-                    delete producto.dataValues.stock;
-                    producto.dataValues.detail = 'http://localhost:3031/api/products/'+producto.id;
+                    delete producto.stock;
+                    producto.detail = 'http://localhost:3031/api/products/'+producto.id;
+
                 });
-                res.status(200).json({
+
+                let findAllProducts = {
                     count: productos.length,
                     ultimo: productos[productos.length-1],
-                    foto: 'http://localhost:3031/api/products/11/image',
+                  /*   foto: 'http://localhost:3031/api/products/12/image', */
                     data: productos,  
                     status: 200 
-                })
+                }
+
+                  
+                findAllProducts.ultimo.foto='http://localhost:3031/api/products/'+findAllProducts.ultimo.id+'/image';
+                console.log(findAllProducts.ultimo)
+                res.status(200).json(findAllProducts)
             }) 
 } ,
 
@@ -90,6 +98,7 @@ listCategories: (req, res) => {
             .then(producto => {
                 producto.image = 'http://localhost:3031/api/products/'+producto.id+'/image'
                 res.status(200).json({
+
                     data: producto,
                     status: 200
                 })
