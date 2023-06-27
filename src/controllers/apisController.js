@@ -54,7 +54,7 @@ const apisController = {
             .then(productos => {
                 console.log(productos)
                 productos.forEach(producto => {
-                    delete producto.stock;
+        
                     producto.detail = 'http://localhost:3031/api/products/'+producto.id;
 
                 });

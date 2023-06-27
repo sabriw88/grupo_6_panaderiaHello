@@ -21,8 +21,37 @@
 }
 
 .addProduct{
-    border: 1px solid teal;
-    width: 22rem;
+
     box-sizing: border-box;
+    margin: auto;
+    width: 80vw;
+    margin-top: 3rem;
    
+}
+
+.addProduct h2{
+    margin: auto;
+}
+
+.addProduct .subtituloUltimoProducto{
+    color: black;
+}
+
+.cajaUltimoProducto{
+    display: flex;
+    padding: 1rem;
+}
+
+.cajaImagen img{
+    width: 100%;
+
+}
+
+.cajaImagen{
+    padding-right: 2rem;
+}
+
+.cajaPrincipal{
+    width: 80vw;
+    margin: auto;
 }

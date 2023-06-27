@@ -7,6 +7,7 @@ function ProductList(props) {
              <td>{props.name}</td>
             <td>{props.description}</td> 
              <td>{props.price}</td>
+             <td>{props.stock}</td>
            </tr>
         </React.Fragment>
 

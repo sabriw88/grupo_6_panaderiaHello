@@ -26,19 +26,36 @@ class Product extends Component {
                     foto: products.ultimo.foto
                 })
             })
-            .catch(error => console.log(error)) 
+            .catch(error => console.log(error))
 
     }
 
     render() {
-        
+
         return (
-           <div className="addProduct">
-            <h2>Ultimo Producto Agregado</h2>
-            <img src={this.state.foto} alt="foto" />
-            <h2>{this.state.name}</h2>
-            <h2>{this.state.descripcion}</h2>
-           </div>
+
+            
+            <div className="addProduct">
+                 <h2 className="subtituloUltimoProducto">Ultimo producto agregado</h2>
+           
+            <hr />
+            <br />
+            <div className="cajaUltimoProducto">
+                <div className="cajaImagen">
+                    <img src={this.state.foto} alt="foto" />
+
+                </div>
+
+
+                <div>
+                    <h3>{this.state.name}</h3>
+                    <p>{this.state.descripcion}</p>
+                </div>
+
+            </div>
+            <br />
+            <hr />
+            </div>
         )
     }
 }

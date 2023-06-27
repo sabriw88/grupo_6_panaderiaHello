@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import ContentRow from './components/contentRow';
 import ContentWrapper from './components/contentWrapper';
-import Categorias from './components/panelCategorias';
+import PanelCategorias from './components/panelCategorias';
 import ProductByCategory from './components/ProductByCategory';
 import TableProducts from './components/tableProducts';
 import React from 'react';
@@ -20,7 +20,7 @@ function App() {
 
         <ContentRow/>
         <ContentWrapper/>
-        <Categorias/>
+        <PanelCategorias/>
 
 
       </div>
