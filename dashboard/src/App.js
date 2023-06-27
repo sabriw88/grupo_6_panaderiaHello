@@ -4,8 +4,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import ContentRow from './components/contentRow';
 import ContentWrapper from './components/contentWrapper';
-import PanelCategorias from './components/panelCategorias';
-import ProductByCategory from './components/ProductByCategory';
+import PanelProducts from './components/panelProducts';
+import PanelCategory from './components/panelCategory';
 import TableProducts from './components/tableProducts';
 import React from 'react';
 import '../src/assets/css/app.css';
@@ -20,7 +20,8 @@ function App() {
 
         <ContentRow/>
         <ContentWrapper/>
-        <PanelCategorias/>
+        <PanelProducts/>
+        <PanelCategory/>
 
 
       </div>

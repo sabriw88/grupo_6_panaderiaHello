@@ -2,7 +2,7 @@ import React, { Component } from "react";
 /* import Product from "./contentWrapper"; */
 import ProductList from "./productList";
 
-class PanelCategorias extends Component {
+class PanelProducts extends Component {
     constructor() {
         super()
         this.state = {
@@ -28,6 +28,7 @@ class PanelCategorias extends Component {
 
     }
 
+
     render() {
 
         return (
@@ -36,16 +37,20 @@ class PanelCategorias extends Component {
            
 
                 <div className="cajaPrincipal">
-                <h2>Listado de productos</h2>
-                <table>
-                    <thead>
-                        <tr>Name</tr>
-                        <tr>Descripcion</tr>
-                        <tr>precio</tr>
-                        <tr>stock</tr>
+                <h2 className="subtituloListProduct">Listado de productos</h2>
+                <br></br>
+                <table className="tabla">
+                    <thead className="tablaCabeza">
+                        <tr className="tablaTr">
+
+                            <td>Id</td>
+                            <td>Nombre</td>
+                            <td>Precio</td>
+                            <td>Stock</td>
+                            
+                        </tr>
                     </thead>
-                </table>
-                <tbody>
+                    <tbody className="tablaBody">
                     {
                     
                     this.state.todo.map((product, index)=>{
@@ -55,8 +60,10 @@ class PanelCategorias extends Component {
                     }
 
                 </tbody>
-
-
+                </table>
+                <br />
+                <br />
+                <hr />
 
                 </div>
             </React.Fragment>
@@ -66,4 +73,4 @@ class PanelCategorias extends Component {
     }
 }
 
-export default PanelCategorias; 
+export default PanelProducts; 

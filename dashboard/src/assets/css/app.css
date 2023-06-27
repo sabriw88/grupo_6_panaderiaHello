@@ -34,7 +34,7 @@
 }
 
 .addProduct .subtituloUltimoProducto{
-    color: black;
+    color: rgb(224, 149, 124);
 }
 
 .cajaUltimoProducto{
@@ -54,4 +54,47 @@
 .cajaPrincipal{
     width: 80vw;
     margin: auto;
+}
+
+.tabla {
+   border-collapse: collapse;
+   width: 100%;
+
+}
+
+.tabla thead tr{
+    text-align: left;
+    
+}
+
+.tablaTr td{
+    padding: 10px;
+   color: black;
+    font-weight: 600;
+}
+
+.tabla tbody td{
+    padding: 10px;
+}
+
+.subtituloListProduct{
+    color: rgb(224, 149, 124);
+}
+
+.cajaContadores{
+    display: flex;
+    width: 80vw;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.cajaContador{
+    display: flex;
+    width: 15rem;
+    align-items: center;
+    text-align: center;
+}
+
+.cajaContador p{
+    width: 30%;
 }

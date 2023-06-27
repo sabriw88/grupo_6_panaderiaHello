@@ -52,24 +52,47 @@ const apisController = {
         db.Products
             .findAll({raw:true})
             .then(productos => {
-                console.log(productos)
+                
                 productos.forEach(producto => {
         
                     producto.detail = 'http://localhost:3031/api/products/'+producto.id;
 
                 });
 
+                
+
+                let contadorPan = 0
+                let contadorDelicias = 0
+                let contadorTortas = 0
+
+                productos.map((product, index)=>{
+                 
+                    if(product.categoryId==1){ 
+                        contadorPan = contadorPan + 1;
+                    }else if(product.categoryId==2){
+                        contadorTortas = contadorTortas + 1;
+                    }else if(product.categoryId==3){
+                        contadorDelicias = contadorDelicias + 1;
+                    }
+                    
+                })
+
                 let findAllProducts = {
                     count: productos.length,
                     ultimo: productos[productos.length-1],
                   /*   foto: 'http://localhost:3031/api/products/12/image', */
                     data: productos,  
-                    status: 200 
+                    contadores: [{titulo:"Total de panes", total:contadorPan},{titulo:"Total de tortas", total:contadorTortas},{titulo:"Total de delicias", total:contadorDelicias}],
+                    status: 200
+                   
                 }
 
+                console.log(contadorPan, contadorDelicias, contadorTortas)
+                
+                
                   
                 findAllProducts.ultimo.foto='http://localhost:3031/api/products/'+findAllProducts.ultimo.id+'/image';
-                console.log(findAllProducts.ultimo)
+      
                 res.status(200).json(findAllProducts)
             }) 
 } ,
