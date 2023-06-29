@@ -5,7 +5,8 @@
     width: 100%;
     height: 100%;
 }
-.header-main .top-header-main{
+
+.header-main .top-header-main {
     width: 45vw;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -13,20 +14,20 @@
     color: #010101;
     font-size: 1.5em;
 }
-.filtro{
+
+.filtro {
     text-align: end;
 }
-.buscador{
+
+.buscador {
     width: 95vw;
 }
-.main-product{
-   /*  background-color: #fffdf8; */
-    /* background-image: url(/img/fotoCarrito1.jpg); */
+
+.main-product {
     background-color: rgba(255, 255, 255, 0.8);
 }
-.estanteDeProductos{
-    /* background-color: white; */
-    /* border: 1px solid brown; */
+
+.estanteDeProductos {
     border-radius: 2rem;
     width: 90%;
     display: flex;
@@ -34,65 +35,92 @@
     justify-content: center;
     margin: auto;
 }
-.cajaDeProducto{
+
+.cajaDeProducto {
     background-color: white;
     border: 3px solid #68ABB4;
     margin: 1rem;
     border-radius: 12px;
     overflow: hidden;
 }
-.cajaDeProductoInferior{
+
+.cajaDeProductoInferior {
     padding-left: 1rem;
 }
-.cajaDeProductoInferior .tipo{
+
+.cajaDeProductoInferior .tipo {
     margin: 8px 0px 8px 0px;
     color: grey;
 }
-.cajaDeProductoInferior .titulo{
+
+.cajaDeProductoInferior .titulo {
     margin: 0px 0px 8px 0px;
     font-size: 1.5em;
     color: #d27518
 }
-.cajaDeProductoInferior .precio p{
+
+.cajaDeProductoInferior .precio p {
     font-size: 2em;
     color: #010101;
     margin: 0 0px 8px 0px;
 }
+
 .cajaDeProductoInferior .boton {
     width: 20rem;
     height: 2.5rem;
     background-color: #F1C732;
     color: white;
     border-radius: 15px;
-       border: 3px solid #68ABB4;
+    border: 3px solid #68ABB4;
     font-size: 1.1em;
     font-weight: 700;
     display: block;
     margin: auto;
     margin-bottom: 13px;
 }
-.img-cajaDeProducto .imagen{
+
+.img-cajaDeProducto .imagen {
     width: 100%;
 }
 
-.cajaDeProductoSuperior img{
+.cajaDeProductoSuperior img {
     width: 276px;
     height: 183px;
     object-fit: cover;
 }
 
+.buscador-form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    margin-left: 7%;
+}
 
-@media (min-width: 300px) {
-/*     .main-bar{
-        display: none;
-    } */
-    .father-buscador{
-        margin: auto;
-        padding-top: 1rem;
-    }
+.buscador-input {
+    width: 300px;
+    padding: 0.5rem;
+    border: 1px solid #68ABB4;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.buscador-btn {
+    padding: 0.5rem 1rem;
+    background-color: #F1C732;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 0.5rem;
 }
 
 @media (min-width: 899px) {
+    .buscador-input {
+        width: 200px;
+    }
+
     .background-img {
         position: fixed;
         z-index: -1;
@@ -100,60 +128,68 @@
         width: 100%;
         height: auto;
     }
+
     .estanteDeProductos {
         margin-top: auto;
         margin-bottom: auto;
         padding-top: 50px;
         padding-bottom: 40px;
-    }  
+    }
 
-    .header-main{
+    .header-main {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         text-align: center;
-       
     }
-    .header-main .top-header-main{
+
+    .header-main .top-header-main {
         width: 31vw;
         padding-top: 1rem;
         padding-bottom: 1rem;
         margin: auto;
     }
-    .buscador{
+
+    .buscador {
         width: 28vw;
     }
-    .cajaDeProductoSuperior{
+
+    .cajaDeProductoSuperior {
         text-align: center;
-        /* padding-top: 8px; */
     }
-    .card{
+
+    .card {
         width: 600px;
         height: 450px;
         display: flex;
         margin: 100px auto;
     }
-    .father-buscador{
+
+    .father-buscador {
         margin: auto;
         padding-top: 0rem;
     }
-    .card_first-section{
+
+    .card_first-section {
         width: 300px;
     }
-    .card_second-section{
+
+    .card_second-section {
         width: 300px;
     }
-    .cajaDeProducto{
+
+    .cajaDeProducto {
         width: 20vw;
         max-width: 275px;
     }
+
     .cajaDeProductoInferior .boton {
         width: 15vw;
         height: 2.5rem;
         background-color: #F1C732;
         color: white;
         border-radius: 15px;
-           border: 3px solid #68ABB4;
+        border: 3px solid #68ABB4;
         font-size: 1.1em;
         font-weight: 700;
         display: block;

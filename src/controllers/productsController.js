@@ -163,6 +163,42 @@ const productsController = {
 
        res.redirect("/products"); */
 
-      }
+      },
+
+  //Buscador
+
+  search: async (req, res) => {
+    try {
+      const searchTerm = req.query.q;
+
+      const products = await db.Products.findAll({
+        where: {
+          [db.Sequelize.Op.or]: [
+            {
+              name: {
+                [db.Sequelize.Op.like]: `%${searchTerm}%`,
+              },
+            },
+            {
+              "$category.name$": {
+                [db.Sequelize.Op.like]: `%${searchTerm}%`,
+              },
+            },
+          ],
+        },
+        include: [
+          {
+            model: db.Categories,
+            as: "category",
+          },
+        ],
+      });
+
+      res.render("products/searchResults", { searchTerm: searchTerm, products: products });
+    } catch (error) {
+      console.error("Error al realizar la búsqueda:", error);
+      res.status(500).render("error", { error: "Ocurrió un error al realizar la búsqueda." });
+    }
+  }
     };
 module.exports = productsController;
