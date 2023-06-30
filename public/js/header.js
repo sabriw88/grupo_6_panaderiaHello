@@ -1,5 +1,3 @@
-console.log('se linkeo correctamente');
-
 window.addEventListener('load', function() {
     let button = document.querySelector('.icon-bars');
 

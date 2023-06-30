@@ -1,4 +1,5 @@
 const db = require("../database/models");
+const { validationResult } = require("express-validator");
 
 
 const productsController = {
@@ -39,15 +40,22 @@ const productsController = {
     },
 
     store: (req, res) => {
-      db.Products.create({
-        name: req.body.name,
-        price: req.body.price,
-        categoryId: req.body.category,
-        stock:req.body.stock,
-        image: req.file ? req.file.filename : 'default-image.png',
-        description: req.body.description
-      },
-        res.redirect ("/products"))
+      const resultValidation = validationResult(req);
+      if (resultValidation.errors.length > 0) {
+        return res.render('products/productCreate', {
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+          categorias: db.Categories.findAll()});
+      } else {
+        db.Products.create({
+          name: req.body.name,
+          price: req.body.price,
+          categoryId: req.body.category,
+          stock:req.body.stock,
+          image: req.file ? req.file.filename : 'default-image.png',
+          description: req.body.description
+        }).then(()=>res.redirect('/products'))
+      }
 
       //Antiguo código con JSON
 
@@ -92,19 +100,30 @@ const productsController = {
     },
 
     update: (req, res) => {
-      db.Products.update({
-        name: req.body.name,
-        price: req.body.price,
-        categoryId: req.body.category,
-        stock:req.body.stock,
-        image: req.file ? req.file.filename : 'default-image.png',
-        description: req.body.description
-      },{
-        where: {
-          id: req.params.id
+      const resultvalidation = validationResult(req); 
+        if (resultvalidation.errors.length > 0) {
+            /* res.redirect('/products/edit/'+req.params.id) */
+            return res.render ('products/productEdit', {
+              errors: resultvalidation.mapped(),
+              producto: req.body,
+              categorias: db.Categories.findAll()
+            });
+        } else {
+          db.Products.update({
+            name: req.body.name,
+            price: req.body.price,
+            categoryId: req.body.category,
+            stock:req.body.stock,
+            image: req.file ? req.file.filename : 'default-image.png',
+            description: req.body.description
+          },{
+            where: {
+              id: req.params.id
+            }
+          },
+          res.redirect ("/products"))
         }
-      },
-      res.redirect ("/products"))
+      
 
       //Antiguo código con JSON
 

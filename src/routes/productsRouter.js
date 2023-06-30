@@ -12,9 +12,11 @@ let storage = multer.diskStorage({
     }
 })
 
-const upload = multer({storage: storage});
-
 const productsController = require("../controllers/productsController.js");
+
+const upload = multer({storage: storage});
+const validations = require('../middlewares/validateCreateEditProductMidleware.js');
+
 //Lectura
     router.get('/', productsController.listaDeProductos);
     router.get('/detail/:id/', productsController.detalleProducto);
@@ -22,12 +24,11 @@ const productsController = require("../controllers/productsController.js");
 
 //Editar
     router.get('/edit/:id', productsController.edit);
-    router.patch('/edit/:id', upload.single("image") , productsController.update);
+    router.patch('/edit/:id', upload.single("image"), validations, productsController.update);
 
 //crear
-    router.get("/productCreate",productsController.create);
-    router.post("/", upload.single("image") ,productsController.store);
-    router.post("/", productsController.store);
+    router.get("/create", productsController.create);
+    router.post("/create", upload.single("image"), validations, productsController.store);
        
 //Borrar
     router.delete('/delete/:id', productsController.destroy);

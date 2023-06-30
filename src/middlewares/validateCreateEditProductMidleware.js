@@ -1,10 +1,11 @@
-const { body} = require('express-validator');
+const path = require('path');
+const { body } = require('express-validator');
 
 // Validación para la creación y modificación de productos
-const productsValidations = [
+const validations = [
   body('name')
-    .notEmpty().withMessage('El nombre es obligatorio.')
-    .isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres.'),
+    .notEmpty().withMessage('El nombre es obligatorio.').bail()
+    .isLength({min:5}).withMessage('El nombre debe tener al menos 5 caracteres.'),
   body('description')
     .isLength({ min: 20 }).withMessage('La descripción debe tener al menos 20 caracteres.'),
   body('image')
@@ -20,5 +21,5 @@ const productsValidations = [
       return true;
     })
 ];
-module.exports = productsValidations
+module.exports = validations
 
