@@ -1,6 +1,7 @@
 
 
 window.addEventListener('load', function(){
+    console.log('se cargó el validator del front');
 
     let formulario = document.querySelector('form.createProduct');
   

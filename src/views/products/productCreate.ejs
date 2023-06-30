@@ -9,13 +9,16 @@
         <img src="https://cdn.pixabay.com/photo/2016/11/29/10/09/bakery-1868925_1280.jpg"valt="">
     </div>
     <div class="form-create">
-        <form action="/products" method="POST" enctype="multipart/form-data" class="createProduct">           
+        <form action="/products/create" method="POST" enctype="multipart/form-data" class="createProduct">           
             <div class="row product-detail">
                 <h2 class="create-title">Formulario de creación de productos</h2>
 
                 <div class="create-input">
                     <label for="name" class="form-label">Nombre del producto:</label>
-                    <input type="text" id="name" name="name" class="form-input"></input>
+                    <input type="text" id="name" name="name" class="form-input" value="<%= locals.oldData ? oldData.name : null %>"></input>
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="warning"><p><%= errors.name.msg %></p></div>
+                    <% } %>
                 </div>
 
                 <div class="create-input">
@@ -40,11 +43,17 @@
                 <div class="create-input">
                     <label for="description" class="form-label">Descripción:</label>
                     <input name="description" id="description" class="form-input"></input>
+                    <% if (locals.errors && errors.description) { %>
+                        <div class="warning"><p><%= errors.description.msg %></p></div>
+                    <% } %>
                 </div>
 
                 <div class="create-input">
                     <label for="image" class="form-label">Imagen</label>
                     <input type= "file" name="image" id="image" accept=".jpg" class="form-input"></input>
+                    <% if (locals.errors && errors.image) { %>
+                        <div class="warning"><p><%= errors.image.msg %></p></div>
+                    <% } %>
                 </div>
                 <div class="errores">
                     <ul>

@@ -1,4 +1,5 @@
 const db = require("../database/models");
+const { validationResult } = require("express-validator");
 
 
 const productsController = {
@@ -39,15 +40,22 @@ const productsController = {
     },
 
     store: (req, res) => {
-      db.Products.create({
-        name: req.body.name,
-        price: req.body.price,
-        categoryId: req.body.category,
-        stock:req.body.stock,
-        image: req.file ? req.file.filename : 'default-image.png',
-        description: req.body.description
-      },
-        res.redirect ("/products"))
+      const resultValidation = validationResult(req);
+      if (resultValidation.errors.length > 0) {
+        return res.render('products/productCreate', {
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+          categorias: db.Categories.findAll()});
+      } else {
+        db.Products.create({
+          name: req.body.name,
+          price: req.body.price,
+          categoryId: req.body.category,
+          stock:req.body.stock,
+          image: req.file ? req.file.filename : 'default-image.png',
+          description: req.body.description
+        }).then(()=>res.redirect('/products'))
+      }
 
       //Antiguo código con JSON
 
@@ -92,19 +100,30 @@ const productsController = {
     },
 
     update: (req, res) => {
-      db.Products.update({
-        name: req.body.name,
-        price: req.body.price,
-        categoryId: req.body.category,
-        stock:req.body.stock,
-        image: req.file ? req.file.filename : 'default-image.png',
-        description: req.body.description
-      },{
-        where: {
-          id: req.params.id
+      const resultvalidation = validationResult(req); 
+        if (resultvalidation.errors.length > 0) {
+            /* res.redirect('/products/edit/'+req.params.id) */
+            return res.render ('products/productEdit', {
+              errors: resultvalidation.mapped(),
+              producto: req.body,
+              categorias: db.Categories.findAll()
+            });
+        } else {
+          db.Products.update({
+            name: req.body.name,
+            price: req.body.price,
+            categoryId: req.body.category,
+            stock:req.body.stock,
+            image: req.file ? req.file.filename : 'default-image.png',
+            description: req.body.description
+          },{
+            where: {
+              id: req.params.id
+            }
+          },
+          res.redirect ("/products"))
         }
-      },
-      res.redirect ("/products"))
+      
 
       //Antiguo código con JSON
 
@@ -163,6 +182,42 @@ const productsController = {
 
        res.redirect("/products"); */
 
-      }
+      },
+
+  //Buscador
+
+  search: async (req, res) => {
+    try {
+      const searchTerm = req.query.q;
+
+      const products = await db.Products.findAll({
+        where: {
+          [db.Sequelize.Op.or]: [
+            {
+              name: {
+                [db.Sequelize.Op.like]: `%${searchTerm}%`,
+              },
+            },
+            {
+              "$category.name$": {
+                [db.Sequelize.Op.like]: `%${searchTerm}%`,
+              },
+            },
+          ],
+        },
+        include: [
+          {
+            model: db.Categories,
+            as: "category",
+          },
+        ],
+      });
+
+      res.render("products/searchResults", { searchTerm: searchTerm, products: products });
+    } catch (error) {
+      console.error("Error al realizar la búsqueda:", error);
+      res.status(500).render("error", { error: "Ocurrió un error al realizar la búsqueda." });
+    }
+  }
     };
 module.exports = productsController;

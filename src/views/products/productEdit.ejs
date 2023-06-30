@@ -15,6 +15,9 @@
                 <div class="create-input">
                     <label for="name" class="form-label">Nombre del producto:</label>
                     <input type="text" id="name" name="name" value="<%= producto.name %>" class="form-input"></input>
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="warning"><p><%= errors.name.msg %></p></div>
+                    <% } %>
                 </div>
 
                 <div class="create-input">
@@ -47,11 +50,17 @@
                 <div class="create-input">
                     <label for="description" class="form-label">Descripción:</label>
                     <input name="description" id="description" value="<%= producto.description %>" class="form-input"></input>
+                    <% if (locals.errors && errors.description) { %>
+                        <div class="warning"><p><%= errors.description.msg %></p></div>
+                    <% } %>
                 </div>
 
                 <div class="create-input">
                     <label for="image" class="form-label">Imagen</label>
                     <input type= "file" name="image" id="image" accept="image/*" class="form-input"></input>
+                    <% if (locals.errors && errors.image) { %>
+                        <div class="warning"><p><%= errors.image.msg %></p></div>
+                    <% } %>
                 </div>
                 <div class="errores">
                     <ul>

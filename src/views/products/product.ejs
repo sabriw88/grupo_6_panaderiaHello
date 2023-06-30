@@ -8,12 +8,20 @@
     <main class="main-product">
 
         <div class="header-main">
-            <p class="father-buscador"><input type="text" class="bottom-header-main buscador" placeholder="Buscar"></p>
+            <!-- <p class="father-buscador"><input type="text" class="bottom-header-main buscador" placeholder="Buscar"></p> -->
             <h4 class="top-header-main">Lista de productos</h4>
             <p class="top-header-main filtro">Filtros</p>
      
         </div>
 
+    <br><br>
+
+        <form action="/products/search" method="GET" class="buscador-form">
+        <input type="text" name="q" placeholder="Buscar productos" class="buscador-input">
+        <button type="submit" class="buscador-btn">Buscar</button>
+        </form>
+
+        
        <section class="estanteDeProductos">
 
       

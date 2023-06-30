@@ -1,0 +1,57 @@
+
+
+<%- include('../partials/head.ejs', {cssSheet: "styles-product"}) %>
+
+<body>
+
+<%- include('../partials/header.ejs') %>
+    <img class="background-img" src="/img/fotoCarrito1.jpg" alt="">
+
+    <main class="main-product">
+
+        <div class="header-main">
+            <p class="father-buscador"><input type="text" class="bottom-header-main buscador" placeholder="Buscar"></p>
+            <h4 class="top-header-main">Lista de productos</h4>
+            <p class="top-header-main filtro">Filtros</p>
+     
+        </div>
+
+    <br><br>
+
+        <form action="/products/search" method="GET" class="buscador-form">
+        <input type="text" name="q" placeholder="Buscar productos" class="buscador-input">
+        <button type="submit" class="buscador-btn">Buscar</button>
+        </form>
+
+        
+       <section class="estanteDeProductos">
+
+      
+        <% for (let i=0; i < products.length; i++) { %>
+         
+            <a href="/products/detail/<%= products[i].id %>"> <div class="cajaDeProducto">
+                <section class="cajaDeProductoSuperior">
+                    <img src="/img/<%= products[i].image %>" alt="foto">
+                </section>
+                <section class="cajaDeProductoInferior">
+                    
+                    <p class="tipo"><%= products[i].category.name%></p>
+                    <h2 class="titulo"><%= products[i].name%></h2>
+                    <div class="precio">
+                        <p>$<%= products[i].price%></p>
+                    </div></a>
+                    <button class="boton">Add to cart</button>
+                </section>
+            </div>
+
+        <% } %>
+
+       
+    </section>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+
+    
+</body>
+</html>
