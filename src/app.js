@@ -25,6 +25,7 @@ const mainRouter = require("./routes/mainRouter.js");
 const usersRouter = require('./routes/usersRouter.js');
 const productsRouter = require('./routes/productsRouter.js');
 const apisRouter = require('./routes/apisRouter')
+const nosotrosRouter = require("./routes/nosotrosRouter")
 
 app.use(express.static(path.join(__dirname,'../public')));
 
@@ -32,6 +33,7 @@ app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use('/products', productsRouter);
+app.use('/nosotros', nosotrosRouter);
 app.use('/users', usersRouter);
 app.use('/api', apisRouter)
 app.use('/', mainRouter);

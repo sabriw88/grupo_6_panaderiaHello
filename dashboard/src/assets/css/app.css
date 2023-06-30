@@ -4,20 +4,22 @@
 
 .body .titulo   {
     text-align: center;
-    color: teal;
+    color: rgb(224, 149, 124);
 }
 .row{
    
     display: flex;
     justify-content: space-evenly;
+    width: 80vw;
+    margin: auto;
    
 }
 
 .caja{
-    border: 1px solid teal;
     display: flex;
     width: 22rem;
     justify-content: space-around;
+    align-items: center;
 }
 
 .addProduct{

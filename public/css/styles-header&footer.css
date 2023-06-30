@@ -25,7 +25,7 @@ body {
     display: none;
 }
 div.bottom-header-bar {
-    background-color: #010101;
+     background-color: #010101; 
     color: white;
     display: flex;
     flex-direction: row;

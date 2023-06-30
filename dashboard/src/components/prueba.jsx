@@ -4,8 +4,8 @@ function Prueba(props) {
     return (
         <React.Fragment>
             <div className="caja">
-                <h2>{props.name}</h2>
-                <h2>{props.totalUsers}</h2>
+                <h3>{props.name}:</h3>
+                <p>{props.totalUsers}</p>
             </div>
         </React.Fragment>
 

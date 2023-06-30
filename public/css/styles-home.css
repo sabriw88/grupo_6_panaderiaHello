@@ -1,3 +1,8 @@
+body{
+    width: 98.9vw;
+}
+
+
 /* MAIN */
 .main-home {
     background-color: whitesmoke /* wheat */;
@@ -6,7 +11,7 @@
     position: relative;
 }
 .main-img {
-    width: 100vw;
+    width: 100%;
     height: 30vh;
     max-height: 300px;
     object-fit: cover;
@@ -15,10 +20,9 @@
     display: none;
 }
 .main-logo {
-    width: 30%;
-    position: absolute;
-    top: 40px;
-    left: 35%;
+       position: absolute;
+       top: -25px;
+       left: 39%
 }
 .main-logo:hover {
     animation: greeting 0.5s 1;
@@ -52,7 +56,7 @@ a {
     text-decoration: none;
 }
 .star-products {
-    width: 95%;
+    width: 80%;
     margin: auto;
     padding: 5px 5px 15px;
     border-bottom: 4px dotted #F1C732;
@@ -118,13 +122,14 @@ a {
 }
 .product-bottom-box {
     position: relative;
-    margin-top: 10px;
+    /* margin: 1px; */
+    padding: 6px;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    margin-bottom: 10px;
-    padding: 10px;
-    height: 50%;
+    /* align-items: stretch; */
+    /* margin-bottom: 10px; */
+    /* padding: 10px; */
+    height: 30%;
     width: 100%;
 }
 .product-bottom-box p {
@@ -204,7 +209,7 @@ a {
 @media (min-width: 899px) {
     /* MAIN */
     .main-img {
-        max-height: 450px;
+        max-height: 100%;
     }
     .main-logo {
         max-width: 300px;
@@ -231,23 +236,24 @@ a {
     }
     .all-star-products {
         margin: 20px auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-        padding: 15px;
+    display: flex;
+    justify-content: center;
+    /* align-items: stretch; */
+    padding: 40px;
+    flex-wrap: wrap;
+    align-content: space-between;
     }
     .product-main {
         width: 28%;
         border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
+        height: 33rem;
+        margin: 1rem;
     }
     .product-main img {
-        width: 100%;
-        height: 45%;
+        width: 80%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        height: 50%;
         object-fit: cover;
         border-radius: 8px 8px 0 0;
     }
@@ -265,9 +271,11 @@ a {
         font-weight: 300;
         text-align: center;
         width: 80px;
-        margin: 10px;
+        /* margin: 10px; */
+        margin: auto;
         transition: all 0.3s;
-        height: 30px;
+        /* height: 30px;*/
+    }
     }
     .go-to-buy:hover {
         box-shadow: 0 0 10px white;
@@ -311,4 +319,3 @@ a {
         color: #010101;
         text-shadow: 1px 1px #F1C732;
     }
-}

@@ -1,0 +1,52 @@
+.cajaExt{
+   display: flex;
+    /* margin-top: 5rem; */
+    width: 80%;
+    margin-top: 0rem;
+    margin-left: 9rem;
+    /* margin: auto; */
+    height: 52vh;
+    /* padding-top: 10rem;*/
+    flex-wrap: wrap;
+
+
+}
+
+.encabezado{
+    width: 80%;
+    margin: auto;
+    margin-top: 10rem;
+
+}
+
+.encabezado h2{
+    font-size: 2rem;
+    color: #d27518;
+}
+
+.volver{
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.cajaInt{
+    display: flex;
+    width: 33%;
+    /* margin: auto; */
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cajaInt p{
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cajaInt img{
+    width: 8rem;
+}
+
+
