@@ -5,22 +5,13 @@
         </div>
         <nav class="main-bar">
             <ul type="none">
-                <li><a href="/"><i class="fa-solid fa-house-chimney"></i>
-                        <p>HOME</p>
-                    </a></li>
-                <li><a href="/products">
-                        <p>PRODUCTOS</p>
-                    </a></li>
-                <li><a href="/nosotros">
-                        <p>NOSOTROS</p>
-                    </a></li>
-                <li><a href="/contact">
-                        <p>CONTACTO</p>
-                    </a></li>
-
-                 <li><a href="/products/create">
-                        <p>VENDER</p>
-                    </a></li>
+                <li><a href="/"><i class="fa-solid fa-house-chimney"></i><p>HOME</p></a></li>
+                <li><a href="/products"><p>PRODUCTOS</p></a></li>
+                <li><a href="/nosotros"><p>NOSOTROS</p></a></li>
+                <li><a href="/contact"><p>CONTACTO</p></a></li>
+                <% if (locals.isLogged && (locals.loggedUser.admin == 1)) { %>
+                    <li><a href="/products/create"><p>VENDER</p></a></li>
+                <% } %>
             </ul>
         </nav>
         <h1>HELLO!</h1>

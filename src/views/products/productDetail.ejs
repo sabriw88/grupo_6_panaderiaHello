@@ -17,12 +17,15 @@
                 </div>
                     <button class="card_button">Add to cart</button>
                 <br>
+                <!-- Botones sólo disponibles para usuarios admin -->
+                <% if (locals.isLogged && (locals.loggedUser.admin == 1)) { %>
                 <div class="botonesModificar">
                 <a href="/products/edit/<%= product.id %>" > <button class="card_button2" >  Editar producto </button></a>
                 <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" >
                     <button type="submit" class="card_button2" onclick="return confirm('Estas seguro que quieres borrar este producto?')">Borrar producto</button>
                 </form>
                 </div>
+                <% } %>
             </section>
         </div>
     </main>
