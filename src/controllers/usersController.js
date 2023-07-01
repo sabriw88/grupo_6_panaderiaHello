@@ -97,7 +97,7 @@ const usersController = {
             email: req.body.email,
             bday: req.body.bday,
             adress: req.body.address,
-            avatar: req.file ? req.file.filename : 'default-image.png',
+            avatar: req.file ? req.file.filename : req.session.loggedUser.avatar,
             password: bcrypt.hashSync(req.body.password, 10),
           },{
             where: {
