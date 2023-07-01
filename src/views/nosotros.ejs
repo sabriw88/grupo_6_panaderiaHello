@@ -1,4 +1,8 @@
-<%- include('../partials/head.ejs', {cssSheet: "styles-nosotros" }) %>
+<%- include('partials/head.ejs', {cssSheet: "styles-nosotros"}) %>
+
+<body>
+
+<%- include('partials/header.ejs') %>
 
 <a href="/"><p class="volver">Volver</p></a>
      
@@ -36,6 +40,7 @@
        
     </div>
 
-    </body>
+    <%- include('partials/footer.ejs') %>
 
-    </html>
+</body>
+</html>

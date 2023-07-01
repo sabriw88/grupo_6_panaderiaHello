@@ -33,7 +33,7 @@ app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use('/products', productsRouter);
-app.use('/nosotros', nosotrosRouter);
+/* app.use('/nosotros', nosotrosRouter); */
 app.use('/users', usersRouter);
 app.use('/api', apisRouter)
 app.use('/', mainRouter);

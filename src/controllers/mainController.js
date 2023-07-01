@@ -15,6 +15,9 @@ const mainController = {
     contact: (req, res) => {
         res.render("contact");
       },
+    nosotros: (req, res) => {
+      res.render("nosotros");
+    }
 }
 
 module.exports = mainController;
