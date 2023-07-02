@@ -16,6 +16,7 @@ const productsController = require("../controllers/productsController.js");
 
 const upload = multer({storage: storage});
 const validations = require('../middlewares/validateCreateEditProductMidleware.js');
+const adminCheck = require('../middlewares/adminMiddleware.js')
 
 //Lectura
     router.get('/', productsController.listaDeProductos);
@@ -23,15 +24,15 @@ const validations = require('../middlewares/validateCreateEditProductMidleware.j
     router.get("/search", productsController.search);
 
 //Editar
-    router.get('/edit/:id', productsController.edit);
+    router.get('/edit/:id', adminCheck, productsController.edit);
     router.patch('/edit/:id', upload.single("image"), validations, productsController.update);
 
 //crear
-    router.get("/create", productsController.create);
+    router.get("/create", adminCheck, productsController.create);
     router.post("/create", upload.single("image"), validations, productsController.store);
        
 //Borrar
-    router.delete('/delete/:id', productsController.destroy);
+    router.delete('/delete/:id', adminCheck, productsController.destroy);
 
 
 module.exports = router;
