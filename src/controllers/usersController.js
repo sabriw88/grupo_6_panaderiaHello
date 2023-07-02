@@ -92,8 +92,8 @@ const usersController = {
 
     update: (req,res) => {
         db.Users.update({
-            name: req.body.name,
-            surname: req.body.surname,
+            name: (req.body.name == "") ? req.session.loggedUser.name : req.body.name,
+            surname: req.body.surname == "" ? req.session.loggedUser.surname : req.body.surname,
             email: req.body.email,
             bday: req.body.bday,
             adress: req.body.address,
