@@ -3,12 +3,12 @@
 <body class="body-productCart">
 
 <%- include('../partials/header.ejs') %>
+<!-- <img class="img-fondo" src="../img/fotoCarrito1.jpg" alt=""> -->
 
 <main class="main-cart">
-    <section>
-        <h2 class="title-cart">CARRITO DE COMPRAS</h2>
-        <img class="img-fondo" src="../img/fotoCarrito1.jpg" alt="">
-    </section>
+<!--     <section>
+        <h2 class="title-cart">CARRITO DE COMPRAS</h2> -->
+<!--     </section> -->
     <ul type="none" class="cuadro">
         <% products.forEach(product => { %>
         <li class="main-product">
@@ -16,7 +16,13 @@
                 <img class="img-product" src="../img/<%= product.image %>" alt="">
                 <div class="sub-main-productCart">
                     <h3 class="name-product"><%= product.name %></h3>
-                    <p class="descr-product"><%= product.description %></p>
+                    <p class="descr-product">
+                        <% if (product.description.length > 100) { %>
+                            <%= product.description.slice(0, 97) + "..." %>
+                        <% } else { %>
+                            <%= product.description %>
+                        <% } %>
+                    </p>
                 </div>
             </div>
             <div class="contenedor-carrito">

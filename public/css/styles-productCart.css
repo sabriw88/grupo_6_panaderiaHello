@@ -2,7 +2,6 @@
 .img-fondo{
     display: none;
 }
-
 .title-cart{
     text-align: center; 
     /* font-family: 'Mynerve'; */
@@ -11,6 +10,7 @@
     color: black;
     background-color: wheat; 
     padding: 5vw;  
+    display: none;
 }
 .cuadro{
     display: flex;
@@ -22,6 +22,7 @@
     border: 3px solid #68ABB4;
     border-radius: 10px;
     width: 90%;
+    height: 90%;
 }
 .main-cart{
     background-color: wheat;
@@ -43,8 +44,12 @@
     margin-bottom: 10px;   
     border-radius: 15px;
     border: 3px solid #F1C732;
+    /* overflow: scroll; */
+    height: 100%;
 }
-
+.descr-product {
+    overflow: hidden;
+}
 .main-product3 {
     background-color: whitesmoke;
     color: black;
@@ -192,13 +197,16 @@ input.qtyminus { width:15px; height:20px;}
     /* MAIN */
     .img-fondo{
         display: block;
-        width: 100%;
+        /* width: 100vw; */
+        height: 100vh;
+        object-fit: fill;
         padding: 0px; 
         opacity: 0.7;
         margin: 0;
+        position: absolute;
     }
     .cuadro{
-        position: absolute;
+        position: relative;
         margin: 60px 10vw;
         width: 80vw;
     }
@@ -231,37 +239,37 @@ input.qtyminus { width:15px; height:20px;}
     }
     .total{
         display: flex;
-        background-color: wheat;
+        background-color: white;
         color: black;
 /*         font-family: 'Mynerve'; */
         font-size: 2vw;
         font-weight: bold;
-        padding: 2px;
+        padding: 5px;
         border-radius: 10px;
-        border: 2px solid #68ABB4;
+        /* border: 2px solid #68ABB4; */
         align-items: center;
     }
     .precio-total{
         display: flex;
-        background-color: wheat;
+        background-color: white;
         color: black;
 /*         font-family: 'Mynerve'; */
         font-size: 2vw;
         font-weight: bold;
-        padding: 2px;
+        padding: 5px;
         border-radius: 10px;
-        border: 2px solid #68ABB4;
+        /* border: 2px solid #68ABB4; */
         align-items: center;
     }
     .button{
         background-color:#F1C732;
-        color: black;
+        color: #010101;
 /*         font-family: 'Mynerve'; */
         font-size: 2vw;
-        font-weight: bold;
-        padding: 2px;
+        /* font-weight: bold; */
+        padding: 5px;
         border-radius: 10px;
-        border: 2px solid #68ABB4;
+        /* border: 2px solid #68ABB4; */
         align-items: center;
     }
 }
