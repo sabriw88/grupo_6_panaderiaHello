@@ -16,10 +16,16 @@
                 <div class="register-input">
                     <input type="text" name="name" placeholder="Nombre" value="<%= user.name %>">
                 </div>
+                <% if (locals.errors && errors.name) { %>
+                    <div class="warning"><p><%= errors.name.msg %></p></div>
+                <% } %>
                 <br>
                 <div class="register-input">
                     <input type="text" name="surname" placeholder="Apellido" value="<%= user.surname %>">
                 </div>
+                <% if (locals.errors && errors.surname) { %>
+                    <div class="warning"><p><%= errors.surname.msg %></p></div>
+                <% } %>
                 <br>
                 <div class="register-input">
                     <input type="text" name="email" placeholder="Correo electronico" value="<%= user.email %>" readonly style="background-color: lightgray;">
@@ -38,6 +44,9 @@
                     <label for="avatar"><h2>Foto de perfil</h2></label>
                     <input type="file" name="avatar" id="foto-usuario" accept=".jpg, .png">
                 </div>
+                <% if (locals.errors && errors.avatar) { %>
+                    <div class="warning"><p><%= errors.avatar.msg %></p></div>
+                <% } %>
                 <br>
                 <div class="register-input">
                     <input type="password" name="password" placeholder="Contraseña">
@@ -46,6 +55,9 @@
                 <div class="register-input">
                     <input type="password" placeholder="Confirmar contraseña">
                 </div>
+                <% if (locals.errors && errors.password) { %>
+                    <div class="warning"><p><%= errors.password.msg %></p></div>
+                <% } %>
                 <br>
 
                 <div class="botones">

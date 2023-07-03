@@ -91,12 +91,20 @@ const usersController = {
     },
 
     update: (req,res) => {
+        const resultvalidation = validationResult(req); 
+        if (resultvalidation.errors.length > 0) {
+            return res.render ('users/userEdit', {
+                errors: resultvalidation.mapped(),
+                oldData: req.body,
+                user: req.session.loggedUser
+            });
+        }
         db.Users.update({
             name: (req.body.name == "") ? req.session.loggedUser.name : req.body.name,
             surname: req.body.surname == "" ? req.session.loggedUser.surname : req.body.surname,
             email: req.body.email,
-            bday: req.body.bday,
-            adress: req.body.address,
+            bday: (req.body.bday == "") ? req.session.loggedUser.bday : req.body.bday,
+            adress: (req.body.address== "") ? req.session.loggedUser.adress : req.body.address,
             avatar: req.file ? req.file.filename : req.session.loggedUser.avatar,
             password: bcrypt.hashSync(req.body.password, 10),
           },{

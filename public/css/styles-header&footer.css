@@ -213,9 +213,18 @@ footer li i{
     .login-bar ul li a div {
         display: inline;
     }
+    .login-bar ul li a div.login-i {
+        display: none;
+    }
     .login-bar p {
         font-size: 16px;
-        padding-right: 5px;
+        /* padding-right: 5px; */
+    }
+    .bottom-header-bar i.fa-cart-shopping {
+        margin: auto 0px;
+    }
+    .login-bar ul li a div.shop-i {
+        margin: 5px 0px;
     }
     .login-bar i {
         font-size: 16px

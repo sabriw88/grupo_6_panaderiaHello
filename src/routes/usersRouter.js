@@ -7,13 +7,14 @@ const uploadFile = require('../middlewares/multerMiddleware');
 const validations = require('../middlewares/validateRegisterMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
-const loginValidations = require('../middlewares/validateLoginMiddleware.js')
+const loginValidations = require('../middlewares/validateLoginMiddleware.js');
+const userEditValidations = require('../middlewares/validateUserEditMiddleware.js');
 
 router.get('/register', guestMiddleware, usersController.register);
 router.post('/register', uploadFile.single('avatar'), validations, usersController.processRegister) 
 
 router.get('/edit/:id', authMiddleware, usersController.edit);
-router.put('/edit/:id', uploadFile.single('avatar'), usersController.update);
+router.put('/edit/:id', uploadFile.single('avatar'), userEditValidations, usersController.update);
 
 router.get('/login', guestMiddleware, usersController.login);
 router.post('/login', loginValidations, usersController.processLogin);
