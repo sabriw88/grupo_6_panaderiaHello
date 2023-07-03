@@ -76,7 +76,7 @@
 }
 .name-product{
 /*     font-family: 'Mynerve'; */
-    font-size: 1.7vw;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
@@ -86,7 +86,7 @@
 .descr-product{
 /*     font-family: 'Mynerve'; */
     display: flex;
-    font-size: 1.5vw;
+    font-size: 14px;
     padding-top: 1vw;  
 }
 .contenedor-carrito{
@@ -232,17 +232,17 @@ input.qtyminus { width:15px; height:20px;}
     input.qtyplus { width:25px; height:25px;}
     input.qtyminus { width:25px; height:25px;}
     .fa-trash-can {
-        font-size: 20px;
+        font-size: 16px;
     }
     .precio {
-        font-size: 18px;
+        font-size: 14px;
     }
     .total{
         display: flex;
         background-color: white;
         color: black;
 /*         font-family: 'Mynerve'; */
-        font-size: 2vw;
+        font-size: 18px;
         font-weight: bold;
         padding: 5px;
         border-radius: 10px;
@@ -254,7 +254,7 @@ input.qtyminus { width:15px; height:20px;}
         background-color: white;
         color: black;
 /*         font-family: 'Mynerve'; */
-        font-size: 2vw;
+        font-size: 16px;
         font-weight: bold;
         padding: 5px;
         border-radius: 10px;
@@ -265,7 +265,7 @@ input.qtyminus { width:15px; height:20px;}
         background-color:#F1C732;
         color: #010101;
 /*         font-family: 'Mynerve'; */
-        font-size: 2vw;
+        font-size: 14px;
         /* font-weight: bold; */
         padding: 5px;
         border-radius: 10px;
