@@ -9,15 +9,22 @@ window.addEventListener('load', function(){
         if(nombreProducto.value == ''){
         errores.push('El campo "Nombre" no puede estar vacío');
         }
-        else if(nombreProducto.value.length < 2){
-        errores.push('El campo "Nombre" debe tener al menos 5 caracteres');
+        else if(nombreProducto.value.length < 3){
+        errores.push('El campo "Nombre" debe tener al menos 3 caracteres');
+        }
+
+        //validacion del precio
+        let precioProducto = document.querySelector('#price');
+
+        if(nombreProducto.value == ''){
+        errores.push('El campo "Precio" no puede estar vacío');
         }
 
         //validacion descripcion
         let descripcionProducto = document.querySelector('#description');
         
-        if(descripcionProducto.value.length < 2){
-        errores.push('El campo "Descripcion" debe tener al menos 20 caracteres');}
+        if(descripcionProducto.value.length < 10){
+        errores.push('El campo "Descripcion" debe tener al menos 10 caracteres');}
 
 
         // Validación del campo imagen

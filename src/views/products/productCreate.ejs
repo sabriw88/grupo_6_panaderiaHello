@@ -24,6 +24,9 @@
                 <div class="create-input">
                     <label for="price" class="form-label">Precio del producto:</label>
                     <input type="number" id="price" name="price" class="form-input">
+                    <% if (locals.errors && errors.price) { %>
+                        <div class="warning"><p><%= errors.price.msg %></p></div>
+                    <% } %>
                 </div>
 
                 <div class="create-input">
