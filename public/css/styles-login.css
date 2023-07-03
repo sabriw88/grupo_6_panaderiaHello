@@ -140,7 +140,21 @@ body {
     margin-bottom: 2px;
 }
 
-
+.modifyUser {
+    border: 3px solid #F1C732;
+    background-color: #68ABB4;
+    height: 10px;
+    border-radius: 15px;
+    padding: 3px 10px;
+    color: white;
+}
+.card_button2 {
+    color: black;
+    border-radius: 15px;
+    border: 1px solid #68ABB4;
+    padding: 0 5px;
+    font-size: 10px;
+}
 
 
 @media (min-width: 899px) {
