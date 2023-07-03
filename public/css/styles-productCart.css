@@ -4,7 +4,7 @@
 }
 .title-cart{
     text-align: center; 
-    font-family: 'Mynerve';
+    /* font-family: 'Mynerve'; */
     font-size: 20px;
     font-weight: bold;
     color: black;
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
+    background-color: whitesmoke;
     margin: 20px auto;
     padding: 30px;
     border: 3px solid #68ABB4;
@@ -32,16 +32,15 @@
     border-radius: 10px;
     width: 100%;
 }
-.main-product1 {  
-    background-color: whitesmoke;
-    color: black;
-    display: flex;   
-}
-.main-product2 {
-    background-color: whitesmoke;
+.main-product {  
+    background-color: white;
     color: black;
     display: flex;
+    margin-bottom: 10px;   
+    border-radius: 15px;
+    border: 3px solid #F1C732;
 }
+
 .main-product3 {
     background-color: whitesmoke;
     color: black;
@@ -67,15 +66,16 @@
    padding-left: 10px;
 }
 .name-product{
-    font-family: 'Mynerve';
+/*     font-family: 'Mynerve'; */
     font-size: 1.7vw;
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
     font-weight: bold;
+    color: #d27518;
 }
 .descr-product{
-    font-family: 'Mynerve';
+/*     font-family: 'Mynerve'; */
     display: flex;
     font-size: 1.5vw;
     padding-top: 1vw;  
@@ -140,12 +140,12 @@ input.qtyminus { width:15px; height:20px;}
     border: none;
     font-weight: bold;
     font-size: 10px;
-    font-family: 'Mynerve';
+/*     font-family: 'Mynerve'; */
 }
 .button-cart1{
     background-color: #F1C732;
     color: black;
-    font-family: 'Mynerve';
+/*     font-family: 'Mynerve'; */
     font-size: 14px;
     font-weight: bold;
     padding: 2px;
@@ -155,7 +155,7 @@ input.qtyminus { width:15px; height:20px;}
 .button-cart2{
     background-color: #F1C732;
     color: black;
-    font-family: 'Mynerve';
+/*     font-family: 'Mynerve'; */
     font-size: 14px;
     font-weight: bold;
     padding: 2px;
@@ -165,7 +165,7 @@ input.qtyminus { width:15px; height:20px;}
 .total{
     background-color:wheat;
     color: black;
-    font-family: 'Mynerve';
+/*     font-family: 'Mynerve'; */
     font-size: 12px;
     font-weight: bold;
     padding: 2px;
@@ -175,7 +175,7 @@ input.qtyminus { width:15px; height:20px;}
 .precio-total{
     background-color: wheat;
     color: black;
-    font-family: 'Mynerve';
+/*     font-family: 'Mynerve'; */
     font-size: 12px;
     font-weight: bold;
     padding: 2px;
@@ -194,9 +194,9 @@ input.qtyminus { width:15px; height:20px;}
         margin: 0;
     }
     .cuadro{
-    position: absolute;
-    margin-top: 13vw;
-    margin-left: 3vw;
+        position: absolute;
+        margin: 60px 10vw;
+        width: 80vw;
     }
     .title-cart{
         padding: 2vw;
@@ -229,7 +229,7 @@ input.qtyminus { width:15px; height:20px;}
         display: flex;
         background-color: wheat;
         color: black;
-        font-family: 'Mynerve';
+/*         font-family: 'Mynerve'; */
         font-size: 2vw;
         font-weight: bold;
         padding: 2px;
@@ -241,7 +241,7 @@ input.qtyminus { width:15px; height:20px;}
         display: flex;
         background-color: wheat;
         color: black;
-        font-family: 'Mynerve';
+/*         font-family: 'Mynerve'; */
         font-size: 2vw;
         font-weight: bold;
         padding: 2px;
@@ -252,7 +252,7 @@ input.qtyminus { width:15px; height:20px;}
     .button{
         background-color:#F1C732;
         color: black;
-        font-family: 'Mynerve';
+/*         font-family: 'Mynerve'; */
         font-size: 2vw;
         font-weight: bold;
         padding: 2px;
