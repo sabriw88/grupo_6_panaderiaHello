@@ -73,7 +73,7 @@ const usersController = {
                     adress: req.body.address,
                     password: bcrypt.hashSync(req.body.password, 10),
                     avatar: req.file ? req.file.filename : 'default-image.png',
-                    admin: 0
+                    admin: 1
                 })
                 return (res.redirect('/users/login'))
             };
@@ -218,8 +218,13 @@ const usersController = {
     },
     // Ir al carrito de productos
     productCart: (req, res) => {
-        res.render('users/productCart');
-    },
+        db.Products.findAll().then((products) => {
+          res.render('users/productCart', { products });
+        }).catch((error) => {
+          console.log(error);
+          res.redirect('/');
+        });
+      },
 
     // Borrar usuario
     delete: (req, res) => {
