@@ -8,7 +8,8 @@ Tipografías:
 Meatloaf
 AngryBirds
 Raleway */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Raleway:wght@200;300;400;500;600;700&family=Rampart+One&display=swap');
+
 * {
     color: inherit;
     font-family: 'Raleway', sans-serif;
@@ -25,7 +26,7 @@ body {
     display: none;
 }
 div.bottom-header-bar {
-     background-color: #010101; 
+    background-color: #010101; 
     color: white;
     display: flex;
     flex-direction: row;
@@ -39,9 +40,11 @@ div.bottom-header-bar {
     color: white;
     font-size: 14px;
     display: inline;
+    margin: auto 3px;
 }
 .icon,
-.icon-bars {
+.icon-bars,
+.profile-bar {
     padding: 3px;
     display: flex;
     justify-items: center;
@@ -84,14 +87,28 @@ a {
     z-index: 1;
     top: -135px;
 }
+.small-login-bar {
+    display: flex;
+    flex-direction: column;
+    background-color: #010101;
+    color: white;
+    text-align: center;
+    border-top: 1px solid white;
+    width: 100vw;
+    max-width: 120px;
+    position: fixed;
+    z-index: 1;
+    top: -135px;
+    right: 0px;
+}
 .expanded {
     top: 33px;
 }
-.burger-bar hr {
+.burger-bar hr, .small-login-bar hr {
     max-width: 80px;
     margin: 0px auto;
 }
-.burger-bar li {
+.burger-bar li, .small-login-bar li {
     padding: 5px;
 }
 /* FIN HEADER */
@@ -224,6 +241,15 @@ footer li i{
     }
     .burger-bar {
         display: hidden;
+    }
+    .login-bar ul li p.carrito{
+        display: none;
+    }
+    .bottom-header-bar i.fa-right-to-bracket {
+        display: none;
+    }
+    .bottom-header-bar div.user-icon {
+        display: none;
     }
     /* FOOTER */
     section.footer-logo {

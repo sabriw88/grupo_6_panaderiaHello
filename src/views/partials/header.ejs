@@ -19,12 +19,7 @@
             <ul type="none">
                 <% if (locals.isLogged) { %>
                     <li>
-                        <a href="/users/productCart">
-                            <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
-                            <p>Carrito</p>
-                        </a>
-                    </li>
-                    <li>
+                        <div class="icon user-icon"><i class="fa-solid fa-user"></i></div>
                         <a href="/users/profile/<%= locals.loggedUser.id %>">
                             <p>Mi perfil</p>
                         </a>
@@ -47,6 +42,12 @@
                         </a>
                     </li>
                 <% } %>
+                <li>
+                    <a href="/users/productCart">
+                        <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                        <p class="carrito">Carrito</p>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -56,6 +57,17 @@
             <li><a href="/products"><p>PRODUCTOS</p></a></li><hr>
             <li><a href="/nosotros"><p>ABOUT-US</p></a></li><hr>
             <li><a href="/contact"><p>CONTACTO</p></a></li>
+            <% if (locals.isLogged && (locals.loggedUser.admin == 1)) { %>
+                <li><a href="/products/create"><p>VENDER</p></a></li>
+            <% } %>
+        </ul>
+    </nav>
+    <nav id="profileNavbar" class="small-login-bar">
+        <ul type="none">
+            <% if (locals.isLogged) { %>
+                <li><a href="/users/profile/<%= locals.loggedUser.id %>"><p>Mi perfil</p></a></li><hr>
+                <li><a href="/users/logout"><p>Logout</p></a></li>
+            <% } %>
         </ul>
     </nav>
 <script src="/js/header.js"></script>

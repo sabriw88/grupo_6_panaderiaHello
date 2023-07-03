@@ -1,9 +1,15 @@
 window.addEventListener('load', function() {
-    let button = document.querySelector('.icon-bars');
+    let burgerButton = document.querySelector('.icon-bars');
+    let profileButton = document.querySelector('.user-icon');
 
-    button.addEventListener('click', () => {
+    burgerButton.addEventListener('click', () => {
         let navBar = document.querySelector('#burgerNavbar');
         navBar.classList.toggle('expanded')
+    })
+
+    profileButton.addEventListener('click', () => {
+        let profileBar = document.querySelector('#profileNavbar');
+        profileBar.classList.toggle('expanded')
     })
         
 });
