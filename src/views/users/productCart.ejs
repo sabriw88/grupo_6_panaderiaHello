@@ -4,15 +4,13 @@
 
 <%- include('../partials/header.ejs') %>
 
-
-<main class="main-cart">
-    <section>
-        <h2 class="title-cart">CARRITO DE COMPRAS</h2>
-        <img class="img-fondo" src="../img/fotoCarrito1.jpg" alt="">
-    </section>
+    <main class="main-cart">
+        <section>
+            <h2 class="title-cart">CARRITO DE COMPRAS</h2>
+            <img class="img-fondo" src="../img/fotoCarrito1.jpg" alt="">
+        </section>
     <ul type="none" class="cuadro">
-        <% products.forEach(product => { %>
-        <li class="main-product">
+        <li class="main-product1">
             <div class="contenedor-product">
                 <img class="img-product" src="../img/<%= product.image %>" alt="">
                 <div class="sub-main-productCart">
@@ -30,7 +28,24 @@
                 <p class="precio">$<%= product.price %></p>
             </div>
         </li>
-        <% }) %>
+        <li class="main-product2">
+            <div class="contenedor-product">
+                <img class="img-product" src="../img/pan-de-molde-casero-cuadrado.jpg">
+                <div class="sub-main-productCart">
+                    <p class="name-product">Pan de molde</p>
+                    <p class="descr-product">Su masa se enriquece con mantequilla o leche y se hornea dentro de un molde o lata.</p>
+                </div>
+            </div>
+            <div class="contenedor-carrito">
+                <form id='myform' method='POST' class='quantity' action='#'>
+                <input type='button' value='-' class='qtyminus minus' field='quantity' />
+                <input type='text' name='quantity' value='0' class='qty' />
+                <input type='button' value='+' class='qtyplus plus' field='quantity' />
+                </form>
+                <i class="fa-solid fa-trash-can"></i>
+                <p class="precio">$1000</p>
+            </div>
+        </li>
         <li class="main-product3">
             <img class="img-logo2" src="../img/Logo-recortado.png">
             <div class="main-precio">

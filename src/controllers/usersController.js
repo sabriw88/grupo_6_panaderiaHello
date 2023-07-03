@@ -202,7 +202,7 @@ const usersController = {
     // Ir al perfil de usuario
     profile: (req, res) => {
         db.Users.findByPk(req.session.loggedUser.id).then(usuario => {
-            delete usuario.password;
+            delete usuario.dataValues.password;
             req.session.loggedUser = usuario;
             res.render('users/profile', {
                 user: req.session.loggedUser
