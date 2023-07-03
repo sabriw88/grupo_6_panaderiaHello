@@ -21,7 +21,7 @@
     padding: 30px;
     border: 3px solid #68ABB4;
     border-radius: 10px;
-    width: 90%;
+    width: 90%; 
 }
 .main-cart{
     background-color: wheat;
@@ -34,8 +34,8 @@
     width: 100%;
     flex-grow: 1;
     margin-bottom: 20px;
-    min-height: 100vh;
-}
+    height: 100 vw
+    }
 .main-product {  
     background-color: white;
     color: black;
@@ -55,7 +55,7 @@
 }
 .contenedor-product{   
     width: 35vw;
-    height: 15vw;
+    height: 10vw;
     display: flex;
     align-items: center;
 }
