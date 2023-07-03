@@ -12,7 +12,7 @@ const loginValidations = require('../middlewares/validateLoginMiddleware.js')
 router.get('/register', guestMiddleware, usersController.register);
 router.post('/register', uploadFile.single('avatar'), validations, usersController.processRegister) 
 
-router.get('/edit/:id', usersController.edit);
+router.get('/edit/:id', authMiddleware, usersController.edit);
 router.put('/edit/:id', uploadFile.single('avatar'), usersController.update);
 
 router.get('/login', guestMiddleware, usersController.login);
@@ -23,6 +23,6 @@ router.get('/logout', usersController.logout);
 
 router.get('/productCart', usersController.productCart);
 
-router.delete('/delete/:id', usersController.delete);
+router.delete('/delete/:id', authMiddleware, usersController.delete);
 
 module.exports = router;
